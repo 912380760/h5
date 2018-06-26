@@ -66,7 +66,7 @@ tags: css
 * hsl()和hsla  
 
 ## 继承
-子元素会默认继承父节点的字体相关的一些属性，对 font-family 和 color
+子元素会默认继承父节点的字体相关的一些属性，如 font-family 和 color
 
 #### 控制继承
 CSS为处理继承提供的通用属性，可以让元素继承或者不继承父元素的属性
@@ -78,7 +78,7 @@ CSS为处理继承提供的通用属性，可以让元素继承或者不继承�
 * 相同权重下书写在后面的样式比前面的高
 
 ## 盒子模型
-<img src="./images/盒模型.png" style="margin-left: 0;" width="50%" height="50%">
+<img src="/h5/images/盒模型.png" style="margin-left: 0;" width="50%" height="50%">
 ### content
 * width 规定content的宽度
 * height 规定content的高度
@@ -94,7 +94,7 @@ CSS为处理继承提供的通用属性，可以让元素继承或者不继承�
 * padding: 10px 20px 30px === padding: 10px 20px 30px 20px; 中间值是左右，第一个值上，第三个值下
 
 ### margin 
-margin和padding类似，不通点
+margin和padding类似，不同点
 * margin不在背景区域
 * margin可以为负数
 * 两个元素连在一起，上下margin重叠，只保留两者较大的
