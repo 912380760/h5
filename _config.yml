@@ -14,7 +14,7 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://912380760.github.io
-root: /hexoss
+root: /h5
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
