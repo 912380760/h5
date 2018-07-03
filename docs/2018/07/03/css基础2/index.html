@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="mynote">
 <meta property="og:description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod 100-900 text-transfo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-03T06:29:47.893Z">
+<meta property="og:updated_time" content="2018-07-03T06:33:34.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS字体与排版">
 <meta name="twitter:description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod 100-900 text-transfo">
@@ -342,7 +342,7 @@
 <h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><p>float的值有<strong>left</strong> <strong>right</strong> <strong>none</strong>；<br>浮动主要的作用是为了排版，让元素向左或向右对其；<br>使用浮动后会造成高度塌陷，需要使用clear: both;清除浮动带来的高度塌陷问题；<br>现在最主流的清除浮动方法：after伪元素清除浮动；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.fix &#123;</span><br><span class="line">  zoom:1;</span><br><span class="line">&#125;</span><br><span class="line">.fix::after &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  content: &apos;clear&apos;;</span><br><span class="line">  height: 0;</span><br><span class="line">  clear: both;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  visibility: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="visibility-opacity"><a href="#visibility-opacity" class="headerlink" title="visibility opacity"></a>visibility opacity</h2><h3 id="visibility"><a href="#visibility" class="headerlink" title="visibility"></a>visibility</h3><p>设置元素是否隐藏，但是并不脱离文本流，元素的位置还是被占用的，hidden 隐藏，visible 显示。</p>
 <h3 id="opacity"><a href="#opacity" class="headerlink" title="opacity"></a>opacity</h3><p>设置元素的透明度，值为0-1；因为浏览器渲染机制的问题，background: rgba(0,0,0,.1);并不等于background: rgb(0,0,0); opacity: .1; </p>
-<h2 id="position"><a href="#position" class="headerlink" title="position"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position#Sticky_positioning" target="_blank" rel="noopener">position</a></h2><p>文档流：正常的元素堆叠效果。<br>absolute 和 fixed 会脱离文档流，元素并不占用正常文档流的空间。</p>
+<h2 id="position"><a href="#position" class="headerlink" title="position"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position#Sticky_positioning" target="_blank" rel="noopener">position</a></h2><p>设置元素的定位属性<br>文档流：正常的元素堆叠效果。<br>absolute 和 fixed 会脱离文档流，元素并不占用正常文档流的空间。</p>
 <ul>
 <li><strong>relative</strong><br>静态定位，根据自身定位</li>
 <li><strong>absolute</strong><br>相对定位，根据最近的有定位属性的父元素定位</li>

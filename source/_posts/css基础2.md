@@ -74,6 +74,7 @@ float的值有**left** **right** **none**；
 
 
 ## [position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position#Sticky_positioning)
+设置元素的定位属性
 文档流：正常的元素堆叠效果。
 absolute 和 fixed 会脱离文档流，元素并不占用正常文档流的空间。
 * **relative**  
