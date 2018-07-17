@@ -12,10 +12,11 @@ tags: css
 * **font-family** 字体种类
 * **font-size** 字体大小
 * **font-style** 斜体 italic oblique
-* **font-weight** 字体粗细 blod 100-900
+* **font-weight** 字体粗细 blod粗体 lighter细体 100-900
 * **text-transform** 字体大小写转换 uppercase lowercase capitalize full-width
 * **text-decoration** 上下中划线 underline overline line-through
 * **text-shadow** 文本阴影 可以应用多个，以逗号隔开 1px 1px 2px #aaa
+* **font-variant** 把字体设置为小型大写字母 small-caps
 
 ### 字体布局
 * **text-align** 文本对齐 left right center justify
@@ -100,3 +101,15 @@ absolute 和 fixed 会脱离文档流，元素并不占用正常文档流的空�
 * **auto** 只有在内容超过是显示滚动条
 * **overflow-x** 水平方向的内容溢出
 * **overflow-y** 垂直方向的内容溢出 
+
+## list-style
+简写属性，定义如何显示一个列表中的编号标记
+* [**list-style-type**](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type) 
+指定列表项元素的外观，disc实心圆，circle空心圆，decimal阿拉伯数字，upper-roman大写罗马数字。
+
+* [**list-style-position**](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position) 
+指定标记是否位于元素content内部，outside位于content外，inside位于content内。
+
+  
+* [**list-style-image**](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image) 
+会覆盖list-style-type，使用图标来做标记，例子：list-style-image: url("../../media/examples/rocket.svg");

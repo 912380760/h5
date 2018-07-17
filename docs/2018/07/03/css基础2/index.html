@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod 100-900 text-transfo">
+<meta name="description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod粗体 lighter细体 100-900">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS字体与排版">
 <meta property="og:url" content="https://912380760.github.io/2018/07/03/css基础2/index.html">
 <meta property="og:site_name" content="mynote">
-<meta property="og:description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod 100-900 text-transfo">
+<meta property="og:description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod粗体 lighter细体 100-900">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-03T06:33:34.016Z">
+<meta property="og:updated_time" content="2018-07-17T10:27:58.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS字体与排版">
-<meta name="twitter:description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod 100-900 text-transfo">
+<meta name="twitter:description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod粗体 lighter细体 100-900">
 
 
 
@@ -306,10 +306,11 @@
 <li><strong>font-family</strong> 字体种类</li>
 <li><strong>font-size</strong> 字体大小</li>
 <li><strong>font-style</strong> 斜体 italic oblique</li>
-<li><strong>font-weight</strong> 字体粗细 blod 100-900</li>
+<li><strong>font-weight</strong> 字体粗细 blod粗体 lighter细体 100-900</li>
 <li><strong>text-transform</strong> 字体大小写转换 uppercase lowercase capitalize full-width</li>
 <li><strong>text-decoration</strong> 上下中划线 underline overline line-through</li>
 <li><strong>text-shadow</strong> 文本阴影 可以应用多个，以逗号隔开 1px 1px 2px #aaa</li>
+<li><strong>font-variant</strong> 把字体设置为小型大写字母 small-caps</li>
 </ul>
 <h3 id="字体布局"><a href="#字体布局" class="headerlink" title="字体布局"></a>字体布局</h3><ul>
 <li><strong>text-align</strong> 文本对齐 left right center justify</li>
@@ -360,6 +361,16 @@
 <li><strong>overflow-x</strong> 水平方向的内容溢出</li>
 <li><strong>overflow-y</strong> 垂直方向的内容溢出 </li>
 </ul>
+<h2 id="list-style"><a href="#list-style" class="headerlink" title="list-style"></a>list-style</h2><p>简写属性，定义如何显示一个列表中的编号标记</p>
+<ul>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type" target="_blank" rel="noopener"><strong>list-style-type</strong></a><br>指定列表项元素的外观，disc实心圆，circle空心圆，decimal阿拉伯数字，upper-roman大写罗马数字。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position" target="_blank" rel="noopener"><strong>list-style-position</strong></a><br>指定标记是否位于元素content内部，outside位于content外，inside位于content内。</p>
+</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image" target="_blank" rel="noopener"><strong>list-style-image</strong></a><br>会覆盖list-style-type，使用图标来做标记，例子：list-style-image: url(“../../media/examples/rocket.svg”);</li>
+</ul>
 
       
     </div>
@@ -399,6 +410,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/h5/2018/07/17/background/" rel="prev" title="background">
+                background <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -475,7 +490,7 @@
               
                 <a href="/h5/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -537,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#font"><span class="nav-number">1.</span> <span class="nav-text">font</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字体样式"><span class="nav-number">1.1.</span> <span class="nav-text">字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体布局"><span class="nav-number">1.2.</span> <span class="nav-text">字体布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#display"><span class="nav-number">2.</span> <span class="nav-text">display</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#block"><span class="nav-number">2.1.</span> <span class="nav-text">block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline"><span class="nav-number">2.2.</span> <span class="nav-text">inline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-block"><span class="nav-number">2.3.</span> <span class="nav-text">inline-block</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#float"><span class="nav-number">3.</span> <span class="nav-text">float</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#visibility-opacity"><span class="nav-number">4.</span> <span class="nav-text">visibility opacity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#visibility"><span class="nav-number">4.1.</span> <span class="nav-text">visibility</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#opacity"><span class="nav-number">4.2.</span> <span class="nav-text">opacity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position"><span class="nav-number">5.</span> <span class="nav-text">position</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overflow"><span class="nav-number">6.</span> <span class="nav-text">overflow</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#font"><span class="nav-number">1.</span> <span class="nav-text">font</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字体样式"><span class="nav-number">1.1.</span> <span class="nav-text">字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体布局"><span class="nav-number">1.2.</span> <span class="nav-text">字体布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#display"><span class="nav-number">2.</span> <span class="nav-text">display</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#block"><span class="nav-number">2.1.</span> <span class="nav-text">block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline"><span class="nav-number">2.2.</span> <span class="nav-text">inline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-block"><span class="nav-number">2.3.</span> <span class="nav-text">inline-block</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#float"><span class="nav-number">3.</span> <span class="nav-text">float</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#visibility-opacity"><span class="nav-number">4.</span> <span class="nav-text">visibility opacity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#visibility"><span class="nav-number">4.1.</span> <span class="nav-text">visibility</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#opacity"><span class="nav-number">4.2.</span> <span class="nav-text">opacity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position"><span class="nav-number">5.</span> <span class="nav-text">position</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overflow"><span class="nav-number">6.</span> <span class="nav-text">overflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list-style"><span class="nav-number">7.</span> <span class="nav-text">list-style</span></a></li></ol></div>
             
 
           </div>

@@ -8,6 +8,7 @@ tags: css
 * 内联样式
 * 内部样式表
 * 外部样式表
+* @import引入外部文件
 
 ```
 // 内联样式，写在元素的style属性里
@@ -15,6 +16,9 @@ tags: css
 
 // 内部样式表，将CSS放置在<style>元素中
 <style>
+// @import引入外部文件
+@import url(http://style.com/basic);
+
 .test {
     color: red;
 } 
@@ -22,6 +26,7 @@ tags: css
 
 // 外部样式表，保存个独立的.css 的文件，通过link元素引入
 <link rel="stylesheet" href="../index.css">
+
 ```
 
 ## 选择器
@@ -32,22 +37,29 @@ tags: css
 
 ### 伪类
 以冒号(:)作为前缀添加到选择器的末尾，如 .classname:hover
+* **a:link** a标签未被访问前
+* **a:visited** a标签已被访问后
+* **a:active** a标签被用户点击或释放
 * **:hover** 鼠标经过元素
-* **[:nth-child()](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child)** 选择匹配的第N个元素
-* **:first-child()** 选择匹配的第一个元素
-* **:last-child()** 选择匹配的最后一个元素
+* **[:nth-child()](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child)** 选择匹配的第N个子元素
+* **:first-child()** 选择匹配的第一个子元素
+* **:last-child()** 选择匹配的最后一个子元素
 
 ### 伪元素
 以冒号(::)作为前缀添加到选择器的末尾，如 .classname::after
 * **[::after](https://codepen.io/912380760/pen/ERepNO)** 在标签的前面插入一个元素
 * **[::before](https://codepen.io/912380760/pen/ERepNO)** 在标签的后面插入一个元素
+* **[::first-letter](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::first-letter)** 块元素的第一个字母或文字
+* **[::first-line](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::first-line)** 块元素的第一行
+* **[::selection](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::selection)** 文档被用户选择的高亮部分
 
 ### 组合选择器
-* A,B 满足A或B的任意元素
+* A, B 满足A或B的任意元素
 * A B B是A的后代节点
 * A > B B是A的子节点
 * A + B B是A的下一个兄弟节点
 * A ~ B B是A之后的兄弟节点中的任意一个
+* AB 满足A并且满足B
 
 ## CSS单位和值
 ### 数值
@@ -107,3 +119,8 @@ border是属性的简写，和padding一样也是有4个方向，下面是简写
 * **border-width** 边框宽度
 * **border-color** 边框颜色 
 * **border**: none 去除border属性
+
+### box-sizing
+更改盒子模型的宽高计算方式
+* **content-box** 默认值，宽度只包含content部分
+* **border-box** 宽高包含 content + padding + border
