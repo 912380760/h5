@@ -17,7 +17,7 @@ space 图片会尽可能的重复，不会裁切，第一个和最后一个固�
 round 缩放图片的大小，，让图片刚好铺满整个背景。
 * [**background-attachment**](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment) 
 背景在视口中是否随包含它的区块滚动
-```
+``` CSS
 // 背景相对于元素本身固定，而不是随着它的内容滚动
 background-attachment: scroll;
 // 背景相对于视口固定
