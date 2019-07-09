@@ -2,26 +2,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -36,50 +34,67 @@
 
 
 
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/h5/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/h5/',
+    scheme: 'Muse',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
 
 
   
-  
-  <link href="/h5/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-
-
-
-<link href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/h5/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/h5/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+  <meta name="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
 <meta name="keywords" content="个人博客，前端学习，前端笔记">
 <meta property="og:type" content="website">
 <meta property="og:title" content="mynote">
@@ -93,37 +108,19 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/h5/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
 
 
-
+  
+  
   <link rel="canonical" href="https://912380760.github.io/"/>
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>mynote</title>
   
@@ -134,6 +131,35 @@
 
 
 
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
@@ -150,23 +176,22 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/h5/"  class="brand" rel="start">
+      <a href="/h5/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">mynote</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -174,35 +199,53 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/h5/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/h5/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
       
+    
+
+    
+
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>Archiv</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -210,12 +253,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -228,21 +279,23 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2018/07/17/background/">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/09/Grid/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/h5/images/avatar.gif">
+      <meta itemprop="name" content="Lucien Huang"/>
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
+      <meta itemprop="image" content="/h5/images/avatar.gif"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mynote">
+      <meta itemprop="name" content="mynote"/>
     </span>
 
     
@@ -252,37 +305,55 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/h5/2018/07/17/background/" itemprop="url">background</a></h1>
+                
+                <a href="/h5/2019/07/09/Grid/" class="post-title-link" itemprop="url">Grid</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
-          <span class="post-time">
-            
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T15:21:37+08:00">
-                2018-07-17
-              </time>
-            
 
-            
+              
+                
+              
 
-            
-          </span>
-
+              <time title="Erstellt: 2019-07-09 16:17:40 / Geändert am: 19:35:12" itemprop="dateCreated datePublished" datetime="2019-07-09T16:17:40+08:00">2019-07-09</time>
+            </span>
           
 
           
             
+
+            
+          
+
+          
+
+          
+            
+            
           
 
           
           
 
+          
+
+          <br/>
           
 
           
@@ -304,35 +375,107 @@
       
         
           
-            <h2 id="background"><a href="#background" class="headerlink" title="background"></a>background</h2><ul>
-<li><strong>background-color</strong><br>背景颜色, 可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">linear-gradient</a>和<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient" target="_blank" rel="noopener">radial-gradient</a></li>
-<li><strong>background-image</strong><br>背景图片，可以写多个，用逗号隔开，也可以使用渐变</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat" target="_blank" rel="noopener"><strong>background-repeat</strong></a><br>背景重复<br>repeat默认值 repeat-x repeat-y no-repeat<br>space 图片会尽可能的重复，不会裁切，第一个和最后一个固定在左右两边，多余间距平均分配<br>round 缩放图片的大小，，让图片刚好铺满整个背景。</li>
-<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment" target="_blank" rel="noopener"><strong>background-attachment</strong></a><br>背景在视口中是否随包含它的区块滚动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 背景相对于元素本身固定，而不是随着它的内容滚动</span><br><span class="line">background-attachment: scroll;</span><br><span class="line">// 背景相对于视口固定</span><br><span class="line">background-attachment: fixed;</span><br><span class="line">// 背景相对于元素的内容固定，背景将随着元素内容滚动</span><br><span class="line">background-attachment: local;</span><br></pre></td></tr></table></figure>
+            <h2 id="重要术语"><a href="#重要术语" class="headerlink" title="重要术语"></a>重要术语</h2><ul>
+<li><p>网格容器(Grid Container)<br>应用 <strong>display: grid</strong> 的元素.</p>
 </li>
-<li><p><strong>background-position</strong><br>背景定位</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/* 关键字 */</span><br><span class="line">background-position: top;</span><br><span class="line">background-position: bottom;</span><br><span class="line">background-position: left;</span><br><span class="line">background-position: right;</span><br><span class="line">background-position: center;</span><br><span class="line"></span><br><span class="line">/* 百分比 */</span><br><span class="line">background-position: 25% 75%;</span><br><span class="line"></span><br><span class="line">/* 长度 */</span><br><span class="line">background-position: 20px 20px;</span><br><span class="line">background-position: 1cm 2cm;</span><br><span class="line">background-position: 10ch 8em;</span><br><span class="line"></span><br><span class="line">/* 多个背景图 */</span><br><span class="line">background-position: 0 0, center;</span><br><span class="line"></span><br><span class="line">/* 怪异的简写语法 */</span><br><span class="line">// 在 background 简写属性中指定 background-size 时，需要同时提供一个 background-position 值</span><br><span class="line">// (哪怕它的值就是其初始值也需要写出来)，而且还要使 用一个斜杠(/)作为分隔</span><br><span class="line">background: url(tr.png) no-repeat top right / 2em 2em;</span><br></pre></td></tr></table></figure>
+<li><p>网格项(Grid Item)<br>网格容器的直接子元素.这里<strong>item</strong>就是网各项,但是<strong>sub-item</strong>不是.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"sub-item"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size" target="_blank" rel="noopener"><strong>background-size</strong></a><br>背景大小</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">/* 关键字 */</span><br><span class="line">background-size: cover;  // 居中裁剪</span><br><span class="line">background-size: contain; // 按比例最大化显示</span><br><span class="line"></span><br><span class="line">/* 一个值: 这个值指定图片的宽度，图片的高度隐式的为auto */</span><br><span class="line">background-size: 50%;</span><br><span class="line">background-size: 3em;</span><br><span class="line">background-size: 12px;</span><br><span class="line">background-size: auto;</span><br><span class="line"></span><br><span class="line">/* 两个值 */</span><br><span class="line">/* 第一个值指定图片的宽度，第二个值指定图片的高度 */</span><br><span class="line">background-size: 50% auto;</span><br><span class="line">background-size: 3em 25%;</span><br><span class="line">background-size: auto 6px;</span><br><span class="line">background-size: auto auto;</span><br><span class="line"></span><br><span class="line">/* 逗号分隔的多个值：设置多重背景 */</span><br><span class="line">background-size: auto, auto; // 不同background-size:auto auto;</span><br><span class="line">background-size: 50%, 25%, 25%;</span><br><span class="line">background-size: 6px, auto, contain;</span><br></pre></td></tr></table></figure>
+<li><p>网格线(Grid Line)<br>构成网格结构的分界线.它们既可以是垂直的(列网格线column grid lines),也可以是水平的(行网格线row grid lines).</p>
 </li>
-<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin" target="_blank" rel="noopener"><strong>background-origin</strong></a><br>背景圆点位置<br>border-box<br>padding-box<br>content-box </p>
+<li><p>网格轨道(Grid Track)<br>两条相邻网格线之间的空间,你可以把它们想象成网格的行或者列.</p>
 </li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip" target="_blank" rel="noopener"><strong>background-clip</strong></a><br>背景范围<br>border-box 背景范围到border<br>padding-box 背景范围到padding<br>content-box 背景范围只有content<br>text 背景被剪切到前景文本中</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode" target="_blank" rel="noopener"><strong>background-blend-mode</strong></a><br>定义该元素的背景图片，以及背景色如何混合。</li>
+<li><p>网格单元格(Grid Cell)<br>网格线之间形成的单元格</p>
+</li>
+<li><p>网格区域(Grid Area)<br>任意数量的网络单元格组成的网络区域</p>
+</li>
 </ul>
+<h2 id="grid-template-columns-grid-template-rows"><a href="#grid-template-columns-grid-template-rows" class="headerlink" title="grid-template-columns / grid-template-rows"></a>grid-template-columns / grid-template-rows</h2><p>值:</p>
+<ul>
+<li><strong>track-size</strong>: 长度值,百分比,或者等份网络容器可用空间(fr单位)</li>
+<li><strong>line-name</strong>: 任意名称<br>使用空格分隔值列表,用来定义网格的行和列.这些值表示网格轨道大小,它们之间的[]表示网格线.  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*不填写网格线名称时,网格线会自动分配正数和负数(倒数)名称.*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">40px</span> <span class="number">50px</span> auto <span class="number">50px</span> <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: <span class="number">25%</span> <span class="number">100px</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/h5/images/grid-columns.png" alt="avatar"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*明确的指定网格线(Grid Line)名称*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: [first] <span class="number">40px</span> [line2] <span class="number">50px</span> [line3] auto [col4-start] <span class="number">50px</span> [five] <span class="number">40px</span> [end];</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: [row1-start] <span class="number">25%</span> [row1-end] <span class="number">100px</span> [third-line] auto [last-line];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/h5/images/grid-columns2.png" alt="avatar"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*一条线可以有多个名称,名称可以相同*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: [row1-start] <span class="number">25%</span> [row1-end row2-start] <span class="number">25%</span> [row2-end];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*如果你定义多重复值,可以使用repeat()表示法来简化定义*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(3, 20px [col-start]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*等价于*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">20px</span> [col-start] <span class="number">20px</span> [col-start] <span class="number">20px</span> [col-start];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*fr单位用等份网络容器剩余空间来设置网络轨道的大小*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">1</span>fr <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*剩余可用空间是出去所有非灵活网各项之后计算得到的*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">50px</span> <span class="number">1</span>fr <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="grid-template-areas"><a href="#grid-template-areas" class="headerlink" title="grid-template-areas"></a>grid-template-areas</h2><p>指定网格区域名称来定义网格模板,点号(.)代表空单元格.这个语法本身可视作网格的可视化结构.<br>值:</p>
+<ul>
+<li><strong>grid-area-name</strong>: 网格区域名称</li>
+<li><strong>.</strong>(点号): 代表空的单元格</li>
+<li><strong>none</strong>: 不定义网格区域<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">50px</span> <span class="number">50px</span> <span class="number">50px</span> <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: auto;</span><br><span class="line">    <span class="attribute">grid-template-areas</span>: </span><br><span class="line">        <span class="string">"header header header header"</span></span><br><span class="line">        <span class="string">"main main . sidebar"</span></span><br><span class="line">        <span class="string">"footer footer footer footer"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>当你使用这种语法时,区域两端的网格线会自动命名,如你的网格区域的名字是header,该区域的起始行和起始列的名称将为header-start,而最后一行网格线和最后一列的名称为header-end.<br><img src="/h5/images/grid-areas.png" alt="avatar"></p>
+<h2 id="grid-template"><a href="#grid-template" class="headerlink" title="grid-template"></a>grid-template</h2><p><strong>grid-template-rows</strong>, <strong>grid-template-columns</strong>, <strong>grid-template-areas</strong>的简写属性.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template</span>:</span><br><span class="line">        [row1-start] <span class="string">"header header header"</span> <span class="number">25px</span> [row1-end]</span><br><span class="line">        [row2-start] <span class="string">"footer footer footer"</span> <span class="number">25px</span> [row2-end]</span><br><span class="line">        / auto <span class="number">50px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*等价于*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: [row1-start] <span class="number">25px</span> [row1-end row2-start] <span class="number">25px</span> [row2-end];</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: auto <span class="number">50px</span> auto;</span><br><span class="line">    <span class="attribute">grid-template-areas</span>: </span><br><span class="line">        <span class="string">"header header header"</span> </span><br><span class="line">        <span class="string">"footer footer footer"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>由于<strong>grid-template</strong>不会充值隐式网格属性(<strong>grid-template-rows</strong>, <strong>grid-template-columns</strong>, <strong>grid-template-areas</strong>),建议使用<strong>grid</strong>属性而不是<strong>grid-template</strong>.</p>
+<h2 id="grid-column-gap-grid-row-gap"><a href="#grid-column-gap-grid-row-gap" class="headerlink" title="grid-column-gap/grid-row-gap"></a>grid-column-gap/grid-row-gap</h2><p> 指定网格线的大小,只能在列/行之间创建间距，网格外部边缘不会有这个间距.<br> 注意这两个属性在现代浏览器已经可以删除grid-前缀,重命名为<strong>column-gap</strong>和<strong>row-gap</strong>.<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">100px</span> <span class="number">50px</span> <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: <span class="number">80px</span> auto <span class="number">80px</span>; </span><br><span class="line">    <span class="attribute">grid-column-gap</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">grid-row-gap</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/h5/images/grid-gap.png" alt="avatar"></p>
+<h2 id="grid-gap"><a href="#grid-gap" class="headerlink" title="grid-gap"></a>grid-gap</h2><p><strong>grid-column-gap</strong>和<strong>grid-row-gap</strong>的简写<br>如果grid-column-gap没定义,被设置为等同于grid-column-gap的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;</span><br><span class="line">    grid-gap: &lt;grid-row-gap&gt; &lt;grid-column-gap&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container&#123;</span><br><span class="line">    /* 设置 grid-column-gap 和 grid-row-gap */  </span><br><span class="line">    grid-column-gap: 10px;</span><br><span class="line">    grid-row-gap: 10px; </span><br><span class="line">    </span><br><span class="line">    /* 等价于 */  </span><br><span class="line">    grid-gap: 10px 10px;</span><br><span class="line">    </span><br><span class="line">    /* 等价于 */  </span><br><span class="line">    grid-gap: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="justify-items"><a href="#justify-items" class="headerlink" title="justify-items"></a>justify-items</h2><p>沿着行轴线对其网格项(相反的属性是<strong>align-items</strong>),此值适用于容器内所有网格项.<br>值:</p>
+<ul>
+<li><strong>start</strong>: 左侧对齐</li>
+<li><strong>end</strong>: 右侧对齐</li>
+<li><strong>center</strong>: 水平居中对齐</li>
+<li><strong>stretch</strong>: 填满单元格的宽度(默认值)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    justify-items: start | end | center | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/h5/images/justify-items.png" alt="avatar"></p>
+<h2 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h2><p>沿着列轴线对其网格项</p>
+<ul>
+<li><strong>start</strong>: 顶部对齐</li>
+<li><strong>end</strong>: 底部对齐</li>
+<li><strong>center</strong>: 垂直居中对齐</li>
+<li><strong>stretch</strong>: 填满单元格的宽度(默认值)<br><img src="/h5/images/align-items.png" alt="avatar"></li>
+</ul>
+<h2 id="place-items"><a href="#place-items" class="headerlink" title="place-items"></a>place-items</h2><p><strong>align-items</strong> 和 <strong>justify-items</strong> 的简写形式.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    place-items: &lt;align-items&gt; &lt;justify-items&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h2><p>你的网格大小小于网格容器大小是,设置网格容器内的网格对齐方式.此属性是沿着行轴线对齐网格.<br>值:</p>
+<ul>
+<li><strong>start</strong>: 左侧对齐</li>
+<li><strong>end</strong>: 右侧对齐</li>
+<li><strong>center</strong>: 水平居中对齐</li>
+<li><strong>stretch</strong>: 调整网格项的宽度,允许该网格填充满整个网格容器的宽度</li>
+<li><strong>space-around</strong>: 每个网格项之间间隙均匀,左右两端只有一半的空间</li>
+<li><strong>space-between</strong>: 每个网格项之间间隙均匀,左右两端没有空间</li>
+<li><strong>space-evenly</strong>: 每个网格项之间间隙均匀,左右两端空间也是均匀的.<br><img src="/h5/images/justify-content.png" alt="avatar"></li>
+</ul>
+<h2 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h2><p>你的网格大小小于网格容器大小是,设置网格容器内的网格的对齐方式,此属性是验证列轴线对齐网路.<br>值:</p>
+<ul>
+<li><strong>start</strong>: 顶部对齐</li>
+<li><strong>end</strong>: 底部对齐</li>
+<li><strong>center</strong>: 垂直居中对齐</li>
+<li><strong>stretch</strong>: 调整网格项的高度,允许该网格填充满整个网格容器的高度</li>
+<li><strong>space-around</strong>: 每个网格项之间间隙均匀,上下两端只有一半的空间</li>
+<li><strong>space-between</strong>: 每个网格项之间间隙均匀,上下两端没有空间</li>
+<li><strong>space-evenly</strong>: 每个网格项之间间隙均匀,上下两端空间也是均匀的.<br><img src="/h5/images/align-content.png" alt="avatar"></li>
+</ul>
+<h2 id="place-content"><a href="#place-content" class="headerlink" title="place-content"></a>place-content</h2><p><strong>align-content</strong>和<strong>justify-content</strong>的简写形式.除了Edge之外所有主要浏览器都支持<strong>place-content</strong>简写属性.</p>
+<h2 id="grid-auto-columns-grid-auto-rows"><a href="#grid-auto-columns-grid-auto-rows" class="headerlink" title="grid-auto-columns / grid-auto-rows"></a>grid-auto-columns / grid-auto-rows</h2><p>任何自动生成的网络轨道(隐式轨道)的大小,当网格中的网格多于单元格时,或者网格项位于显示网格之外,会创建隐式轨道.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-a"</span>&gt;</span>item-a<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-b"</span>&gt;</span>item-b<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="comment">/*生成一个2*2的网格*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-template-columns: 60px 60px;</span></span><br><span class="line"><span class="undefined">    grid-template-rows: 90px 90px</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.item-a</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-column: 1 / 2;</span></span><br><span class="line"><span class="undefined">    grid-row: 2 / 3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="comment">/*.item-b 从第 5 条列网格线开始到第 6 条列网格线结束，*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.item-b</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-column: 5 / 6;</span></span><br><span class="line"><span class="undefined">    grid-row: 2 / 3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/h5/images/grid-auto.png" alt="avatar"></p>
+<h2 id="grid-auto-flow"><a href="#grid-auto-flow" class="headerlink" title="grid-auto-flow"></a>grid-auto-flow</h2><p>如果你没有明确放置网格项,自动放置算法会自动放置这些网格项<br>值:<br><strong>row</strong>: 依次填充每行,根据需要添加新行(默认值)<br><strong>column</strong>: 依次填入每列,根据需要添加新列<br><strong>dense</strong>: 在稍后出现较小的网格项时,尝试填充网格项中较早的空缺<br>请注意,<strong>dense</strong>只会更改网格项的可视顺序,并可能导致它们出现乱序,这对可访问性不利.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-a"</span>&gt;</span>item-a<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-b"</span>&gt;</span>item-b<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-c"</span>&gt;</span>item-c<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-d"</span>&gt;</span>item-d<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-e"</span>&gt;</span>item-e<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="comment">/*定义一个5列2行的网格*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">    display: grid;</span></span><br><span class="line"><span class="undefined">    grid-template-columns: 60px 60px 60px 60px 60px;</span></span><br><span class="line"><span class="undefined">    grid-template-rows: 30px 30px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="comment">/*指定两个item位置*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.item-a</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-column: 1;</span></span><br><span class="line"><span class="undefined">    grid-row: 1 / 3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.item-e</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-column: 5;</span></span><br><span class="line"><span class="undefined">    grid-row: 1 / 3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/h5/images/auto-flow1.png" alt="avatar"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*把 grid-auto-flow 设成了 column*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">60px</span> <span class="number">60px</span> <span class="number">60px</span> <span class="number">60px</span> <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: <span class="number">30px</span> <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">grid-auto-flow</span>: column;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/h5/images/auto-flow2.png" alt="avatar"></p>
+<h2 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h2><p>以下属性的简写: <strong><a href="#grid-template-columns-grid-template-rows">grid-template-rows</a></strong>, <strong><a href="#grid-template-columns-grid-template-rows">grid-template-columns</a></strong>, <strong><a href="#grid-template-areas">grid-template-areas</a></strong>, <strong><a href="#grid-auto-columns-grid-auto-rows">grid-auto-rows</a></strong>, <strong><a href="#grid-auto-columns-grid-auto-rows">grid-auto-columns</a></strong>, 和 <strong><a href="#grid-auto-flow">grid-auto-flow</a></strong>.<br>以下两个紧挨着的代码是等效的<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid</span>: <span class="number">100px</span> <span class="number">300px</span> / <span class="number">3</span>fr <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid-template-rows</span>: <span class="number">100px</span> <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="number">3</span>fr <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid</span>: auto-flow / <span class="number">200px</span> <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid-auto-flow</span>: row;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="number">200px</span> <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid</span>: auto-flow dense <span class="number">100px</span> / <span class="number">1</span>fr <span class="number">2</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid-auto-flow</span>: row dense;</span><br><span class="line">  <span class="attribute">grid-auto-rows</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">2</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid</span>: <span class="number">100px</span> <span class="number">300px</span> / auto-flow <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid-template-rows</span>: <span class="number">100px</span> <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">grid-auto-flow</span>: column;</span><br><span class="line">  <span class="attribute">grid-auto-columns</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid</span>: [row1-start] <span class="string">"header header header"</span> <span class="number">1</span>fr [row1-end]</span><br><span class="line">        [row2-start] <span class="string">"footer footer footer"</span> <span class="number">25px</span> [row2-end]</span><br><span class="line">        / auto <span class="number">50px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">grid-template-areas</span>: </span><br><span class="line">    <span class="string">"header header header"</span></span><br><span class="line">    <span class="string">"footer footer footer"</span>;</span><br><span class="line">  <span class="attribute">grid-template-rows</span>: [row1-start] <span class="number">1</span>fr [row1-end row2-start] <span class="number">25px</span> [row2-end];</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: auto <span class="number">50px</span> auto;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
           
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -365,21 +508,23 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2018/07/03/css基础2/">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/09/BFC/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/h5/images/avatar.gif">
+      <meta itemprop="name" content="Lucien Huang"/>
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
+      <meta itemprop="image" content="/h5/images/avatar.gif"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mynote">
+      <meta itemprop="name" content="mynote"/>
     </span>
 
     
@@ -389,37 +534,404 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/h5/2018/07/03/css基础2/" itemprop="url">CSS字体与排版</a></h1>
+                
+                <a href="/h5/2019/07/09/BFC/" class="post-title-link" itemprop="url">BFC</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
-          <span class="post-time">
-            
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-03T00:12:04+08:00">
-                2018-07-03
-              </time>
-            
 
-            
+              
+                
+              
 
-            
-          </span>
-
+              <time title="Erstellt: 2019-07-09 15:01:46 / Geändert am: 16:53:53" itemprop="dateCreated datePublished" datetime="2019-07-09T15:01:46+08:00">2019-07-09</time>
+            </span>
           
 
           
             
+
+            
+          
+
+          
+
+          
+            
+            
           
 
           
           
 
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="BFC-块级格式化上下文"><a href="#BFC-块级格式化上下文" class="headerlink" title="BFC 块级格式化上下文"></a>BFC 块级格式化上下文</h2><p>用于决定块盒子的布局及浮动互相影响范围的一个区域.</p>
+<h2 id="BFC的创建方法"><a href="#BFC的创建方法" class="headerlink" title="BFC的创建方法"></a>BFC的创建方法</h2><ul>
+<li>根元素或其它包含根元素的元素</li>
+<li>浮动<strong>float: left/right</strong></li>
+<li>绝对定位元素 <strong>pisition: absolute/fixed</strong></li>
+<li>表格元素 <strong>table/table-cell/table-caption…</strong></li>
+<li><strong>overflow: hidden/auto/scroll</strong></li>
+<li>弹性元素<strong>flex/inline-flex</strong></li>
+<li>网格元素<strong>grid/inline-grid</strong></li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/contain" target="_blank" rel="noopener">contain</a>: layout/content/strict</strong></li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/column-count" target="_blank" rel="noopener">column-count</a></strong>/<strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/column-width" target="_blank" rel="noopener">column-width</a></strong>不为auto</li>
+<li><strong>display: flow-root</strong>;(这个新属性就是为了创建一个新的BFC)</li>
+</ul>
+<h2 id="BFC的效果"><a href="#BFC的效果" class="headerlink" title="BFC的效果"></a>BFC的效果</h2><ul>
+<li>内部的盒子会在垂直方向一个接一个排列;</li>
+<li>处于同一个BFC中的元素相互影响,浮动只影响同一个BFC的元素,不会影响其他BFC.Margin塌陷也只会发生在同一个BFC内.</li>
+<li>计算高度的时候,会考虑BFC包含的所有元素,连浮动元素也参与计算;</li>
+</ul>
+<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><p>下面例子中,我们让float盒子浮动,浮动脱离了文档流,所以box的background和border仅仅包含了内容,不包含整个浮动.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"float"</span>&gt;</span>I am a floated box!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>I am content inside the container.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">.box &#123;</span></span><br><span class="line"><span class="undefined">    background-color: rgb(224, 206, 247);</span></span><br><span class="line"><span class="undefined">    border: 5px solid rebeccapurple;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">.float &#123;</span></span><br><span class="line"><span class="undefined">    float: left;</span></span><br><span class="line"><span class="undefined">    width: 200px;</span></span><br><span class="line"><span class="undefined">    height: 150px;</span></span><br><span class="line"><span class="undefined">    background-color: white;</span></span><br><span class="line"><span class="undefined">    border:1px solid black;</span></span><br><span class="line"><span class="undefined">    padding: 10px;</span></span><br><span class="line"><span class="undefined">&#125;      </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">// 创建一个BFC包含这个浮动</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">.box &#123;</span></span><br><span class="line"><span class="undefined">    background-color: rgb(224, 206, 247);</span></span><br><span class="line"><span class="undefined">    border: 5px solid rebeccapurple;</span></span><br><span class="line"><span class="undefined">    display: flow-root;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>盒子浮动,超出box<br><img src="/h5/images/BFC1.png" style="margin-left: 0;"><br>创建一个BFC包含这个浮动<br><img src="/h5/images/BFC2.png" style="margin-left: 0;"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://juejin.im/post/59b73d5bf265da064618731d" target="_blank" rel="noopener">学习 BFC (Block Formatting Context) - 掘金</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">格式化上下文 - Web 开发者指南 | MDN</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2018/07/17/background/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang"/>
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
+      <meta itemprop="image" content="/h5/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mynote"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/h5/2018/07/17/background/" class="post-title-link" itemprop="url">background</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2018-07-17 15:21:37" itemprop="dateCreated datePublished" datetime="2018-07-17T15:21:37+08:00">2018-07-17</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-09 14:54:54" itemprop="dateModified" datetime="2019-07-09T14:54:54+08:00">2019-07-09</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="background"><a href="#background" class="headerlink" title="background"></a>background</h2><ul>
+<li><strong>background-color</strong><br>背景颜色, 可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">linear-gradient</a>和<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient" target="_blank" rel="noopener">radial-gradient</a></li>
+<li><strong>background-image</strong><br>背景图片，可以写多个，用逗号隔开，也可以使用渐变</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat" target="_blank" rel="noopener"><strong>background-repeat</strong></a><br>背景重复<br>repeat默认值 repeat-x repeat-y no-repeat<br>space 图片会尽可能的重复，不会裁切，第一个和最后一个固定在左右两边，多余间距平均分配<br>round 缩放图片的大小，，让图片刚好铺满整个背景。</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment" target="_blank" rel="noopener"><strong>background-attachment</strong></a><br>背景在视口中是否随包含它的区块滚动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 背景相对于元素本身固定，而不是随着它的内容滚动</span><br><span class="line"><span class="selector-tag">background-attachment</span>: <span class="selector-tag">scroll</span>;</span><br><span class="line">// 背景相对于视口固定</span><br><span class="line"><span class="selector-tag">background-attachment</span>: <span class="selector-tag">fixed</span>;</span><br><span class="line">// 背景相对于元素的内容固定，背景将随着元素内容滚动</span><br><span class="line"><span class="selector-tag">background-attachment</span>: <span class="selector-tag">local</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>background-position</strong><br>背景定位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/* 关键字 */</span><br><span class="line">background-position: top;</span><br><span class="line">background-position: bottom;</span><br><span class="line">background-position: left;</span><br><span class="line">background-position: right;</span><br><span class="line">background-position: center;</span><br><span class="line"></span><br><span class="line">/* 百分比 */</span><br><span class="line">background-position: 25% 75%;</span><br><span class="line"></span><br><span class="line">/* 长度 */</span><br><span class="line">background-position: 20px 20px;</span><br><span class="line">background-position: 1cm 2cm;</span><br><span class="line">background-position: 10ch 8em;</span><br><span class="line"></span><br><span class="line">/* 多个背景图 */</span><br><span class="line">background-position: 0 0, center;</span><br><span class="line"></span><br><span class="line">/* 怪异的简写语法 */</span><br><span class="line">// 在 background 简写属性中指定 background-size 时，需要同时提供一个 background-position 值</span><br><span class="line">// (哪怕它的值就是其初始值也需要写出来)，而且还要使 用一个斜杠(/)作为分隔</span><br><span class="line">background: url(tr.png) no-repeat top right / 2em 2em;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size" target="_blank" rel="noopener"><strong>background-size</strong></a><br>背景大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">/* 关键字 */</span><br><span class="line">background-size: cover;  // 居中裁剪</span><br><span class="line">background-size: contain; // 按比例最大化显示</span><br><span class="line"></span><br><span class="line">/* 一个值: 这个值指定图片的宽度，图片的高度隐式的为auto */</span><br><span class="line">background-size: 50%;</span><br><span class="line">background-size: 3em;</span><br><span class="line">background-size: 12px;</span><br><span class="line">background-size: auto;</span><br><span class="line"></span><br><span class="line">/* 两个值 */</span><br><span class="line">/* 第一个值指定图片的宽度，第二个值指定图片的高度 */</span><br><span class="line">background-size: 50% auto;</span><br><span class="line">background-size: 3em 25%;</span><br><span class="line">background-size: auto 6px;</span><br><span class="line">background-size: auto auto;</span><br><span class="line"></span><br><span class="line">/* 逗号分隔的多个值：设置多重背景 */</span><br><span class="line">background-size: auto, auto; // 不同background-size:auto auto;</span><br><span class="line">background-size: 50%, 25%, 25%;</span><br><span class="line">background-size: 6px, auto, contain;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin" target="_blank" rel="noopener"><strong>background-origin</strong></a><br>背景圆点位置<br>border-box<br>padding-box<br>content-box </p>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip" target="_blank" rel="noopener"><strong>background-clip</strong></a><br>背景范围<br>border-box 背景范围到border<br>padding-box 背景范围到padding<br>content-box 背景范围只有content<br>text 背景被剪切到前景文本中</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode" target="_blank" rel="noopener"><strong>background-blend-mode</strong></a><br>定义该元素的背景图片，以及背景色如何混合。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2018/07/03/CSS字体与排版/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang"/>
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
+      <meta itemprop="image" content="/h5/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mynote"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/h5/2018/07/03/CSS字体与排版/" class="post-title-link" itemprop="url">CSS字体与排版</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2018-07-03 00:12:04" itemprop="dateCreated datePublished" datetime="2018-07-03T00:12:04+08:00">2018-07-03</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-09 14:07:24" itemprop="dateModified" datetime="2019-07-09T14:07:24+08:00">2019-07-09</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br/>
           
 
           
@@ -517,12 +1029,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -555,21 +1073,23 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2018/06/27/css基础1/">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2018/06/27/选择器与盒子模型/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/h5/images/avatar.gif">
+      <meta itemprop="name" content="Lucien Huang"/>
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
+      <meta itemprop="image" content="/h5/images/avatar.gif"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mynote">
+      <meta itemprop="name" content="mynote"/>
     </span>
 
     
@@ -579,37 +1099,65 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/h5/2018/06/27/css基础1/" itemprop="url">css基础</a></h1>
+                
+                <a href="/h5/2018/06/27/选择器与盒子模型/" class="post-title-link" itemprop="url">选择器与盒子模型</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
-          <span class="post-time">
-            
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-27T00:06:00+08:00">
-                2018-06-27
-              </time>
-            
 
-            
+              
+                
+              
 
-            
-          </span>
-
+              <time title="Erstellt: 2018-06-27 00:06:00" itemprop="dateCreated datePublished" datetime="2018-06-27T00:06:00+08:00">2018-06-27</time>
+            </span>
           
 
           
             
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-09 14:59:10" itemprop="dateModified" datetime="2019-07-09T14:59:10+08:00">2019-07-09</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
           
 
           
           
 
+          
+
+          <br/>
           
 
           
@@ -685,7 +1233,7 @@
 <li>hsl()和hsla  </li>
 </ul>
 <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>子元素会默认继承父节点的字体相关的一些属性，如 font-family 和 color</p>
-<h4 id="控制继承"><a href="#控制继承" class="headerlink" title="控制继承"></a>控制继承</h4><p>CSS为处理继承提供的通用属性，可以让元素继承或者不继承父元素的属性</p>
+<h3 id="控制继承"><a href="#控制继承" class="headerlink" title="控制继承"></a>控制继承</h3><p>CSS为处理继承提供的通用属性，可以让元素继承或者不继承父元素的属性</p>
 <ul>
 <li><strong>inherit</strong> 继承父元素属性， 如：width: inherit;继承父元素的宽度</li>
 <li><strong>initial</strong> 设置成浏览器的默认值</li>
@@ -734,12 +1282,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -772,9 +1326,6 @@
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -788,79 +1339,70 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Lucien Huang</p>
-              <p class="site-description motion-element" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</p>
+              <div class="site-description motion-element" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/h5/archives/">
-              
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">标签</span>
-                
-              </div>
-            
-
-          </nav>
-
           
-
-          
-            <div class="links-of-author motion-element">
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/912380760" target="_blank" title="GitHub">
+                  <a href="/h5/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
                       
-                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://www.zhihu.com/people/huang-zhi-long-22/activities" target="_blank" title="ZhiHu">
-                      
-                        <i class="fa fa-fw fa-globe"></i>ZhiHu</a>
-                  </span>
-                
-            </div>
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">schlagwörter</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
           
 
           
           
 
           
+            
           
-
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -868,6 +1410,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -876,17 +1419,19 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.7.1</div>
 
 
 
@@ -894,12 +1439,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
 
 
 
 
         
+
 
 
 
@@ -920,11 +1466,14 @@
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -938,92 +1487,11 @@
 
 
 
-  
 
 
 
 
 
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/h5/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/h5/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/h5/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/h5/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/h5/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/h5/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/h5/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/h5/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/h5/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
 
 
 
@@ -1037,7 +1505,51 @@
 
 
   
+  <script src="/h5/lib/jquery/index.js?v=3.4.1"></script>
 
+  
+  <script src="/h5/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/h5/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/h5/js/utils.js?v=7.2.0"></script>
+
+  <script src="/h5/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/h5/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/h5/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
 
 
 
@@ -1049,6 +1561,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
