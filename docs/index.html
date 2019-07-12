@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/09/Grid/"/>
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/12/flex/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lucien Huang"/>
@@ -306,7 +306,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/h5/2019/07/09/Grid/" class="post-title-link" itemprop="url">Grid</a>
+                <a href="/h5/2019/07/12/flex/" class="post-title-link" itemprop="url">flex</a>
               
             
           </h1>
@@ -331,7 +331,211 @@
                 
               
 
-              <time title="Erstellt: 2019-07-09 16:17:40" itemprop="dateCreated datePublished" datetime="2019-07-09T16:17:40+08:00">2019-07-09</time>
+              <time title="Erstellt: 2019-07-12 15:57:38 / Geändert am: 18:29:30" itemprop="dateCreated datePublished" datetime="2019-07-12T15:57:38+08:00">2019-07-12</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基础知识和术语"><a href="#基础知识和术语" class="headerlink" title="基础知识和术语"></a>基础知识和术语</h1><h2 id="flex容器-flex-container"><a href="#flex容器-flex-container" class="headerlink" title="flex容器(flex container)"></a><strong>flex容器(flex container)</strong></h2><p>flex布局的容器</p>
+<h2 id="flex项-flex-items"><a href="#flex项-flex-items" class="headerlink" title="flex项(flex items)"></a><strong>flex项(flex items)</strong></h2><p>flex容器的直接子元素</p>
+<h2 id="main-axis"><a href="#main-axis" class="headerlink" title="main axis"></a><strong>main axis</strong></h2><p>flex容器的主轴,flex项沿着主轴排布,注意主轴不一定是水平的,这取决于 <strong><a href="#flex-direction">flex-direction</a></strong> 属性.</p>
+<h2 id="main-start-main-end"><a href="#main-start-main-end" class="headerlink" title="main-start|main-end"></a><strong>main-start|main-end</strong></h2><p>分别表示主轴的开始位置和结束位置,flex项在容器中会从main-start到main-end排布.</p>
+<h2 id="main-size"><a href="#main-size" class="headerlink" title="main size"></a><strong>main size</strong></h2><p>flex项占据主轴的宽度或高度.flex项的main size 属性是要么是”宽度”,要么是”高度”,这取决于主轴方向.</p>
+<h2 id="cross-axis"><a href="#cross-axis" class="headerlink" title="cross axis"></a><strong>cross axis</strong></h2><p>垂直于主轴的轴线称为交叉轴,其方向取决于主轴方向.</p>
+<h2 id="cross-start-cross-end"><a href="#cross-start-cross-end" class="headerlink" title="cross-start|cross-end"></a><strong>cross-start|cross-end</strong></h2><p>分别表示交叉轴的开始位置和结束位置</p>
+<h2 id="cross-size"><a href="#cross-size" class="headerlink" title="cross size"></a><strong>cross size</strong></h2><p>flex项占据交叉轴的宽度或高度.<br><img src="/h5/images/flex.png" alt="avatar"></p>
+<h1 id="父元素属性-flex-container"><a href="#父元素属性-flex-container" class="headerlink" title="父元素属性(flex container)"></a>父元素属性(flex container)</h1><h2 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h2><p>定义flex项在flex容器中的排布方向.</p>
+<ul>
+<li><strong>row</strong>: 行排布,从左到有(默认值)</li>
+<li><strong>row-reverse</strong>: 反向行布局,从右到左</li>
+<li><strong>column</strong>: 列布局,从上到下</li>
+<li><strong>column-reverse</strong>: 反向列布局,从下到上.<br><img src="/h5/images/flex-direction.png" alt="avatar"></li>
+</ul>
+<h2 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h2><p>默认情况下,flex项会尽可能尝试排在同一行,通过设置 <strong>flex-wrap</strong> 来决定flex项是否允许换行.</p>
+<ul>
+<li><strong>nowrap</strong>: 所有的flex项都会在同一行上排布,不换行.(默认值)</li>
+<li><strong>wrap</strong>: flex项将从上往下根据实际情况换行</li>
+<li><strong>wrap-reverse</strong>: flex项从下往上根据实际情况换行.<br><img src="/h5/images/flex-wrap.png" alt="avatar"></li>
+</ul>
+<h2 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h2><p>这是 <strong><a href="#flex-direction">flex-direction</a></strong> 和 <strong><a href="#flex-wrap">flex-wrap</a></strong> 属性的缩写.同时定义flex容器的主轴和交叉轴.默认是 <strong>row nowrap</strong>.</p>
+<h2 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h2><p>定义flex项沿主轴方向的对齐方式</p>
+<ul>
+<li><strong>flex-start</strong>: flex项从主轴开始位置(main-start)开始排布(默认值)</li>
+<li><strong>flex-end</strong>: flex项从主轴的结束位置(main-end)开始布局</li>
+<li><strong>center</strong>: flex项沿主轴居中排布</li>
+<li><strong>space-between</strong>: flex项之间间隙均匀,两端没有空间,即我们常说的沿主轴两端对齐</li>
+<li><strong>space-around</strong>: flex项之间间隙均匀,两端只有一半的空间</li>
+<li><strong>space-evenly</strong>: flex项之间间隙均匀,两端空间也是均匀的.<br><img src="/h5/images/flex-justify-content.png" alt="avatar"></li>
+</ul>
+<h2 id="align-items-这是一个单行属性-当多行的时候时行为可能不准确"><a href="#align-items-这是一个单行属性-当多行的时候时行为可能不准确" class="headerlink" title="align-items(这是一个单行属性,当多行的时候时行为可能不准确)"></a>align-items(这是一个单行属性,当多行的时候时行为可能不准确)</h2><p>定义flex项沿当前行在交叉轴上排布的默认行为,可以视为交叉轴上的对齐方式.</p>
+<ul>
+<li><strong>stretch</strong>: 拉伸flex项以填满整个容器(这里需要特别注意: 如果flex项有尺寸属性(height/width/min系列/max系列,那么不会拉伸),(默认值).</li>
+<li><strong>flex-start</strong>: flex项按照交叉轴的开始位置(cross-start)对齐</li>
+<li><strong>flex-end</strong>: flex项按照交叉轴的结束位置(cross-start)对齐</li>
+<li><strong>center</strong>: flex项以交叉轴为中心,居中对齐</li>
+<li><strong>baseline</strong>: flex项按照他们的文字基线对齐<br><img src="/h5/images/flex-align-items.png" alt="avatar"></li>
+</ul>
+<h2 id="align-content-这是一个多行属性-单行不生效"><a href="#align-content-这是一个多行属性-单行不生效" class="headerlink" title="align-content(这是一个多行属性,单行不生效)"></a>align-content(这是一个多行属性,单行不生效)</h2><p>当交叉轴有剩余空间时, <strong>align-content</strong>可以设置flex容器中的行在交叉轴上如何分配剩余空间,与 <strong><a href="#justify-content">justify-content</a></strong>相反.</p>
+<ul>
+<li><strong>strech</strong>：多行拉伸以填充满整个剩余空间(默认值)</li>
+<li><strong>flex-start</strong>: 多行在容器的开始位置排布</li>
+<li><strong>flex-end</strong>: 多行在容器的结束位置排布</li>
+<li><strong>center</strong>: 多行在容器的总结位置排布</li>
+<li><strong>space-between</strong>: 多行均匀分布,两端没有空间</li>
+<li><strong>space-around</strong>: 多行之间间隙均匀,两端只有一半的空间</li>
+<li><strong>space-evenly</strong>: 多行之间间隙均匀,两端空间也是均匀的.<br><img src="/h5/images/flex-align-content.png" alt="avatar"></li>
+</ul>
+<h1 id="flex项属性-flex-items"><a href="#flex项属性-flex-items" class="headerlink" title="flex项属性(flex items)"></a>flex项属性(flex items)</h1><h2 id="order"><a href="#order" class="headerlink" title="order"></a>order</h2><p>flex项按源顺序排布,控制它们在flex容器中显示顺序,默认值是0.</p>
+<h2 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h2><p>定义flex项在有可用剩余空间时拉伸比例,它接受的值作为比例,无单位,它规定了flex项应该占flex容器中可用空间比例.(默认值为0,负值无效).</p>
+<h2 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h2><p>定义flex项的收缩能力.(与flex-grow拉伸正好相反)</p>
+<h2 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h2><p>定义了在分配剩余空间之前flex项默认的大小.</p>
+<ul>
+<li><strong>auto</strong>: 按照其本来大小显示(默认值)</li>
+<li><strong>length</strong>: 可以是长度值,也可以是数字单位.</li>
+</ul>
+<h2 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h2><p><strong>flex</strong> 是 <strong><a href="#flex-grow">flex-grow</a></strong> 、 <strong><a href="#flex-shrink">flex-shrink</a></strong> 、 <strong><a href="#flex-basis">flex-basis</a></strong> 三个属性的简写.其中第二个参数和第三个参数是可选的,默认值为<strong>0 1 auto</strong>.</p>
+<h2 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h2><p>允许某个单独的flex项覆盖默认的对齐方式(或由 <strong><a href="#align-items">align-items</a></strong> 指定的对齐方式).注意: <strong>float</strong>, <strong>clear</strong> 和 <strong>vertical-align</strong> 对flex项没有任何作用.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/10/Grid/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang"/>
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
+      <meta itemprop="image" content="/h5/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mynote"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/h5/2019/07/10/Grid/" class="post-title-link" itemprop="url">Grid</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-10 16:17:40" itemprop="dateCreated datePublished" datetime="2019-07-10T16:17:40+08:00">2019-07-10</time>
             </span>
           
 
@@ -346,7 +550,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-07-10 14:59:31" itemprop="dateModified" datetime="2019-07-10T14:59:31+08:00">2019-07-10</time>
+                <time title="Geändert am: 2019-07-12 15:48:21" itemprop="dateModified" datetime="2019-07-12T15:48:21+08:00">2019-07-12</time>
               </span>
             
           
@@ -1402,7 +1606,7 @@
                 
                   <a href="/h5/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
