@@ -436,3 +436,6 @@ tags: css
 根据 CSS Grid 布局模块 Level 1 规范，有 5 个可应用动画的网格属性：
 - **[grid-gap](#grid-gap)**， **[grid-row-gap](#grid-column-gap-grid-row-gap)**，**[grid-column-gap](#grid-column-gap-grid-row-gap)** 作为长度，百分比或 calc。
 - **[grid-template-columns](#grid-template-columns-grid-template-rows)**，**[grid-template-rows](#grid-template-columns-grid-template-rows)** 作为长度，百分比或 calc 的简单列表，只要列表中长度、百分比或calc组件的值不同即可。
+
+# 参考资料
+[CSS Grid 布局完全指南(图解 Grid 详细教程)-WEB前端开发](https://www.html.cn/archives/8510#prop-grid-column-row)

@@ -1,5 +1,5 @@
 ---
-title: flex
+title: Flexbox
 date: 2019-07-12 15:57:38
 tags:
 ---
@@ -93,3 +93,6 @@ flex项按源顺序排布,控制它们在flex容器中显示顺序,默认值是0
 
 ## align-self
 允许某个单独的flex项覆盖默认的对齐方式(或由 **[align-items](#align-items)** 指定的对齐方式).注意: **float**, **clear** 和 **vertical-align** 对flex项没有任何作用.
+
+# 参考资料
+[CSS3 Flexbox 布局完全指南(图解 Flexbox 布局详细教程)-WEB前端开发](https://www.html.cn/archives/8629)
