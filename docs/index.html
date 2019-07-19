@@ -191,7 +191,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Cambiar a barra de navegación">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -218,7 +218,7 @@
 
     
 
-    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>Inicio</a>
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>Startseite</a>
 
   </li>
         
@@ -234,7 +234,7 @@
 
     
 
-    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>Archivo</a>
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>Archiv</a>
 
   </li>
 
@@ -324,14 +324,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-07-18 16:23:19 / Modificado por: 17:58:00" itemprop="dateCreated datePublished" datetime="2019-07-18T16:23:19+08:00">2019-07-18</time>
+              <time title="Erstellt: 2019-07-18 16:23:19 / Geändert am: 17:58:00" itemprop="dateCreated datePublished" datetime="2019-07-18T16:23:19+08:00">2019-07-18</time>
             </span>
           
 
@@ -496,14 +496,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-07-17 15:59:50 / Modificado por: 18:28:10" itemprop="dateCreated datePublished" datetime="2019-07-17T15:59:50+08:00">2019-07-17</time>
+              <time title="Erstellt: 2019-07-17 15:59:50 / Geändert am: 18:28:10" itemprop="dateCreated datePublished" datetime="2019-07-17T15:59:50+08:00">2019-07-17</time>
             </span>
           
 
@@ -643,20 +643,30 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-07-15 18:15:38 / Modificado por: 19:05:21" itemprop="dateCreated datePublished" datetime="2019-07-15T18:15:38+08:00">2019-07-15</time>
+              <time title="Erstellt: 2019-07-15 18:15:38" itemprop="dateCreated datePublished" datetime="2019-07-15T18:15:38+08:00">2019-07-15</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-19 19:16:46" itemprop="dateModified" datetime="2019-07-19T19:16:46+08:00">2019-07-19</time>
+              </span>
             
           
 
@@ -702,6 +712,52 @@
 <li>更准确<br>因为不带啊key就不是就地复用了,会对比新旧节点key是否相等,所以会更加准确</li>
 <li>更快<br>利用key的唯一性生成map对象遍历来获取对应节点,比遍历方式更快(map对象是通过key/value直接获取值对比,而遍历需要遍历整个数组).</li>
 </ol>
+<h2 id="‘1’-‘2’-‘3’-map-parseInt-what-amp-why"><a href="#‘1’-‘2’-‘3’-map-parseInt-what-amp-why" class="headerlink" title="[‘1’, ‘2’, ‘3’].map(parseInt) what &amp; why ?"></a>[‘1’, ‘2’, ‘3’].map(parseInt) what &amp; why ?</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面两个写法相等</span></span><br><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="function">(<span class="params">element, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(element, index);</span><br><span class="line">&#125;) <span class="comment">// [1, NaN, NaN]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>parseInt(string, radix) 解析字符串为数字,第一个参数为字符串,第二个参数为基数</li>
+<li>parseInt(‘1’, 0) //radix为0时，且string参数不以“0x”和“0”开头时，按照10为基数处理。这个时候返回1</li>
+<li>parseInt(‘2’, 1) //基数为1（1进制）表示的数中，最大值小于2，所以无法解析，返回NaN</li>
+<li>parseInt(‘3’, 2) //基数为2（2进制）表示的数中，最大值小于3，所以无法解析，返回NaN</li>
+<li>map函数返回每次return的结果,所以返回[1, NaN, NaN]</li>
+</ul>
+<h2 id="什么是防抖和节流？有什么区别？如何实现？"><a href="#什么是防抖和节流？有什么区别？如何实现？" class="headerlink" title="什么是防抖和节流？有什么区别？如何实现？"></a>什么是防抖和节流？有什么区别？如何实现？</h2><h3 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h3><p>触发高频时间后n秒内只执行一次,如果n秒内时间再被触发,重新计算时间.<br>利用闭包保存定时器状态,解决计时问题<br>使用apply修改this指向外部函数,保持原有上下文<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 防抖函数</span></span><br><span class="line"><span class="comment">* @param fn 防抖成功回调函数</span></span><br><span class="line"><span class="comment">* @param time 高频事件间隔时间</span></span><br><span class="line"><span class="comment">* @returns &#123;Function&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, time = <span class="number">500</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> timeout = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        clearTimeout(timer);</span><br><span class="line">        timeout = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">// 为了将debounce</span></span><br><span class="line">            fn.appaly(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">        &#125;, time);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'防抖成功'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> input = <span class="built_in">document</span>.getElementById(<span class="string">'input'</span>);</span><br><span class="line">input.addEventListener(<span class="string">'input'</span>, debounce(test));</span><br></pre></td></tr></table></figure></p>
+<h3 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h3><p>高频事件一定时间间隔内只能触发一次<br>利用闭包保存一个标记初始化为true,执行时判断状态是否为true,通过后把标记修改为false,事件执行后修改状态为true.<br>使用apply修改this指向外部函数,保持原有上下文<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn, time = <span class="number">1000</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> canRun  = <span class="literal">true</span>; <span class="comment">// </span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!canRun) <span class="keyword">return</span>;</span><br><span class="line">        canRun = <span class="literal">false</span>;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            fn.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">            canRun = <span class="literal">true</span>;</span><br><span class="line">        &#125;, time);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'节流'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> input = <span class="built_in">document</span>.getElementById(<span class="string">'input'</span>);</span><br><span class="line">input.addEventListener(<span class="string">'input'</span>, throttle(test));</span><br></pre></td></tr></table></figure></p>
+<h2 id="介绍下-Set、Map、WeakSet-和-WeakMap-的区别？"><a href="#介绍下-Set、Map、WeakSet-和-WeakMap-的区别？" class="headerlink" title="介绍下 Set、Map、WeakSet 和 WeakMap 的区别？"></a>介绍下 Set、Map、WeakSet 和 WeakMap 的区别？</h2><p><strong>Set</strong>和<strong>Map</strong>主要应用场景在于<strong>数据重组</strong>和数据存储</p>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><ul>
+<li>Set类似数组,但成员有唯一性,通过全等(===)判断(区别:NaN等于NaN)</li>
+<li>Set的遍历的时候index从1开始</li>
+<li>Set默认可遍历</li>
+<li>Set本身是一个构造函数,用来生成Set数据格式,接受一个<strong>iterable</strong>(可迭代对象)</li>
+</ul>
+<p><strong>实例属性</strong><br>size: 元素个数<br><strong>操作方法</strong></p>
+<ul>
+<li>add(value): 新增,相当于array的push(返回Set对象本身,可以链式调用)</li>
+<li>delete(value): 存在即删除集合中的value</li>
+<li>has(value): 判断集合中是否存在value</li>
+<li>clear(): 清空集合<br><strong>遍历方法</strong>  </li>
+<li>keys(): 返回集合中所有的键的SetIterator(迭代器)</li>
+<li>values(): 返回集合中所有值得SetIterator(和keys全等)</li>
+<li>entries(): 返回集合中所有元素的键值对(数组形式)的迭代器</li>
+<li>forEach(callbackFn, thisArg): 和原生forEach方法区别在于没有第三个数组本身的参数<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</span><br><span class="line"><span class="built_in">console</span>.log(set.keys()); <span class="comment">// SetIterator &#123;1, 2, 3&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(set.values()); <span class="comment">// SetIterator &#123;1, 2, 3&#125; </span></span><br><span class="line"><span class="built_in">console</span>.log(set.entries()); <span class="comment">// SetIterator &#123;1 =&gt; 1, 2 =&gt; 2, 3 =&gt; 3&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> set.keys()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item); <span class="comment">// 1 2 3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> set.entries()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item); <span class="comment">// [1, 1] [2, 2] [3, 3]</span></span><br><span class="line">&#125;</span><br><span class="line">set.forEach(<span class="function">(<span class="params">value, key</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;value&#125;</span> : <span class="subst">$&#123;key&#125;</span>`</span>); <span class="comment">// 1 : 1   2 : 2  3 : 3</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log([...set]); <span class="comment">// [1,2,3];</span></span><br><span class="line">set.add(<span class="number">4</span>).add(<span class="number">5</span>); <span class="comment">// Set(3) &#123;2, 3, 4&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> set1 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line"><span class="keyword">let</span> set2 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>]);</span><br><span class="line"><span class="comment">// 交集</span></span><br><span class="line">[...set1].filter(<span class="function"><span class="params">value</span> =&gt;</span> set2.has(value)); <span class="comment">// [2, 3];</span></span><br><span class="line"><span class="comment">// 并集</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Set</span>([...set1, ...set2]); <span class="comment">// Set(4) &#123;1, 2, 3, 4&#125;</span></span><br><span class="line"><span class="comment">// 差集</span></span><br><span class="line">[...set1].filter(<span class="function"><span class="params">value</span> =&gt;</span> !set2.has(value)); <span class="comment">// [1]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p>Map对象主要是为了解决对象不能作为键名的问题<br>Map还可以接受一个数组和Iterator接口且成员都是双元素的数组结构(也就是说<strong>Set</strong>和<strong>Map</strong>都可以用来生成新的Map)<br>实例属性和方法和Set类似,以下只详细介绍不同点<br><strong>操作方法</strong></p>
+<ul>
+<li>set(key, value) 添加新的属性</li>
+<li>get(key) 读取<strong>key</strong>对应的属性,找不到返回<strong>undefined</strong></li>
+<li>has(key)</li>
+<li>delete(key)<br><strong>遍历方法</strong></li>
+<li>keys() </li>
+<li>values() </li>
+<li>entries()</li>
+<li>forEach(callbackFn, thisArg)<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置对象为键名</span></span><br><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"><span class="keyword">const</span> o = &#123;<span class="attr">p</span>: <span class="string">'Hello World'</span>&#125;;</span><br><span class="line">m.set(o, <span class="string">'content'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过数组生成Map</span></span><br><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [<span class="string">'name'</span>, <span class="string">'张三'</span>],</span><br><span class="line">  [<span class="string">'title'</span>, <span class="string">'Author'</span>]</span><br><span class="line">]); <span class="comment">// Map(2) &#123;"name" =&gt; "张三", "title" =&gt; "Author"&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过set生成Map</span></span><br><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([</span><br><span class="line">  [<span class="string">'foo'</span>, <span class="number">1</span>],</span><br><span class="line">  [<span class="string">'bar'</span>, <span class="number">2</span>]</span><br><span class="line">]);</span><br><span class="line"><span class="keyword">const</span> m1 = <span class="keyword">new</span> <span class="built_in">Map</span>(set); <span class="comment">// Map(2) &#123;"foo" =&gt; 1, "bar" =&gt; 2&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="WeakSet-WeakMap"><a href="#WeakSet-WeakMap" class="headerlink" title="WeakSet WeakMap"></a>WeakSet WeakMap</h3><ul>
+<li>weakSet和WeakMap都是弱引用版的 <strong>Set</strong> 和 <strong>Map</strong> ,主要作用就是为了存储数据的同时不增加变量的引用计数,让变量正常被垃圾回收机制处理,避免造成内存泄漏</li>
+<li>weakSet的成员都只能是对象</li>
+<li>WeakMap的键名只能是对象</li>
+</ul>
 
           
         
@@ -796,14 +852,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-07-12 15:57:38" itemprop="dateCreated datePublished" datetime="2019-07-12T15:57:38+08:00">2019-07-12</time>
+              <time title="Erstellt: 2019-07-12 15:57:38" itemprop="dateCreated datePublished" datetime="2019-07-12T15:57:38+08:00">2019-07-12</time>
             </span>
           
 
@@ -816,9 +872,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Editado el</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Modificado por: 2019-07-15 18:13:18" itemprop="dateModified" datetime="2019-07-15T18:13:18+08:00">2019-07-15</time>
+                <time title="Geändert am: 2019-07-15 18:13:18" itemprop="dateModified" datetime="2019-07-15T18:13:18+08:00">2019-07-15</time>
               </span>
             
           
@@ -1011,14 +1067,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-07-10 16:17:40" itemprop="dateCreated datePublished" datetime="2019-07-10T16:17:40+08:00">2019-07-10</time>
+              <time title="Erstellt: 2019-07-10 16:17:40" itemprop="dateCreated datePublished" datetime="2019-07-10T16:17:40+08:00">2019-07-10</time>
             </span>
           
 
@@ -1031,9 +1087,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Editado el</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Modificado por: 2019-07-15 18:11:16" itemprop="dateModified" datetime="2019-07-15T18:11:16+08:00">2019-07-15</time>
+                <time title="Geändert am: 2019-07-15 18:11:16" itemprop="dateModified" datetime="2019-07-15T18:11:16+08:00">2019-07-15</time>
               </span>
             
           
@@ -1283,14 +1339,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-07-09 15:01:46 / Modificado por: 16:53:53" itemprop="dateCreated datePublished" datetime="2019-07-09T15:01:46+08:00">2019-07-09</time>
+              <time title="Erstellt: 2019-07-09 15:01:46 / Geändert am: 16:53:53" itemprop="dateCreated datePublished" datetime="2019-07-09T15:01:46+08:00">2019-07-09</time>
             </span>
           
 
@@ -1449,14 +1505,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2018-07-17 15:21:37" itemprop="dateCreated datePublished" datetime="2018-07-17T15:21:37+08:00">2018-07-17</time>
+              <time title="Erstellt: 2018-07-17 15:21:37" itemprop="dateCreated datePublished" datetime="2018-07-17T15:21:37+08:00">2018-07-17</time>
             </span>
           
 
@@ -1469,9 +1525,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Editado el</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Modificado por: 2019-07-09 14:54:54" itemprop="dateModified" datetime="2019-07-09T14:54:54+08:00">2019-07-09</time>
+                <time title="Geändert am: 2019-07-09 14:54:54" itemprop="dateModified" datetime="2019-07-09T14:54:54+08:00">2019-07-09</time>
               </span>
             
           
@@ -1622,14 +1678,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2018-07-03 00:12:04" itemprop="dateCreated datePublished" datetime="2018-07-03T00:12:04+08:00">2018-07-03</time>
+              <time title="Erstellt: 2018-07-03 00:12:04" itemprop="dateCreated datePublished" datetime="2018-07-03T00:12:04+08:00">2018-07-03</time>
             </span>
           
 
@@ -1642,9 +1698,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Editado el</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Modificado por: 2019-07-09 14:07:24" itemprop="dateModified" datetime="2019-07-09T14:07:24+08:00">2019-07-09</time>
+                <time title="Geändert am: 2019-07-09 14:07:24" itemprop="dateModified" datetime="2019-07-09T14:07:24+08:00">2019-07-09</time>
               </span>
             
           
@@ -1848,14 +1904,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2018-06-27 00:06:00" itemprop="dateCreated datePublished" datetime="2018-06-27T00:06:00+08:00">2018-06-27</time>
+              <time title="Erstellt: 2018-06-27 00:06:00" itemprop="dateCreated datePublished" datetime="2018-06-27T00:06:00+08:00">2018-06-27</time>
             </span>
           
 
@@ -1868,9 +1924,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Editado el</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Modificado por: 2019-07-09 14:59:10" itemprop="dateModified" datetime="2019-07-09T14:59:10+08:00">2019-07-09</time>
+                <time title="Geändert am: 2019-07-09 14:59:10" itemprop="dateModified" datetime="2019-07-09T14:59:10+08:00">2019-07-09</time>
               </span>
             
           
@@ -2091,7 +2147,7 @@
                   <a href="/h5/archives/">
                 
                     <span class="site-state-item-count">9</span>
-                    <span class="site-state-item-name">entradas</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -2112,7 +2168,7 @@
                       
                     
                     <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">tags</span>
+                    <span class="site-state-item-name">schlagwörter</span>
                   
                 </div>
               
@@ -2165,7 +2221,7 @@
 </div>
 
 
-  <div class="powered-by">Creado mediante <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.7.1</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.7.1</div>
 
 
 
@@ -2173,7 +2229,7 @@
 
 
 
-  <div class="theme-info">Tema – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
 
 
 
