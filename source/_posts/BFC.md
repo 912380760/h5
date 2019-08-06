@@ -8,7 +8,7 @@ tags: css
 用于决定块盒子的布局及浮动互相影响范围的一个区域.
 
 ## BFC的创建方法
-* 根元素或其它包含根元素的元素
+* 根元素
 * 浮动**float: left/right**
 * 绝对定位元素 **pisition: absolute/fixed**
 * 表格元素 **table/table-cell/table-caption...**
@@ -20,9 +20,9 @@ tags: css
 * **display: flow-root**;(这个新属性就是为了创建一个新的BFC)
 
 ## BFC的效果
-* 内部的盒子会在垂直方向一个接一个排列;
-* 处于同一个BFC中的元素相互影响,浮动只影响同一个BFC的元素,不会影响其他BFC.Margin塌陷也只会发生在同一个BFC内.
-* 计算高度的时候,会考虑BFC包含的所有元素,连浮动元素也参与计算;
+* 计算高度的时候,会考虑BFC包含的所有元素(包含元素的margin),连浮动元素也参与计算(清除浮动塌陷)
+* 处于同一个BFC中的元素相互影响,同一个BFC内的元素相邻的margin会发生塌陷
+* 浮动BFC不会与同级BFC元素重叠,它们会并排在同一行(如果一行内能排列下)
 
 ## 范例
 下面例子中,我们让float盒子浮动,浮动脱离了文档流,所以box的background和border仅仅包含了内容,不包含整个浮动.
@@ -62,7 +62,67 @@ tags: css
 创建一个BFC包含这个浮动
 <img src="/h5/images/BFC2.png" style="margin-left: 0;">
 
-## 参考资料
+## 使用BFC做自适应布局
+改变屏幕宽度,会发现box1,box3宽度固定,box2会随着屏幕宽度改变,[codepen代码](https://codepen.io/912380760/pen/pMErwK).
+```html
+<div class="box1"></div>
+<div class="box3"></div>
+<div class="box2"></div>
 
+<style>
+.box1, .box3 {
+    width: 100px;
+    height: 100px;
+    background: #000;
+}
+.box1 {
+    float: left;
+}
+.box3 {
+    float: right;
+}
+.box2 {
+    display: flow-root;
+    height: 150px;
+    background: red;
+}
+</style>
+```
+
+## BFC子节点会隔离父节点同级的浮动BFC节点
+如果box2同级节点box1左浮动,box1内有子元素item是BFC  
+这个情况下box2会被浮动节点box1覆盖,但它的子元素item会与box1隔离开,[codepen代码](https://codepen.io/912380760/pen/MNJozb)
+```html
+<div class="box1">浮动元素</div>
+<div class="box2">
+    <div class="item">子BFC元素</div>
+</div>
+
+<style>
+body {
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    float: left;
+}
+.box2 {
+    background: red;
+}
+.item {
+    display: flow-root;
+    width: 200px;
+    height: 200px;
+    background: green;
+    line-height: 200px;
+}
+</style>
+```
+
+## 参考资料
 [学习 BFC (Block Formatting Context) - 掘金](https://juejin.im/post/59b73d5bf265da064618731d)
 [格式化上下文 - Web 开发者指南 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
