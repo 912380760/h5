@@ -94,18 +94,21 @@
 
 
 
-  <meta name="description" content="安装建议从官网下载最新版本下载webStorm 注册需要先注册Jetbrains账户,可以免费试用30天,30天后可以通过生成注册码网站生成注册码(有效期至2020年3月11日). 常用快捷键 删除当前行 Ctrl + Y 新建一行 Shift + Enter 当前文件搜索 Ctrl + F 当前文件搜索替换 Ctrl + R 全局搜索 Ctrl + Shift + F 全局搜索替换 Ctrl +">
-<meta name="keywords" content="编辑器">
+  <meta name="description" content="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久通过 ETag(验证令牌) / If-None-Match服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”. Cache-Control no-cache必须先与">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webStorm使用技巧">
-<meta property="og:url" content="https://912380760.github.io/2019/07/18/webStorm使用技巧/index.html">
+<meta property="og:title" content="HTTP缓存">
+<meta property="og:url" content="https://912380760.github.io/2019/08/14/HTTP缓存/index.html">
 <meta property="og:site_name" content="mynote">
-<meta property="og:description" content="安装建议从官网下载最新版本下载webStorm 注册需要先注册Jetbrains账户,可以免费试用30天,30天后可以通过生成注册码网站生成注册码(有效期至2020年3月11日). 常用快捷键 删除当前行 Ctrl + Y 新建一行 Shift + Enter 当前文件搜索 Ctrl + F 当前文件搜索替换 Ctrl + R 全局搜索 Ctrl + Shift + F 全局搜索替换 Ctrl +">
+<meta property="og:description" content="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久通过 ETag(验证令牌) / If-None-Match服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”. Cache-Control no-cache必须先与">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-06T03:22:25.711Z">
+<meta property="og:image" content="https://912380760.github.io/h5/images/etag.png">
+<meta property="og:image" content="https://912380760.github.io/h5/images/snipaste.png.png">
+<meta property="og:updated_time" content="2019-08-14T11:09:54.748Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webStorm使用技巧">
-<meta name="twitter:description" content="安装建议从官网下载最新版本下载webStorm 注册需要先注册Jetbrains账户,可以免费试用30天,30天后可以通过生成注册码网站生成注册码(有效期至2020年3月11日). 常用快捷键 删除当前行 Ctrl + Y 新建一行 Shift + Enter 当前文件搜索 Ctrl + F 当前文件搜索替换 Ctrl + R 全局搜索 Ctrl + Shift + F 全局搜索替换 Ctrl +">
+<meta name="twitter:title" content="HTTP缓存">
+<meta name="twitter:description" content="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久通过 ETag(验证令牌) / If-None-Match服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”. Cache-Control no-cache必须先与">
+<meta name="twitter:image" content="https://912380760.github.io/h5/images/etag.png">
 
 
 
@@ -113,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="https://912380760.github.io/2019/07/18/webStorm使用技巧/"/>
+  <link rel="canonical" href="https://912380760.github.io/2019/08/14/HTTP缓存/"/>
 
 
 
@@ -123,7 +126,7 @@
   };
 </script>
 
-  <title>webStorm使用技巧 | mynote</title>
+  <title>HTTP缓存 | mynote</title>
   
 
 
@@ -286,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/18/webStorm使用技巧/"/>
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/14/HTTP缓存/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lucien Huang"/>
@@ -303,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">webStorm使用技巧
+          <h1 class="post-title" itemprop="name headline">HTTP缓存
 
               
             
@@ -329,23 +332,13 @@
                 
               
 
-              <time title="Erstellt: 2019-07-18 16:23:19" itemprop="dateCreated datePublished" datetime="2019-07-18T16:23:19+08:00">2019-07-18</time>
+              <time title="Erstellt: 2019-08-14 18:07:49 / Geändert am: 19:09:54" itemprop="dateCreated datePublished" datetime="2019-08-14T18:07:49+08:00">2019-08-14</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-08-06 11:22:25" itemprop="dateModified" datetime="2019-08-06T11:22:25+08:00">2019-08-06</time>
-              </span>
             
           
 
@@ -381,42 +374,25 @@
       
 
       
-        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>建议从官网下载最新版本<a href="https://www.jetbrains.com/webstorm/download/#section=windows" target="_blank" rel="noopener">下载webStorm</a></p>
-<h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p>需要先注册Jetbrains账户,可以免费试用30天,30天后可以通过<a href="http://idea.lanyus.com/" target="_blank" rel="noopener">生成注册码</a>网站生成注册码(有效期至2020年3月11日).</p>
-<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul>
-<li>删除当前行 Ctrl + Y</li>
-<li>新建一行 Shift + Enter</li>
-<li>当前文件搜索 Ctrl + F</li>
-<li>当前文件搜索替换 Ctrl + R</li>
-<li>全局搜索 Ctrl + Shift + F</li>
-<li>全局搜索替换 Ctrl + Shift + R</li>
-<li>全局搜索文件 Ctrl + Shift + N</li>
-<li>代码检查设置 Ctrl + Shift + Alt + H</li>
-<li>控制台 Ctrl + F12</li>
-<li>重命名文件 Shift + F6</li>
-<li>打开当前文件 右键 -&gt; Show in Explorer</li>
-<li>展开/关闭左侧项目 Alt + 1</li>
-<li>版本控制 Alt + 9</li>
-<li>push到当前远程分支 Ctrl + Shift + k</li>
-<li>格式化文件 Ctrl + Alt + L</li>
-<li>格式化选定区域 Ctrl + Alt + I</li>
-<li>删除文件 Delete</li>
+        <h2 id="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><a href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久" class="headerlink" title="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"></a>浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</h2><h2 id="通过-ETag-验证令牌-If-None-Match"><a href="#通过-ETag-验证令牌-If-None-Match" class="headerlink" title="通过 ETag(验证令牌) / If-None-Match"></a>通过 ETag(验证令牌) / If-None-Match</h2><p>服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),<br>下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,<br>服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”.<br><img src="/h5/images/etag.png" alt="avatar"></p>
+<h2 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h2><ul>
+<li>no-cache<br>必须先与服务器确认响应是否发生变化,因此如果同时存在ETag,no-cache是可以缓存的</li>
+<li>no-store<br>直接禁止浏览器以及所有中间缓存存储任何版本的响应.</li>
+<li>public<br>浏览器和CDN(代理服务器)都可缓存</li>
+<li>private<br>只有浏览器能缓存,CDN不能缓存</li>
+<li>max-age<br>缓存最长时间(单位秒),例如,”max-age=60”表示接下来的60秒缓存和重用响应</li>
 </ul>
-<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><ul>
-<li>查看文件本地历史记录: VCS | Local History | Show History 左上角的返回标志是还原文件</li>
-<li>重构命名,WebStorm会自动重命名其所有引用和import语句: Ctrl + Shift + Alt + T -&gt; rename  -&gt; refactor</li>
-<li>webStrom安装插件 File | Settings | plugins </li>
-<li>webStrom修改主题 File | Settings | 搜索theme</li>
-<li>webStrom无法识别@符号跳转文件<br><code>`</code>js<br>// 如果是vue-cli 3以上隐藏别名配置的这种情况,在根目录添加alias.config.js文件,再指定webpack配置文件,文件内容如下<br>const resolve = dir =&gt; require(‘path’).join(__dirname, dir);</li>
+<h2 id="Last-Modified-If-Modified-Since"><a href="#Last-Modified-If-Modified-Since" class="headerlink" title="Last-Modified / If-Modified-Since"></a>Last-Modified / If-Modified-Since</h2><ul>
+<li>Last-Modified<br>服务器在响应请求时，告诉浏览器资源的最后修改时间。</li>
+<li>If-Modified-Since<br>再次请求服务器时，通过此字段通知服务器上次请求时，服务器返回的资源最后修改时间。<br>服务器收到请求后发现有头If-Modified-Since 则与被请求资源的最后修改时间进行比对。<br>若资源的最后修改时间大于If-Modified-Since，说明资源又被改动过，则响应整片资源内容，返回状态码200；<br>若资源的最后修改时间小于或等于If-Modified-Since，说明资源无新修改，则响应HTTP 304，告知浏览器继续使用所保存的cache。</li>
 </ul>
-<p>module.exports = {<br>    resolve: {<br>        alias: {<br>            ‘@’: resolve(‘src’)<br>        }<br>    }<br>};</p>
-<p>// 指定webpack配置文件<br>// file -&gt; setting -&gt; 搜索webpack -&gt; webpack configuration file 在这里输入webpack别名配置文件地址 例: D:\react-learn\vueinit\alias.config.js.<br><code>`</code> </p>
-<h2 id="webStrom-插件推荐"><a href="#webStrom-插件推荐" class="headerlink" title="webStrom 插件推荐"></a>webStrom 插件推荐</h2><p>webStrom本身就已经集成大部分功能而且占用CPU较高不建议安装太多没必要的插件</p>
-<ul>
-<li>Atom OneDark Theme 个人最喜欢的主题,用完一改webstrom丑丑的外观</li>
-<li>codeGlance 右侧代码预览</li>
+<h2 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a>Expires</h2><p>Expires的值为服务端返回的到期时间,即下一次请求时,请求时间小于服务端返回的到期时间,直接使用缓存数据.<br>不过Expires是HTTP 1.0的东西,另一个问题是到期时间由服务端生成,但是客户端时间和服务端时间有误差,可能导致存储命中误差.所以现在一般使用<a href="#Cache-Control">Cache-Control</a>.</p>
+<p><img src="/h5/images/snipaste.png.png" alt="avatar"></p>
+<h2 id="各种刷新"><a href="#各种刷新" class="headerlink" title="各种刷新"></a>各种刷新</h2><ul>
+<li>浏览器中输入地址,回车<br>服务器缓存策略</li>
+<li>F5<br>去服务器检验缓存是否过期,再使用服务器缓存策略</li>
+<li>Ctrl + F5<br>不缓存,所有请求都直接去服务器拿</li>
 </ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jetbrains.com/help/webstorm/2019.1/meet-webstorm.html" target="_blank" rel="noopener">Meet WebStorm - Help | WebStorm</a></p>
 
       
     </div>
@@ -443,7 +419,7 @@
         
         <div class="post-tags">
           
-            <a href="/h5/tags/编辑器/" rel="tag"># 编辑器</a>
+            <a href="/h5/tags/http/" rel="tag"># http</a>
           
         </div>
       
@@ -456,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/h5/2019/07/17/XOR加密/" rel="next" title="XOR加密">
-                <i class="fa fa-chevron-left"></i> XOR加密
+              <a href="/h5/2019/08/07/React核心概念/" rel="next" title="React核心概念">
+                <i class="fa fa-chevron-left"></i> React核心概念
               </a>
             
           </div>
@@ -465,10 +441,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/h5/2019/08/07/React核心概念/" rel="prev" title="React核心概念">
-                React核心概念 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -598,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册"><span class="nav-number">2.</span> <span class="nav-text">注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用快捷键"><span class="nav-number">3.</span> <span class="nav-text">常用快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用操作"><span class="nav-number">4.</span> <span class="nav-text">常用操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webStrom-插件推荐"><span class="nav-number">5.</span> <span class="nav-text">webStrom 插件推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><span class="nav-number">1.</span> <span class="nav-text">浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-ETag-验证令牌-If-None-Match"><span class="nav-number">2.</span> <span class="nav-text">通过 ETag(验证令牌) / If-None-Match</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cache-Control"><span class="nav-number">3.</span> <span class="nav-text">Cache-Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Last-Modified-If-Modified-Since"><span class="nav-number">4.</span> <span class="nav-text">Last-Modified / If-Modified-Since</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Expires"><span class="nav-number">5.</span> <span class="nav-text">Expires</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种刷新"><span class="nav-number">6.</span> <span class="nav-text">各种刷新</span></a></li></ol></div>
             
 
           </div>
