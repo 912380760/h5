@@ -103,8 +103,8 @@
 <meta property="og:description" content="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久通过 ETag(验证令牌) / If-None-Match服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”. Cache-Control no-cache必须先与">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://912380760.github.io/h5/images/etag.png">
-<meta property="og:image" content="https://912380760.github.io/h5/images/snipaste.png.png">
-<meta property="og:updated_time" content="2019-08-14T11:09:54.748Z">
+<meta property="og:image" content="https://912380760.github.io/h5/images/snipaste.png">
+<meta property="og:updated_time" content="2019-08-27T02:31:49.540Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP缓存">
 <meta name="twitter:description" content="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久通过 ETag(验证令牌) / If-None-Match服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”. Cache-Control no-cache必须先与">
@@ -332,13 +332,23 @@
                 
               
 
-              <time title="Erstellt: 2019-08-14 18:07:49 / Geändert am: 19:09:54" itemprop="dateCreated datePublished" datetime="2019-08-14T18:07:49+08:00">2019-08-14</time>
+              <time title="Erstellt: 2019-08-14 18:07:49" itemprop="dateCreated datePublished" datetime="2019-08-14T18:07:49+08:00">2019-08-14</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-08-27 10:31:49" itemprop="dateModified" datetime="2019-08-27T10:31:49+08:00">2019-08-27</time>
+              </span>
             
           
 
@@ -387,13 +397,13 @@
 <li>If-Modified-Since<br>再次请求服务器时，通过此字段通知服务器上次请求时，服务器返回的资源最后修改时间。<br>服务器收到请求后发现有头If-Modified-Since 则与被请求资源的最后修改时间进行比对。<br>若资源的最后修改时间大于If-Modified-Since，说明资源又被改动过，则响应整片资源内容，返回状态码200；<br>若资源的最后修改时间小于或等于If-Modified-Since，说明资源无新修改，则响应HTTP 304，告知浏览器继续使用所保存的cache。</li>
 </ul>
 <h2 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a>Expires</h2><p>Expires的值为服务端返回的到期时间,即下一次请求时,请求时间小于服务端返回的到期时间,直接使用缓存数据.<br>不过Expires是HTTP 1.0的东西,另一个问题是到期时间由服务端生成,但是客户端时间和服务端时间有误差,可能导致存储命中误差.所以现在一般使用<a href="#Cache-Control">Cache-Control</a>.</p>
-<p><img src="/h5/images/snipaste.png.png" alt="avatar"></p>
+<p><img src="/h5/images/snipaste.png" alt="avatar"></p>
 <h2 id="各种刷新"><a href="#各种刷新" class="headerlink" title="各种刷新"></a>各种刷新</h2><ul>
 <li>浏览器中输入地址,回车<br>服务器缓存策略</li>
 <li>F5<br>去服务器检验缓存是否过期,再使用服务器缓存策略</li>
 <li>Ctrl + F5<br>不缓存,所有请求都直接去服务器拿</li>
 </ul>
-
+<h2 id="使用node-js模拟演示"><a href="#使用node-js模拟演示" class="headerlink" title="使用node.js模拟演示"></a>使用node.js模拟演示</h2>
       
     </div>
 
@@ -570,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><span class="nav-number">1.</span> <span class="nav-text">浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-ETag-验证令牌-If-None-Match"><span class="nav-number">2.</span> <span class="nav-text">通过 ETag(验证令牌) / If-None-Match</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cache-Control"><span class="nav-number">3.</span> <span class="nav-text">Cache-Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Last-Modified-If-Modified-Since"><span class="nav-number">4.</span> <span class="nav-text">Last-Modified / If-Modified-Since</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Expires"><span class="nav-number">5.</span> <span class="nav-text">Expires</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种刷新"><span class="nav-number">6.</span> <span class="nav-text">各种刷新</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><span class="nav-number">1.</span> <span class="nav-text">浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-ETag-验证令牌-If-None-Match"><span class="nav-number">2.</span> <span class="nav-text">通过 ETag(验证令牌) / If-None-Match</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cache-Control"><span class="nav-number">3.</span> <span class="nav-text">Cache-Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Last-Modified-If-Modified-Since"><span class="nav-number">4.</span> <span class="nav-text">Last-Modified / If-Modified-Since</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Expires"><span class="nav-number">5.</span> <span class="nav-text">Expires</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种刷新"><span class="nav-number">6.</span> <span class="nav-text">各种刷新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用node-js模拟演示"><span class="nav-number">7.</span> <span class="nav-text">使用node.js模拟演示</span></a></li></ol></div>
             
 
           </div>

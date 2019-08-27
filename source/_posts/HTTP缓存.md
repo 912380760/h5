@@ -36,7 +36,7 @@ tags: http
 Expires的值为服务端返回的到期时间,即下一次请求时,请求时间小于服务端返回的到期时间,直接使用缓存数据.
 不过Expires是HTTP 1.0的东西,另一个问题是到期时间由服务端生成,但是客户端时间和服务端时间有误差,可能导致存储命中误差.所以现在一般使用[Cache-Control](#Cache-Control).
 
-![avatar](/h5/images/snipaste.png.png)
+![avatar](/h5/images/snipaste.png)
 
 ## 各种刷新
 - 浏览器中输入地址,回车
@@ -45,3 +45,5 @@ Expires的值为服务端返回的到期时间,即下一次请求时,请求时�
 去服务器检验缓存是否过期,再使用服务器缓存策略
 - Ctrl + F5
 不缓存,所有请求都直接去服务器拿
+
+## 使用node.js模拟演示
