@@ -1,7 +1,7 @@
 ---
 title: React核心概念
 date: 2019-08-07 18:56:28
-tags:
+tags: react
 ---
 
 ## JSX

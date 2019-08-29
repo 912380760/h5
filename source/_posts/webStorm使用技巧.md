@@ -1,7 +1,7 @@
 ---
 title: webStorm使用技巧
 date: 2019-07-18 16:23:19
-tags: 编辑器
+tags: editor
 ---
 
 ## 安装
@@ -19,6 +19,7 @@ tags: 编辑器
 - 全局搜索替换 Ctrl + Shift + R
 - 全局搜索文件 Ctrl + Shift + N
 - 代码检查设置 Ctrl + Shift + Alt + H
+- 跳转到指定行 Ctrl + G(输入行数)
 - 控制台 Ctrl + F12
 - 重命名文件 Shift + F6
 - 打开当前文件 右键 -> Show in Explorer
