@@ -81,5 +81,44 @@ const testText = encrypto(text); // "60q60q60"
 decrypto(testText); // "aaa"
 ```
 
+```js
+function GRLC (newC, MB, JX) {
+	var HL = 7.2;
+	var GZ = 22000 + 25000 / HL + 13000 / HL + 5000 / HL;
+	var HX = (30000 + 20000 + 3000) / HL;
+	var SY = GZ - HX + JX;
+	console.log(SY)
+	var SUM = newC;
+	for(var i=5;i<1000;i++) {
+		SUM += SY;
+		if (i % 12 === 0) {
+			SUM += SY * 0.5;
+		}
+		SUM *= 1.01;
+
+		if (SUM >= MB) {
+			console.log(i-5, SUM);
+			return i - 5;
+		} else {
+		    if (SUM * 1.01 >= MB) {
+		        console.log(i-5, SUM);
+		        return i -5;
+		    }
+		}
+	}
+}
+GRLC(165000, 1000000, 0);
+GRLC(165000, 1000000, 1000);
+GRLC(165000, 1000000, 2000);
+GRLC(165000, 1000000, 3000);
+GRLC(165000, 1000000, 4000);
+GRLC(165000, 1000000, 5000);
+GRLC(165000, 1000000, 6000);
+GRLC(165000, 1000000, 7000);
+GRLC(165000, 1000000, 8000);
+GRLC(165000, 1000000, 9000);
+GRLC(165000, 1000000, 10000);
+```
+
 ## 参考资料
 [js加密解密的方法](https://github.com/chenshenhai/blog/issues/21)
