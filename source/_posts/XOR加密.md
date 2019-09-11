@@ -85,25 +85,24 @@ decrypto(testText); // "aaa"
 function GRLC (newC, MB, JX) {
 	var HL = 7.2;
 	var GZ = 22000 + 25000 / HL + 13000 / HL + 5000 / HL;
-	var HX = (30000 + 20000 + 3000) / HL;
+	var HX = (30000 + 20000 + 5000) / HL + 700;
 	var SY = GZ - HX + JX;
 	console.log(SY)
 	var SUM = newC;
 	for(var i=5;i<1000;i++) {
 		SUM += SY;
 		if (i % 12 === 0) {
-			SUM += SY * 0.5;
+			SUM += SY * 1.5;
+			SUM += SY * 6 / 22;
+			
+			SUM -= 30000;
+			SUM -= 10000;
 		}
 		SUM *= 1.01;
 
 		if (SUM >= MB) {
 			console.log(i-5, SUM);
 			return i - 5;
-		} else {
-		    if (SUM * 1.01 >= MB) {
-		        console.log(i-5, SUM);
-		        return i -5;
-		    }
 		}
 	}
 }
