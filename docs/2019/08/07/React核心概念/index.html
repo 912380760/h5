@@ -4,95 +4,56 @@
 
 
 
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/h5/css/main.css?v=7.4.0">
 
 
+<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
-
-<link rel="stylesheet" href="/h5/css/main.css?v=7.2.0"/>
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/h5/',
     scheme: 'Muse',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta name="description" content="JSX JSX中用 {} 嵌入表达式 harmony12const name = &apos;Josh Perez&apos;;const element = &amp;lt;h1&amp;gt;Hello, &amp;#123;name&amp;#125;&amp;lt;/h1&amp;gt;;  JSX也是一个表达式可以在if语句和for循环的代码块中使用JSX,将JSX赋值给变量,把JSX当作参数传入,从函数中返回JSX harmony123456funct">
 <meta name="keywords" content="react">
@@ -102,24 +63,21 @@
 <meta property="og:site_name" content="note">
 <meta property="og:description" content="JSX JSX中用 {} 嵌入表达式 harmony12const name = &apos;Josh Perez&apos;;const element = &amp;lt;h1&amp;gt;Hello, &amp;#123;name&amp;#125;&amp;lt;/h1&amp;gt;;  JSX也是一个表达式可以在if语句和for循环的代码块中使用JSX,将JSX赋值给变量,把JSX当作参数传入,从函数中返回JSX harmony123456funct">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-27T02:57:10.412Z">
+<meta property="og:updated_time" content="2019-09-17T08:34:50.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React核心概念">
 <meta name="twitter:description" content="JSX JSX中用 {} 嵌入表达式 harmony12const name = &apos;Josh Perez&apos;;const element = &amp;lt;h1&amp;gt;Hello, &amp;#123;name&amp;#125;&amp;lt;/h1&amp;gt;;  JSX也是一个表达式可以在if语句和for循环的代码块中使用JSX,将JSX赋值给变量,把JSX当作参数传入,从函数中返回JSX harmony123456funct">
+  <link rel="canonical" href="https://912380760.github.io/2019/08/07/React核心概念/">
 
 
-
-
-
-  
-  
-  <link rel="canonical" href="https://912380760.github.io/2019/08/07/React核心概念/"/>
-
-
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -133,13 +91,8 @@
 
 
 
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -148,7 +101,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -165,29 +118,20 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/h5/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">note</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
   </div>
 
   <div class="site-nav-toggle">
@@ -200,130 +144,81 @@
 </div>
 
 
-
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
+        <li class="menu-item menu-item-home">
       
     
 
-    
-
-    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>Startseite</a>
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
+        <li class="menu-item menu-item-archives">
       
     
 
-    
-
-    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>Archiv</a>
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
     
 
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
-    
-
-  
-
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/07/React核心概念/"/>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/07/React核心概念/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang"/>
-      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
-      <meta itemprop="image" content="/h5/images/avatar.gif"/>
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="note"/>
+      <meta itemprop="name" content="note">
     </span>
-
-    
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">React核心概念
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">React核心概念
-
-              
-            
-          </h1>
-        
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
@@ -332,8 +227,6 @@
               <time title="Erstellt: 2019-08-07 18:56:28" itemprop="dateCreated datePublished" datetime="2019-08-07T18:56:28+08:00">2019-08-07</time>
             </span>
           
-
-          
             
 
             
@@ -341,36 +234,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-08-27 10:57:10" itemprop="dateModified" datetime="2019-08-27T10:57:10+08:00">2019-08-27</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -378,18 +251,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
         <h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><ul>
 <li><p>JSX中用 <strong>{}</strong> 嵌入表达式</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">'Josh Perez'</span>;</span><br><span class="line"><span class="keyword">const</span> element = &lt;h1&gt;Hello, &#123;name&#125;&lt;/h1&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">'Josh Perez'</span>;</span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>JSX也是一个表达式<br>可以在if语句和for循环的代码块中使用JSX,将JSX赋值给变量,把JSX当作参数传入,从函数中返回JSX</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGreeting</span>(<span class="params">user</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;formatName(user)&#125;!&lt;/h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, stranger.&lt;/h1&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGreeting</span>(<span class="params">user</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;formatName(user)&#125;!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, stranger.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>JSX特定属性<br>可以通过引号或大括号来赋值DOM属性值,同一个属性只能选择其中一种方式,JSX里的class变成<strong>className</strong>.</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过引号</span></span><br><span class="line"><span class="keyword">const</span> element = &lt;div tabIndex="0"&gt;&lt;/div&gt;;</span><br><span class="line"><span class="comment">// 通过大括号</span></span><br><span class="line"><span class="keyword">const</span> element2 = &lt;img src=&#123;avatarUrl&#125; /&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过引号</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">tabIndex</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line"><span class="comment">// 通过大括号</span></span><br><span class="line"><span class="keyword">const</span> element2 = <span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#123;avatarUrl&#125;</span> /&gt;</span>;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>JSX防注入攻击 React DOM在渲染所有输入内容前默认会进行转译,所有内容在渲染前都被转成字符串.</p>
 </li>
@@ -398,10 +268,10 @@
 <ul>
 <li>React会将以小写字母开头的组件视为原生DOM标签,大写字母开头的为自定义组件.</li>
 <li><p>函数组件和Class组件</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Class组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Welcome</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Class组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Welcome</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>渲染组件<br>React元素既可以是DOM标签,也可以是自定义的组件,当React元素为自定义组件时,它会将JSX所接受的属性转换为单个对象传递给组件,这个对象被称为”<strong>Props</strong>“.</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DOM元素</span></span><br><span class="line"><span class="keyword">const</span> element = &lt;div&gt;&lt;/div&gt;;</span><br><span class="line"><span class="comment">// 自定义组件</span></span><br><span class="line"><span class="keyword">const</span> element2 = &lt;Welcome name="Sara" /&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DOM元素</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line"><span class="comment">// 自定义组件</span></span><br><span class="line"><span class="keyword">const</span> element2 = <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span> /&gt;</span>;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>组件最外层只能有一标签</p>
 </li>
@@ -426,88 +296,66 @@
 <figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 传统HTML</span></span><br><span class="line">&lt;a href=<span class="string">"#"</span> onclick=<span class="string">"console.log('The link was clicked.'); return false"</span>&gt;</span><br><span class="line">  Click me</span><br><span class="line">&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ React</span></span><br><span class="line"><span class="regexp">function ActionLink() &#123;</span></span><br><span class="line"><span class="regexp">    function handleClick(e) &#123;</span></span><br><span class="line"><span class="regexp">        e.preventDefault();</span></span><br><span class="line"><span class="regexp">        console.log('The link was clicked.');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    </span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">        &lt;a href="#" onClick=&#123;handleClick&#125;&gt;</span></span><br><span class="line"><span class="regexp">            Click me</span></span><br><span class="line"><span class="regexp">        &lt;/</span>a&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>绑定this的三种方法</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过bind绑定</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 通过箭头函数</span></span><br><span class="line">    handleClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="comment">// 通过在事件内写箭头函数,需要显示的传递e(event合成事件)</span></span><br><span class="line">        &lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.handleClick(e)&#125;&gt;&lt;/button&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="comment">// 通过在事件内使用bind绑定</span></span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>)&#125;&gt;&lt;/button&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">- 向事件处理程序传递参数</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>jsx harmony</span><br><span class="line"><span class="comment">// 通过箭头函数</span></span><br><span class="line">&lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.deleteRow(id, e)&#125;&gt;Delete Row&lt;<span class="regexp">/button&gt;;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 通过bind, 事件对象e会被作为第二个参数隐形传递</span></span><br><span class="line"><span class="regexp">&lt;button onClick=&#123;this.deleteRow.bind(this, id)&#125;&gt;Delete Row&lt;/</span>button&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过bind绑定</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 通过箭头函数</span></span><br><span class="line">    handleClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="comment">// 通过在事件内写箭头函数,需要显示的传递e(event合成事件)</span></span><br><span class="line">        &lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.handleClick(e)&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="comment">// 通过在事件内使用bind绑定</span></span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>)&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">- 向事件处理程序传递参数</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>jsx harmony</span><br><span class="line"><span class="comment">// 通过箭头函数</span></span><br><span class="line">&lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.deleteRow(id, e)&#125;&gt;Delete Row&lt;<span class="regexp">/button&gt;;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 通过bind, 事件对象e会被作为第二个参数隐形传递</span></span><br><span class="line"><span class="regexp">&lt;button onClick=&#123;this.deleteRow.bind(this, id)&#125;&gt;Delete Row&lt;/</span>button&gt;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2>
-      
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
         
-          
-        
-        <div class="post-tags">
-          
-            <a href="/h5/tags/react/" rel="tag"># react</a>
-          
-        </div>
       
 
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
+      <footer class="post-footer">
+          
             
-              <a href="/h5/2019/07/18/webStorm使用技巧/" rel="next" title="webStorm使用技巧">
-                <i class="fa fa-chevron-left"></i> webStorm使用技巧
-              </a>
+          
+          <div class="post-tags">
+            
+              <a href="/h5/tags/react/" rel="tag"># react</a>
             
           </div>
+        
 
-          <span class="post-nav-divider"></span>
+        
 
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/h5/2019/08/14/HTTP缓存/" rel="prev" title="HTTP缓存">
-                HTTP缓存 <i class="fa fa-chevron-right"></i>
-              </a>
-            
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/h5/2019/07/18/webStorm使用技巧/" rel="next" title="webStorm使用技巧">
+                  <i class="fa fa-chevron-left"></i> webStorm使用技巧
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/h5/2019/08/14/HTTP缓存/" rel="prev" title="HTTP缓存">
+                  HTTP缓存 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
           </div>
-        </div>
-      
-
-      
-      
-    </footer>
+        
+      </footer>
+    
   </div>
   
   
   
   </article>
 
-
   </div>
 
 
           </div>
           
 
-  
-
-
-
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -518,122 +366,65 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
-
+        
+        
+        
+        
       
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
-          </li>
-        </ul>
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSX"><span class="nav-number">1.</span> <span class="nav-text">JSX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件-amp-Props"><span class="nav-number">2.</span> <span class="nav-text">组件&amp;Props</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#State-amp-生命周期"><span class="nav-number">3.</span> <span class="nav-text">State &amp; 生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#state"><span class="nav-number">3.1.</span> <span class="nav-text">state</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理"><span class="nav-number">4.</span> <span class="nav-text">事件处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件渲染"><span class="nav-number">5.</span> <span class="nav-text">条件渲染</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Lucien Huang</p>
-              <div class="site-description motion-element" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/h5/archives/">
-                
-                    <span class="site-state-item-count">13</span>
-                    <span class="site-state-item-name">Artikel</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">schlagwörter</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lucien Huang</p>
+  <div class="site-description" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/h5/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
       </div>
-
+    
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSX"><span class="nav-number">1.</span> <span class="nav-text">JSX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件-amp-Props"><span class="nav-number">2.</span> <span class="nav-text">组件&amp;Props</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#State-amp-生命周期"><span class="nav-number">3.</span> <span class="nav-text">State &amp; 生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#state"><span class="nav-number">3.1.</span> <span class="nav-text">state</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理"><span class="nav-number">4.</span> <span class="nav-text">事件处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件渲染"><span class="nav-number">5.</span> <span class="nav-text">条件渲染</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">schlagwörter</span>
+        
+      </div>
+    
+  </nav>
 
-      
+
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -644,27 +435,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
-
-  
-
-  
 </div>
-
-
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.7.1</div>
-
-
-
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
-
-
-
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
 
         
+
+
+
+
 
 
 
@@ -676,131 +456,41 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
 
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/h5/lib/jquery/index.js?v=3.4.1"></script>
-
-  
+  <script src="/h5/lib/anime.min.js?v=3.1.0"></script>
   <script src="/h5/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
   <script src="/h5/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/h5/js/utils.js?v=7.2.0"></script>
-
-  <script src="/h5/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/h5/js/schemes/muse.js?v=7.2.0"></script>
-
-
-
-  
-  <script src="/h5/js/scrollspy.js?v=7.2.0"></script>
-<script src="/h5/js/post-details.js?v=7.2.0"></script>
+<script src="/h5/js/utils.js?v=7.4.0"></script><script src="/h5/js/motion.js?v=7.4.0"></script>
+<script src="/h5/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/h5/js/next-boot.js?v=7.4.0"></script>
 
 
 
   
 
 
-  <script src="/h5/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-
-  
 
 
 
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
 
   
 

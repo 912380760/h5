@@ -4,95 +4,56 @@
 
 
 
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/h5/css/main.css?v=7.4.0">
 
 
+<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
-
-<link rel="stylesheet" href="/h5/css/main.css?v=7.2.0"/>
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/h5/',
     scheme: 'Muse',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta name="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
 <meta name="keywords" content="个人博客，前端学习，前端笔记">
@@ -105,20 +66,17 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="note">
 <meta name="twitter:description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+  <link rel="canonical" href="https://912380760.github.io/">
 
 
-
-
-
-  
-  
-  <link rel="canonical" href="https://912380760.github.io/"/>
-
-
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -132,13 +90,8 @@
 
 
 
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -147,7 +100,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -164,30 +117,20 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/h5/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">note</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
   </div>
 
   <div class="site-nav-toggle">
@@ -200,132 +143,220 @@
 </div>
 
 
-
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
+        <li class="menu-item menu-item-home">
       
     
 
-    
-
-    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>Startseite</a>
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
+        <li class="menu-item menu-item-archives">
       
     
 
-    
-
-    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>Archiv</a>
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
     
 
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/27/移动端优化/"/>
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/09/06/Git常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang"/>
-      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
-      <meta itemprop="image" content="/h5/images/avatar.gif"/>
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="note"/>
+      <meta itemprop="name" content="note">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/h5/2019/08/27/移动端优化/" class="post-title-link" itemprop="url">移动端优化</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/h5/2019/09/06/Git常用命令/" class="post-title-link" itemprop="url">Git常用命令</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                
               
+
+              <time title="Erstellt: 2019-09-06 16:26:19" itemprop="dateCreated datePublished" datetime="2019-09-06T16:26:19+08:00">2019-09-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-19 18:45:36" itemprop="dateModified" datetime="2019-09-19T18:45:36+08:00">2019-09-19</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Git-基本概念"><a href="#Git-基本概念" class="headerlink" title="Git 基本概念"></a>Git 基本概念</h2><ul>
+<li>分支<br><strong>本地分支</strong>(工作分支/开发分支)<br><strong>远程分支</strong><br><strong>HEAD</strong> 指向现在使用中的分支的最后一次更新</li>
+<li>文件状态<br>未纳入版本控制<br>已纳入版本控制 git add<br>冲突文件</li>
+<li>存储<br><strong>工作区</strong> (还未纳入版本控制)<br><strong>暂存区</strong> git add后的区域<br><strong>仓库区</strong> git commit后但并未 push 的区域<br><strong>贮藏区</strong> (stash) 临时保存文件修改的区域</li>
+</ul>
+<h2 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h2><p>用于将变化的文件从工作区提交到暂存区,可以使用<strong>git status</strong>命令查看目前的暂存区放置了哪些文件.</p>
+<ul>
+<li><strong> git add &lt;file> </strong> 将指定文件放入暂存区</li>
+<li><strong> git add &lt;directory> </strong> 将指定目录下所有的变化放入暂存区</li>
+<li><strong>git add .</strong> 将当前目录所有变化的文件放入暂存区<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3></li>
+<li><p><strong>-f</strong> 强制添加某个文件,不管 <strong>.gitignore</strong> 是否包含这个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add -f &lt;fileName&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>-u</strong> 参数表示只添加暂存区已有的文件(包括删除操作),但不添加新增的文件</p>
+</li>
+<li><strong>-A | –all</strong> 参数表示追踪所有操作</li>
+<li><strong>-p</strong> 进入交互模式,指定哪些修改需要添加到暂存区,即使是同一个文件,也可以只提交部分改动.</li>
+</ul>
+<h2 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h2><p>将暂存区中的变化提交到仓库区  </p>
+<ul>
+<li><p><strong>-m</strong> 用于指定commit信息,是必须的,如果省略 <strong>-m</strong> 参数,<strong>git commit</strong> 会自动打开文本编辑器,要求输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 跳过 git add 暂存区,直接将指定文件从工作区提交到仓库区 </span><br><span class="line">git commit &lt;filename&gt; -m &apos;message&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>-am</strong> 将所有修改和删除的文件添加进暂存区(不包括新增文件),指定commit信息后推送到仓库区</p>
+</li>
+<li><p><strong>–amend</strong> 修改最近一次的提交信息 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend -m &quot;New commit message&quot;**</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://www.zhihu.com/question/19946553/answer/29033220" target="_blank" rel="noopener">为什么要先 git add 才能 git commit ？</a></p>
+</li>
+</ul>
+<h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h2><h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2><h2 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h2><p>分支操作命令,需要特别注意,<strong>git branch</strong>操作的都是当前分支<br><strong>git branch</strong> 列出所有本地分支<br><strong>git branch <new branch=""></new></strong> 新建分支,clone当前分支内容到新分支,与 <strong>git checkout -b</strong>的区别是并不会切换到新分支</p>
+<h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3><ul>
+<li><strong>-a</strong> 列出所有本地分支和远程分支</li>
+<li><p><strong>-d | -D</strong> 删除本地分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#删除本地分支,前提是该分支没有为合并的变动</span><br><span class="line">git branch -d &lt;branchName&gt;</span><br><span class="line"></span><br><span class="line">#强制删除本地分支,不管有没有未合并变化</span><br><span class="line">git branch -D &lt;branchName&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>-m</strong> 重命名本地分支(远程分支)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 为当前分支重命名</span><br><span class="line">git branch -m &lt;branchName&gt;</span><br><span class="line"></span><br><span class="line"># 为指定分支重命名</span><br><span class="line">git branch -m &lt;new branchName&gt; &lt;old branchName&gt;</span><br><span class="line"></span><br><span class="line"># 为远程分支重命名,其实就是先删除远程分支，然后重命名本地分支，再重新提交一个远程分支。</span><br><span class="line">git checkout &lt;old branchName&gt; #切换到远程分支</span><br><span class="line">git pull #拉去最新的分支内容</span><br><span class="line">git branch -m &lt;new branchName&gt; &lt;old branchName&gt; #修改本地分支名称</span><br><span class="line">git push origin &lt;old branchName&gt; ## 删除远程分支</span><br><span class="line">git push origin &lt;new branchName&gt; ## 推送当前分支到远端</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout"></a>git checkout</h2><p>用于切换分支和恢复文件<br><strong>checkout</strong> 分支时需要将当前改动 <strong>commit</strong> 或者 <strong>stash</strong> 起来, 不然会有以下两个问题:<br>如果已纳入版本控制的文件有改动将无法切换,<br>未纳入版控的文件将随着 <strong>checkout</strong> 到新的分支</p>
+<ul>
+<li><strong>git checkout <branch></branch></strong> 切换本地分支</li>
+<li><strong>git checkout <commitid></commitid></strong> 切换到指定快照(commit),在快照上修改无法提交到此快照上,提交需要 <strong>git checkout <new branch=""></new></strong> 把快照切换到新分支.</li>
+<li><strong>git checkout tags/1.1.4</strong> 切换到某个tags<h3 id="参数-2"><a href="#参数-2" class="headerlink" title="参数"></a>参数</h3></li>
+<li><strong>-b | -B</strong> 创建新分支,clone当前分支内容,切换到该分支(保留分支的提交记录) <strong>git checkout -b <new branch=""></new></strong><br>如果存在同名分支 -b 会提示错误,-B 会强制创建新分支,并且会覆盖原来存在的同名分支</li>
+<li><p><strong>–orphan</strong>  将当前内容切换到新分支,当前分支会是一个全新的分支没有任何提交记录(和-b|-B的区别)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan &lt;new_branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>–merge</strong> 将当前分支工作区的修改内容(修改并没有commit的内容)合并到切换的分支下  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#需要注意的问题</span><br><span class="line">#1.合并可能产生冲突</span><br><span class="line">#2.切换到新分支后,前分支的修改内容会消失</span><br><span class="line">git checkout --merge &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>-- 用于恢复文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 放弃工作区对该文件的修改</span><br><span class="line">git checkout -- &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"># 指定从某个commit 恢复指定文件</span><br><span class="line">git checkout &lt;commitID&gt;~ -- &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>-p</strong> 进入交互模式,只恢复部分变化</p>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/27/移动端优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/08/27/移动端优化/" class="post-title-link" itemprop="url">移动端优化</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
@@ -334,31 +365,23 @@
               <time title="Erstellt: 2019-08-27 11:10:51" itemprop="dateCreated datePublished" datetime="2019-08-27T11:10:51+08:00">2019-08-27</time>
             </span>
           
-
-          
-
-          
-
-          
             
+
             
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -366,144 +389,79 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            
           
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/27/Markdown基本语法/"/>
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/27/Markdown基本语法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang"/>
-      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
-      <meta itemprop="image" content="/h5/images/avatar.gif"/>
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="note"/>
+      <meta itemprop="name" content="note">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/h5/2019/08/27/Markdown基本语法/" class="post-title-link" itemprop="url">Markdown基本语法</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/h5/2019/08/27/Markdown基本语法/" class="post-title-link" itemprop="url">Markdown基本语法</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
               
 
-              <time title="Erstellt: 2019-08-27 10:47:28 / Geändert am: 10:55:56" itemprop="dateCreated datePublished" datetime="2019-08-27T10:47:28+08:00">2019-08-27</time>
+              <time title="Erstellt: 2019-08-27 10:47:28" itemprop="dateCreated datePublished" datetime="2019-08-27T10:47:28+08:00">2019-08-27</time>
             </span>
           
-
-          
             
 
             
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
             
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -511,12 +469,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>两种形式：<br>1）使用<code>=</code>和<code>-</code>标记一级和二级标题。</p>
+          <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>两种形式：<br>1）使用<code>=</code>和<code>-</code>标记一级和二级标题。</p>
 <blockquote>
 <p>一级标题<br><code>=========</code><br>二级标题<br><code>---------</code></p>
 </blockquote>
@@ -615,101 +568,53 @@
 <p><strong>注意</strong>：不同的Markdown解释器或工具对相应语法（扩展语法）的解释效果不尽相同，具体可参见工具的使用说明。</p>
 <hr>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/14/HTTP缓存/"/>
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/14/HTTP缓存/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang"/>
-      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
-      <meta itemprop="image" content="/h5/images/avatar.gif"/>
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="note"/>
+      <meta itemprop="name" content="note">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/h5/2019/08/14/HTTP缓存/" class="post-title-link" itemprop="url">HTTP缓存</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/h5/2019/08/14/HTTP缓存/" class="post-title-link" itemprop="url">HTTP缓存</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
@@ -718,8 +623,6 @@
               <time title="Erstellt: 2019-08-14 18:07:49" itemprop="dateCreated datePublished" datetime="2019-08-14T18:07:49+08:00">2019-08-14</time>
             </span>
           
-
-          
             
 
             
@@ -727,36 +630,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-08-27 10:31:49" itemprop="dateModified" datetime="2019-08-27T10:31:49+08:00">2019-08-27</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -764,12 +647,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><a href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久" class="headerlink" title="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"></a>浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</h2><h2 id="通过-ETag-验证令牌-If-None-Match"><a href="#通过-ETag-验证令牌-If-None-Match" class="headerlink" title="通过 ETag(验证令牌) / If-None-Match"></a>通过 ETag(验证令牌) / If-None-Match</h2><p>服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),<br>下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,<br>服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”.<br><img src="/h5/images/etag.png" alt="avatar"></p>
+          <h2 id="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><a href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久" class="headerlink" title="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"></a>浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</h2><h2 id="通过-ETag-验证令牌-If-None-Match"><a href="#通过-ETag-验证令牌-If-None-Match" class="headerlink" title="通过 ETag(验证令牌) / If-None-Match"></a>通过 ETag(验证令牌) / If-None-Match</h2><p>服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),<br>下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,<br>服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”.<br><img src="/h5/images/etag.png" alt="avatar"></p>
 <h2 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h2><ul>
 <li>no-cache<br>必须先与服务器确认响应是否发生变化,因此如果同时存在ETag,no-cache是可以缓存的</li>
 <li>no-store<br>直接禁止浏览器以及所有中间缓存存储任何版本的响应.</li>
@@ -789,101 +667,53 @@
 <li>Ctrl + F5<br>不缓存,所有请求都直接去服务器拿</li>
 </ul>
 <h2 id="使用node-js模拟演示"><a href="#使用node-js模拟演示" class="headerlink" title="使用node.js模拟演示"></a>使用node.js模拟演示</h2>
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/07/React核心概念/"/>
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/07/React核心概念/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang"/>
-      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
-      <meta itemprop="image" content="/h5/images/avatar.gif"/>
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="note"/>
+      <meta itemprop="name" content="note">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/h5/2019/08/07/React核心概念/" class="post-title-link" itemprop="url">React核心概念</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/h5/2019/08/07/React核心概念/" class="post-title-link" itemprop="url">React核心概念</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
@@ -892,8 +722,6 @@
               <time title="Erstellt: 2019-08-07 18:56:28" itemprop="dateCreated datePublished" datetime="2019-08-07T18:56:28+08:00">2019-08-07</time>
             </span>
           
-
-          
             
 
             
@@ -901,36 +729,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-08-27 10:57:10" itemprop="dateModified" datetime="2019-08-27T10:57:10+08:00">2019-08-27</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -938,20 +746,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><ul>
+          <h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><ul>
 <li><p>JSX中用 <strong>{}</strong> 嵌入表达式</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">'Josh Perez'</span>;</span><br><span class="line"><span class="keyword">const</span> element = &lt;h1&gt;Hello, &#123;name&#125;&lt;/h1&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">'Josh Perez'</span>;</span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>JSX也是一个表达式<br>可以在if语句和for循环的代码块中使用JSX,将JSX赋值给变量,把JSX当作参数传入,从函数中返回JSX</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGreeting</span>(<span class="params">user</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;formatName(user)&#125;!&lt;/h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, stranger.&lt;/h1&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGreeting</span>(<span class="params">user</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;formatName(user)&#125;!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, stranger.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>JSX特定属性<br>可以通过引号或大括号来赋值DOM属性值,同一个属性只能选择其中一种方式,JSX里的class变成<strong>className</strong>.</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过引号</span></span><br><span class="line"><span class="keyword">const</span> element = &lt;div tabIndex="0"&gt;&lt;/div&gt;;</span><br><span class="line"><span class="comment">// 通过大括号</span></span><br><span class="line"><span class="keyword">const</span> element2 = &lt;img src=&#123;avatarUrl&#125; /&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过引号</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">tabIndex</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line"><span class="comment">// 通过大括号</span></span><br><span class="line"><span class="keyword">const</span> element2 = <span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#123;avatarUrl&#125;</span> /&gt;</span>;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>JSX防注入攻击 React DOM在渲染所有输入内容前默认会进行转译,所有内容在渲染前都被转成字符串.</p>
 </li>
@@ -960,10 +763,10 @@
 <ul>
 <li>React会将以小写字母开头的组件视为原生DOM标签,大写字母开头的为自定义组件.</li>
 <li><p>函数组件和Class组件</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Class组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Welcome</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Class组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Welcome</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>渲染组件<br>React元素既可以是DOM标签,也可以是自定义的组件,当React元素为自定义组件时,它会将JSX所接受的属性转换为单个对象传递给组件,这个对象被称为”<strong>Props</strong>“.</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DOM元素</span></span><br><span class="line"><span class="keyword">const</span> element = &lt;div&gt;&lt;/div&gt;;</span><br><span class="line"><span class="comment">// 自定义组件</span></span><br><span class="line"><span class="keyword">const</span> element2 = &lt;Welcome name="Sara" /&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DOM元素</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line"><span class="comment">// 自定义组件</span></span><br><span class="line"><span class="keyword">const</span> element2 = <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span> /&gt;</span>;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>组件最外层只能有一标签</p>
 </li>
@@ -988,258 +791,29 @@
 <figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 传统HTML</span></span><br><span class="line">&lt;a href=<span class="string">"#"</span> onclick=<span class="string">"console.log('The link was clicked.'); return false"</span>&gt;</span><br><span class="line">  Click me</span><br><span class="line">&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ React</span></span><br><span class="line"><span class="regexp">function ActionLink() &#123;</span></span><br><span class="line"><span class="regexp">    function handleClick(e) &#123;</span></span><br><span class="line"><span class="regexp">        e.preventDefault();</span></span><br><span class="line"><span class="regexp">        console.log('The link was clicked.');</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    </span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">        &lt;a href="#" onClick=&#123;handleClick&#125;&gt;</span></span><br><span class="line"><span class="regexp">            Click me</span></span><br><span class="line"><span class="regexp">        &lt;/</span>a&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>绑定this的三种方法</p>
-<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过bind绑定</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 通过箭头函数</span></span><br><span class="line">    handleClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="comment">// 通过在事件内写箭头函数,需要显示的传递e(event合成事件)</span></span><br><span class="line">        &lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.handleClick(e)&#125;&gt;&lt;/button&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="comment">// 通过在事件内使用bind绑定</span></span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>)&#125;&gt;&lt;/button&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">- 向事件处理程序传递参数</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>jsx harmony</span><br><span class="line"><span class="comment">// 通过箭头函数</span></span><br><span class="line">&lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.deleteRow(id, e)&#125;&gt;Delete Row&lt;<span class="regexp">/button&gt;;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 通过bind, 事件对象e会被作为第二个参数隐形传递</span></span><br><span class="line"><span class="regexp">&lt;button onClick=&#123;this.deleteRow.bind(this, id)&#125;&gt;Delete Row&lt;/</span>button&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过bind绑定</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 通过箭头函数</span></span><br><span class="line">    handleClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="comment">// 通过在事件内写箭头函数,需要显示的传递e(event合成事件)</span></span><br><span class="line">        &lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.handleClick(e)&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="comment">// 通过在事件内使用bind绑定</span></span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>)&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">- 向事件处理程序传递参数</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>jsx harmony</span><br><span class="line"><span class="comment">// 通过箭头函数</span></span><br><span class="line">&lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.deleteRow(id, e)&#125;&gt;Delete Row&lt;<span class="regexp">/button&gt;;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 通过bind, 事件对象e会被作为第二个参数隐形传递</span></span><br><span class="line"><span class="regexp">&lt;button onClick=&#123;this.deleteRow.bind(this, id)&#125;&gt;Delete Row&lt;/</span>button&gt;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2>
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/18/webStorm使用技巧/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lucien Huang"/>
-      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。"/>
-      <meta itemprop="image" content="/h5/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="note"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/h5/2019/07/18/webStorm使用技巧/" class="post-title-link" itemprop="url">webStorm使用技巧</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2019-07-18 16:23:19" itemprop="dateCreated datePublished" datetime="2019-07-18T16:23:19+08:00">2019-07-18</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-08-29 18:39:33" itemprop="dateModified" datetime="2019-08-29T18:39:33+08:00">2019-08-29</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>建议从官网下载最新版本<a href="https://www.jetbrains.com/webstorm/download/#section=windows" target="_blank" rel="noopener">webStorm</a></p>
-<h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p>需要先注册Jetbrains账户,可以免费试用30天,30天后可以通过<a href="http://idea.lanyus.com/" target="_blank" rel="noopener">生成注册码</a>网站生成注册码(有效期至2020年3月11日).</p>
-<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul>
-<li>删除当前行 Ctrl + Y</li>
-<li>下方插入新行 Shift + Enter</li>
-<li>当前文件搜索 Ctrl + F</li>
-<li>当前文件搜索替换 Ctrl + R</li>
-<li>全局搜索 Ctrl + Shift + F</li>
-<li>全局搜索替换 Ctrl + Shift + R</li>
-<li>全局搜索文件 Ctrl + Shift + N</li>
-<li>代码检查设置 Ctrl + Shift + Alt + H</li>
-<li>跳转到指定行 Ctrl + G(输入行数)</li>
-<li>控制台 Ctrl + F12</li>
-<li>重命名文件 Shift + F6</li>
-<li>打开当前文件 右键 -&gt; Show in Explorer</li>
-<li>展开/关闭左侧项目 Alt + 1</li>
-<li>版本控制 Alt + 9</li>
-<li>git commit: Ctrl + K</li>
-<li>push到当前远程分支 Ctrl + Shift + K</li>
-<li>格式化文件 Ctrl + Alt + L</li>
-<li>格式化选定区域 Ctrl + Alt + I</li>
-<li>删除文件 Delete</li>
-</ul>
-<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><ul>
-<li>查看文件本地历史记录: VCS | Local History | Show History 左上角的返回标志是还原文件</li>
-<li>重构命名,WebStorm会自动重命名其所有引用和import语句: Ctrl + Shift + Alt + T -&gt; rename  -&gt; refactor</li>
-<li>webStrom安装插件 File | Settings | plugins </li>
-<li>webStrom修改主题 File | Settings | 搜索theme</li>
-<li>解决冲突: 随便右键一个文件选择Git -&gt; Resolve Conflicts… </li>
-<li>webStrom无法识别@符号跳转文件</li>
-</ul>
-<pre><code class="js"><span class="comment">// 如果是vue-cli 3以上隐藏别名配置的这种情况,在根目录添加alias.config.js文件,再指定webpack配置文件,文件内容如下</span>
-<span class="keyword">const</span> resolve = <span class="function"><span class="params">dir</span> =&gt;</span> <span class="built_in">require</span>(<span class="string">'path'</span>).join(__dirname, dir);
-
-<span class="built_in">module</span>.exports = {
-    resolve: {
-        alias: {
-            <span class="string">'@'</span>: resolve(<span class="string">'src'</span>)
-        }
-    }
-};
-
-<span class="comment">// 指定webpack配置文件</span>
-<span class="comment">// file -&gt; setting -&gt; 搜索webpack -&gt; webpack configuration file </span>
-<span class="comment">// 在这里输入webpack别名配置文件地址 例: D:\react-learn\vueinit\alias.config.js.</span>
-</code></pre>
-<h2 id="webStrom-插件推荐"><a href="#webStrom-插件推荐" class="headerlink" title="webStrom 插件推荐"></a>webStrom 插件推荐</h2><p>webStrom本身就已经集成大部分功能而且占用CPU较高不建议安装太多没必要的插件</p>
-<ul>
-<li>Atom OneDark Theme 个人最喜欢的主题,用完一改webstrom丑丑的外观</li>
-<li>codeGlance 右侧代码预览(如果没有显示,尝试使用Ctrl+Shift+G快捷键切换关闭开启)</li>
-</ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jetbrains.com/help/webstorm/2019.1/meet-webstorm.html" target="_blank" rel="noopener">Meet WebStorm - Help | WebStorm</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
   <nav class="pagination">
@@ -1247,12 +821,10 @@
   </nav>
 
 
-
           </div>
           
 
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -1263,96 +835,58 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Lucien Huang</p>
-              <div class="site-description motion-element" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/h5/archives/">
-                
-                    <span class="site-state-item-count">13</span>
-                    <span class="site-state-item-name">Artikel</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">schlagwörter</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lucien Huang</p>
+  <div class="site-description" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/h5/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">schlagwörter</span>
+        
+      </div>
+    
+  </nav>
 
-      
+
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -1363,27 +897,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
-
-  
-
-  
 </div>
-
-
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.7.1</div>
-
-
-
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
-
-
-
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
 
         
+
+
+
+
 
 
 
@@ -1395,96 +918,17 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
 
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/h5/lib/jquery/index.js?v=3.4.1"></script>
-
-  
+  <script src="/h5/lib/anime.min.js?v=3.1.0"></script>
   <script src="/h5/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
   <script src="/h5/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/h5/js/utils.js?v=7.2.0"></script>
-
-  <script src="/h5/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/h5/js/schemes/muse.js?v=7.2.0"></script>
-
-
-
-  
-
-  
-
-
-  <script src="/h5/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
+<script src="/h5/js/utils.js?v=7.4.0"></script><script src="/h5/js/motion.js?v=7.4.0"></script>
+<script src="/h5/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/h5/js/next-boot.js?v=7.4.0"></script>
 
 
 
@@ -1493,27 +937,22 @@
 
 
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
 
   
 
