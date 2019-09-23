@@ -8,7 +8,16 @@ tags: editor
 建议从官网下载最新版本[webStorm](https://www.jetbrains.com/webstorm/download/#section=windows)
 
 ## 注册
-需要先注册Jetbrains账户,可以免费试用30天,30天后可以通过[生成注册码](http://idea.lanyus.com/)网站生成注册码(有效期至2020年3月11日).
+修改hosts文件,用自带的文本编辑器可能无法保存host文件,建议用notePad++打开
+```
+# windows下的位置
+C:\Windows\System32\drivers\etc
+
+# 将下面代码放在最后一行
+0.0.0.0 account.jetbrains.com
+
+# 网上随意找一个激活码就可以激活了
+```
 
 ## 常用快捷键
 - 删除当前行 Ctrl + Y
@@ -36,9 +45,10 @@ tags: editor
 - 重构命名,WebStorm会自动重命名其所有引用和import语句: Ctrl + Shift + Alt + T -> rename  -> refactor
 - webStrom安装插件 File | Settings | plugins 
 - webStrom修改主题 File | Settings | 搜索theme
-- 解决冲突: 随便右键一个文件选择Git -> Resolve Conflicts... 
+- 解决冲突: 随便右键一个文件选择Git -> Resolve Conflicts...  左边是合并分支,右边是当前分支,中间是修改后的代码.
+- 逐行查看文件更改记录 右键文件打断点的行数位置 选择annotate
+- 查看版本提交记录和修改 Ctrl + F12(打开控制台) -> Version Control -> log
 - webStrom无法识别@符号跳转文件
-
 ```js
 // 如果是vue-cli 3以上隐藏别名配置的这种情况,在根目录添加alias.config.js文件,再指定webpack配置文件,文件内容如下
 const resolve = dir => require('path').join(__dirname, dir);
