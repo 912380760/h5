@@ -7,7 +7,7 @@ tags: Git
 ## Git 基本概念
 - 分支
 **本地分支**(工作分支/开发分支)
-**远程分支**  
+**远端分支**  
 **HEAD** 当前分支引用的指针（上一次提交的快照，下一次提交的父结点）
 - 文件状态
 未纳入版本控制  
@@ -48,13 +48,34 @@ git commit --amend -m "New commit message"**
 - [为什么要先 git add 才能 git commit ？](https://www.zhihu.com/question/19946553/answer/29033220)
 
 ## git reset
+将HEAD引用指向给定提交
+- **--mixed** git reset默认模式，将修改的代码添加入工作区
+- **--soft** 将修改的代码加入暂存区（add后还未commit）
+- **--hard** 将修改的代码丢弃
+```
+#撤销commit修改，存储代码
+git reset <HEAD> #回退到指定commit
+git stash #存储代码
+
+#回退已push到远程分支的代码，并舍弃修改
+git reset --hard <HEAD> #回退到指定提交，丢弃修改
+git push -f origin <branchName> #强制将远端分支的HEAD指向本地分支 （有很大的风险，push到远程分支后，HEAD后commit会在远程分支上会消失）
+```
 
 ## git push
+将代码推送到远端分支
+- **git push** 将当前分支推送到默认的master分支
+- **git push origin <branchName>** 将当前分支推送到指定的远端分支
+### 参数
+- **--delete** 删除指定的远程分支
+```
+git push origin --delete <branchName>
+```
 
 ## git branch 
 分支操作命令,需要特别注意,**git branch**操作的都是当前分支
 **git branch** 列出所有本地分支
-**git branch <new branch>** 新建分支,clone当前分支内容到新分支,与 **git checkout -b**的区别是并不会切换到新分支
+**git branch <new branch>** 新建分支,clone当前分支内容到新分支,与 **git checkout -b** 的区别是并不会切换到新分支
 ### 参数
 - **-a** 列出所有本地分支和远程分支
 - **-d | -D** 删除本地分支
@@ -113,7 +134,11 @@ git checkout <commitID>~ -- <filename>
 ```
 - **-p** 进入交互模式,只恢复部分变化
 
+## git stash
+将工作区和暂存区的修改添加到储藏区
+- **git stash** 将工作区和暂存区的修改添加到储藏区，已经commit到仓库区的代码并不会被储藏
+- **git stash list** 查看现有的储藏列表
+- **git stash apply <stashName>** 应用储藏, 不指定stashName会应用最近的储藏
 
-
-
-
+## git merge
+将指定分支与当前分支合并（注意这里的合并是相反的，还有需要注意的是需要合并远程分支而不是本地分支）
