@@ -8,10 +8,10 @@ tags: Git
 - 分支
 **本地分支**(工作分支/开发分支)
 **远程分支**  
-**HEAD** 指向现在使用中的分支的最后一次更新
+**HEAD** 当前分支引用的指针（上一次提交的快照，下一次提交的父结点）
 - 文件状态
 未纳入版本控制  
-已纳入版本控制 git add  
+已纳入版本控制
 冲突文件
 - 存储
 **工作区** (还未纳入版本控制)
@@ -77,8 +77,8 @@ git branch -m <new branchName> <old branchName>
 git checkout <old branchName> #切换到远程分支
 git pull #拉去最新的分支内容
 git branch -m <new branchName> <old branchName> #修改本地分支名称
-git push origin <old branchName> ## 删除远程分支
-git push origin <new branchName> ## 推送当前分支到远端
+git push origin --delete <old branchName> #删除远程分支
+git push origin <new branchName> #推送当前分支到远端
 ```
 
 ## git checkout
@@ -108,7 +108,7 @@ git checkout --merge <branch>
 # 放弃工作区对该文件的修改
 git checkout -- <filename>
 
-# 指定从某个commit 恢复指定文件
+# 指定从某个commit恢复指定文件
 git checkout <commitID>~ -- <filename>
 ```
 - **-p** 进入交互模式,只恢复部分变化
