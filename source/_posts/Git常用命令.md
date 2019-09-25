@@ -30,7 +30,7 @@ tags: Git
  git add -f <fileName>
  ```
 - **-u** 参数表示只添加暂存区已有的文件(包括删除操作),但不添加新增的文件
-- **-A | --all** 参数表示追踪所有操作
+- **-A | -\-all** 参数表示追踪所有操作
 - **-p** 进入交互模式,指定哪些修改需要添加到暂存区,即使是同一个文件,也可以只提交部分改动.
 
 ## git commit 
@@ -41,7 +41,7 @@ tags: Git
 git commit <filename> -m 'message'
 ```
 - **-am** 将所有修改和删除的文件添加进暂存区(不包括新增文件),指定commit信息后推送到仓库区
-- **--amend** 修改最近一次的提交信息 
+- **-\-amend** 修改最近一次的提交信息 
 ```
 git commit --amend -m "New commit message"**
 ```
@@ -49,9 +49,9 @@ git commit --amend -m "New commit message"**
 
 ## git reset
 将HEAD引用指向给定提交
-- **--mixed** git reset默认模式，将修改的代码添加入工作区
-- **--soft** 将修改的代码加入暂存区（add后还未commit）
-- **--hard** 将修改的代码丢弃
+- **-\-mixed** git reset默认模式，将修改的代码添加入工作区
+- **-\-soft** 将修改的代码加入暂存区（add后还未commit）
+- **-\-hard** 将修改的代码丢弃
 ```
 #撤销commit修改，存储代码
 git reset <HEAD> #回退到指定commit
@@ -67,7 +67,7 @@ git push -f origin <branchName> #强制将远端分支的HEAD指向本地分支 
 - **git push** 将当前分支推送到默认的master分支
 - **git push origin <branchName>** 将当前分支推送到指定的远端分支
 ### 参数
-- **--delete** 删除指定的远程分支
+- **-\-delete** 删除指定的远程分支
 ```
 git push origin --delete <branchName>
 ```
@@ -113,11 +113,11 @@ git push origin <new branchName> #推送当前分支到远端
 ### 参数
 - **-b | -B** 创建新分支,clone当前分支内容,切换到该分支(保留分支的提交记录) **git checkout -b <new branch>**     
 如果存在同名分支 -b 会提示错误,-B 会强制创建新分支,并且会覆盖原来存在的同名分支
-- **--orphan**  将当前内容切换到新分支,当前分支会是一个全新的分支没有任何提交记录(和-b|-B的区别)
+- **-\-orphan**  将当前内容切换到新分支,当前分支会是一个全新的分支没有任何提交记录(和-b|-B的区别)
 ```
 git checkout --orphan <new_branch>
 ```
-- **--merge** 将当前分支工作区的修改内容(修改并没有commit的内容)合并到切换的分支下  
+- **-\-merge** 将当前分支工作区的修改内容(修改并没有commit的内容)合并到切换的分支下  
 ```
 #需要注意的问题
 #1.合并可能产生冲突
