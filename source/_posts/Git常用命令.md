@@ -65,7 +65,7 @@ git push -f origin <branchName> #强制将远端分支的HEAD指向本地分支 
 ## git push
 将代码推送到远端分支
 - **git push** 将当前分支推送到默认的master分支
-- **git push origin <branchName>** 将当前分支推送到指定的远端分支
+- **git push origin <branchName\>** 将当前分支推送到指定的远端分支
 ### 参数
 - **-\-delete** 删除指定的远程分支
 ```
@@ -75,7 +75,7 @@ git push origin --delete <branchName>
 ## git branch 
 分支操作命令,需要特别注意,**git branch**操作的都是当前分支
 **git branch** 列出所有本地分支
-**git branch <new branch>** 新建分支,clone当前分支内容到新分支,与 **git checkout -b** 的区别是并不会切换到新分支
+**git branch <newBranch\>** 新建分支,clone当前分支内容到新分支,与 **git checkout -b** 的区别是并不会切换到新分支
 ### 参数
 - **-a** 列出所有本地分支和远程分支
 - **-d | -D** 删除本地分支
@@ -107,8 +107,8 @@ git push origin <new branchName> #推送当前分支到远端
 **checkout** 分支时需要将当前改动 **commit** 或者 **stash** 起来, 不然会有以下两个问题:  
 如果已纳入版本控制的文件有改动将无法切换,  
 未纳入版控的文件将随着 **checkout** 到新的分支
-- **git checkout <branch>** 切换本地分支
-- **git checkout <commitID>** 切换到指定快照(commit),在快照上修改无法提交到此快照上,提交需要 **git checkout <new branch>** 把快照切换到新分支.
+- **git checkout <branch\>** 切换本地分支
+- **git checkout <commitID\>** 切换到指定快照(commit),在快照上修改无法提交到此快照上,提交需要 **git checkout <new branch>** 把快照切换到新分支.
 - **git checkout tags/1.1.4** 切换到某个tags
 ### 参数
 - **-b | -B** 创建新分支,clone当前分支内容,切换到该分支(保留分支的提交记录) **git checkout -b <new branch>**     
@@ -138,7 +138,7 @@ git checkout <commitID>~ -- <filename>
 将工作区和暂存区的修改添加到储藏区
 - **git stash** 将工作区和暂存区的修改添加到储藏区，已经commit到仓库区的代码并不会被储藏
 - **git stash list** 查看现有的储藏列表
-- **git stash apply <stashName>** 应用储藏, 不指定stashName会应用最近的储藏
+- **git stash apply <stashName\>** 应用储藏, 不指定stashName会应用最近的储藏
 
 ## git merge
 将指定分支与当前分支合并（注意这里的合并是相反的，还有需要注意的是需要合并远程分支而不是本地分支）

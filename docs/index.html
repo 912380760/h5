@@ -47,9 +47,9 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'Kopieren',
-      copy_success: 'Kopiert',
-      copy_failure: 'Kopieren fehlgeschlagen'
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
     },
     sidebarPadding: 40
   };
@@ -134,7 +134,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -154,7 +154,7 @@
       
     
 
-    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
       
@@ -165,7 +165,7 @@
       
     
 
-    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
   </ul>
@@ -217,13 +217,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               
                 
               
 
-              <time title="Erstellt: 2019-09-06 16:26:19" itemprop="dateCreated datePublished" datetime="2019-09-06T16:26:19+08:00">2019-09-06</time>
+              <time title="Created: 2019-09-06 16:26:19" itemprop="dateCreated datePublished" datetime="2019-09-06T16:26:19+08:00">2019-09-06</time>
             </span>
           
             
@@ -233,8 +233,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2019-09-25 10:19:01" itemprop="dateModified" datetime="2019-09-25T10:19:01+08:00">2019-09-25</time>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-25 10:26:14" itemprop="dateModified" datetime="2019-09-25T10:26:14+08:00">2019-09-25</time>
               </span>
             
           
@@ -291,11 +291,11 @@
 <h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2><p>将代码推送到远端分支</p>
 <ul>
 <li><strong>git push</strong> 将当前分支推送到默认的master分支</li>
-<li><strong>git push origin <branchname></branchname></strong> 将当前分支推送到指定的远端分支<h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3></li>
+<li><strong>git push origin &lt;branchName></strong> 将当前分支推送到指定的远端分支<h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3></li>
 <li><strong>--delete</strong> 删除指定的远程分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete &lt;branchName&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h2><p>分支操作命令,需要特别注意,<strong>git branch</strong>操作的都是当前分支<br><strong>git branch</strong> 列出所有本地分支<br><strong>git branch <new branch=""></new></strong> 新建分支,clone当前分支内容到新分支,与 <strong>git checkout -b</strong> 的区别是并不会切换到新分支</p>
+<h2 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h2><p>分支操作命令,需要特别注意,<strong>git branch</strong>操作的都是当前分支<br><strong>git branch</strong> 列出所有本地分支<br><strong>git branch &lt;newBranch></strong> 新建分支,clone当前分支内容到新分支,与 <strong>git checkout -b</strong> 的区别是并不会切换到新分支</p>
 <h3 id="参数-2"><a href="#参数-2" class="headerlink" title="参数"></a>参数</h3><ul>
 <li><strong>-a</strong> 列出所有本地分支和远程分支</li>
 <li><p><strong>-d | -D</strong> 删除本地分支</p>
@@ -307,8 +307,8 @@
 </ul>
 <h2 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout"></a>git checkout</h2><p>用于切换分支和恢复文件<br><strong>checkout</strong> 分支时需要将当前改动 <strong>commit</strong> 或者 <strong>stash</strong> 起来, 不然会有以下两个问题:<br>如果已纳入版本控制的文件有改动将无法切换,<br>未纳入版控的文件将随着 <strong>checkout</strong> 到新的分支</p>
 <ul>
-<li><strong>git checkout <branch></branch></strong> 切换本地分支</li>
-<li><strong>git checkout <commitid></commitid></strong> 切换到指定快照(commit),在快照上修改无法提交到此快照上,提交需要 <strong>git checkout <new branch=""></new></strong> 把快照切换到新分支.</li>
+<li><strong>git checkout &lt;branch></strong> 切换本地分支</li>
+<li><strong>git checkout &lt;commitID></strong> 切换到指定快照(commit),在快照上修改无法提交到此快照上,提交需要 <strong>git checkout <new branch=""></new></strong> 把快照切换到新分支.</li>
 <li><strong>git checkout tags/1.1.4</strong> 切换到某个tags<h3 id="参数-3"><a href="#参数-3" class="headerlink" title="参数"></a>参数</h3></li>
 <li><strong>-b | -B</strong> 创建新分支,clone当前分支内容,切换到该分支(保留分支的提交记录) <strong>git checkout -b <new branch=""></new></strong><br>如果存在同名分支 -b 会提示错误,-B 会强制创建新分支,并且会覆盖原来存在的同名分支</li>
 <li><p><strong>--orphan</strong>  将当前内容切换到新分支,当前分支会是一个全新的分支没有任何提交记录(和-b|-B的区别)</p>
@@ -327,7 +327,7 @@
 <ul>
 <li><strong>git stash</strong> 将工作区和暂存区的修改添加到储藏区，已经commit到仓库区的代码并不会被储藏</li>
 <li><strong>git stash list</strong> 查看现有的储藏列表</li>
-<li><strong>git stash apply <stashname></stashname></strong> 应用储藏, 不指定stashName会应用最近的储藏</li>
+<li><strong>git stash apply &lt;stashName></strong> 应用储藏, 不指定stashName会应用最近的储藏</li>
 </ul>
 <h2 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h2><p>将指定分支与当前分支合并（注意这里的合并是相反的，还有需要注意的是需要合并远程分支而不是本地分支）</p>
 
@@ -377,13 +377,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               
                 
               
 
-              <time title="Erstellt: 2019-08-27 11:10:51" itemprop="dateCreated datePublished" datetime="2019-08-27T11:10:51+08:00">2019-08-27</time>
+              <time title="Created: 2019-08-27 11:10:51" itemprop="dateCreated datePublished" datetime="2019-08-27T11:10:51+08:00">2019-08-27</time>
             </span>
           
             
@@ -393,8 +393,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
@@ -457,13 +457,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               
                 
               
 
-              <time title="Erstellt: 2019-08-27 10:47:28" itemprop="dateCreated datePublished" datetime="2019-08-27T10:47:28+08:00">2019-08-27</time>
+              <time title="Created: 2019-08-27 10:47:28" itemprop="dateCreated datePublished" datetime="2019-08-27T10:47:28+08:00">2019-08-27</time>
             </span>
           
             
@@ -473,8 +473,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
@@ -635,13 +635,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               
                 
               
 
-              <time title="Erstellt: 2019-08-14 18:07:49" itemprop="dateCreated datePublished" datetime="2019-08-14T18:07:49+08:00">2019-08-14</time>
+              <time title="Created: 2019-08-14 18:07:49" itemprop="dateCreated datePublished" datetime="2019-08-14T18:07:49+08:00">2019-08-14</time>
             </span>
           
             
@@ -651,8 +651,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
@@ -734,13 +734,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               
                 
               
 
-              <time title="Erstellt: 2019-08-07 18:56:28" itemprop="dateCreated datePublished" datetime="2019-08-07T18:56:28+08:00">2019-08-07</time>
+              <time title="Created: 2019-08-07 18:56:28" itemprop="dateCreated datePublished" datetime="2019-08-07T18:56:28+08:00">2019-08-07</time>
             </span>
           
             
@@ -750,8 +750,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
@@ -838,7 +838,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/h5/page/2/">2</a><a class="page-number" href="/h5/page/3/">3</a><a class="extend next" rel="next" href="/h5/page/2/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/h5/page/2/">2</a><a class="page-number" href="/h5/page/3/">3</a><a class="extend next" rel="next" href="/h5/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -861,10 +861,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Inhaltsverzeichnis
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          Übersicht
+          Overview
         </li>
       </ul>
 
@@ -884,7 +884,7 @@
           <a href="/h5/archives/">
         
           <span class="site-state-item-count">14</span>
-          <span class="site-state-item-name">Artikel</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
     
@@ -893,7 +893,7 @@
       <div class="site-state-item site-state-tags">
         
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">schlagwörter</span>
+        <span class="site-state-item-name">tags</span>
         
       </div>
     
@@ -919,9 +919,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
 </div>
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
 
         
 
