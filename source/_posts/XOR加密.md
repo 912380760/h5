@@ -82,31 +82,57 @@ decrypto(testText); // "aaa"
 ```
 
 ```js
-function GRLC (newC, MB, JX) {
-	var HL = 7.2;
-	var GZ = 22000 + 25000 / HL + 13000 / HL + 5000 / HL;
-	var HX = (30000 + 20000 + 5000) / HL + 700;
-	var SY = GZ - HX + JX;
-	console.log(SY)
-	var SUM = newC;
-	for(var i=5;i<1000;i++) {
-		SUM += SY;
-		if (i % 12 === 0) {
-			SUM += SY * 1.5;
-			SUM += SY * 6 / 22;
-			
-			SUM -= 30000;
-			SUM -= 10000;
-		}
-		SUM *= 1.01;
+var ck = 150954;
+var gz = 22000;
+var mb = 1000000;
+function test(ck, gz, mb) {
+    var HL = 7.3;
+    var GZ = gz + 25000 / HL + 13000 / HL + 5000 / HL;
+    var HX = (3000 + 20000 + 5000) / HL + 1000;
+    var SY = GZ - HX;
+    
+    var SUM = ck;
+    
+    var nowDate = new Date();
+    var nowMonth = nowDate.getMonth();
+    var nowDay = nowDate.getDate();
+    
+    var monthSum;
+    
+    for (var i=nowMonth; i<1000; i++) {
+        SUM += SY;
+        if (i % 12 === 0) {
+            SUM += SY;
+            
+            SUM -= 30000;
+            SUM -= 10000;
+        }
+        SUM *= 1.01;
 
-		if (SUM >= MB) {
-			console.log(i-5, SUM);
-			return i - 5;
-		}
-	}
+        if (SUM >= mb) {
+            monthSum = i - 5;
+            
+            if (nowDay > 10) {
+                monthSum ++;
+            }
+            var nowDateCopy = new Date();
+            nowDateCopy.setMonth(monthSum + nowMonth);
+            nowDateCopy.setDate(10);
+            var day = (nowDateCopy - nowDate) / (1000 * 60 * 60 * 24);
+            console.log(day, nowDateCopy.toLocaleString(), monthSum);
+            return nowDateCopy;
+        }
+    }
 }
-GRLC(165000, 1000000, 0);
+var mbDate = test(ck, gz, mb);
+
+function test2(addCk, addGz) {
+    if (addCk) {
+        var sumMonth =  (mbDate - new Date()) / (1000 * 60 * 60 * 24) / (365/12);       
+    }
+}
+
+
 ```
 
 ## 参考资料
