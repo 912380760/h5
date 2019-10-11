@@ -18,6 +18,9 @@ tags: Git
 **暂存区** git add后的区域
 **仓库区** git commit后但并未 push 的区域  
 **贮藏区** (stash) 临时保存文件修改的区域
+- HEAD
+**HEAD^** 上一个commit的HEAD
+**HEAD~N** 上N个commit的HEAD
 
 ## git add
 用于将变化的文件从工作区提交到暂存区,可以使用**git status**命令查看目前的暂存区放置了哪些文件.
@@ -48,7 +51,7 @@ git commit --amend -m "New commit message"**
 - [为什么要先 git add 才能 git commit ？](https://www.zhihu.com/question/19946553/answer/29033220)
 
 ## git reset
-将HEAD引用指向给定提交
+将HEAD引用指向给定commit
 - **-\-mixed** git reset默认模式，将修改的代码添加入工作区
 - **-\-soft** 将修改的代码加入暂存区（add后还未commit）
 - **-\-hard** 将修改的代码丢弃
@@ -60,6 +63,16 @@ git stash #存储代码
 #回退已push到远程分支的代码，并舍弃修改
 git reset --hard <HEAD> #回退到指定提交，丢弃修改
 git push -f origin <branchName> #强制将远端分支的HEAD指向本地分支 （有很大的风险，push到远程分支后，HEAD后commit会在远程分支上会消失）
+```
+
+## git revert
+恢复某个commit的代码
+这个命令相当于手工回退某个commit的代码
+```
+## 输入后会进入一个交互界面让你确认更改内容和commit内容，一般:q退出就行了
+git revert [HEAD] 
+## 推送到远端仓库
+git push origin [branch]
 ```
 
 ## git push
@@ -117,7 +130,7 @@ git push origin <new branchName> #推送当前分支到远端
 ```
 git checkout --orphan <new_branch>
 ```
-- **-\-merge** 将当前分支工作区的修改内容(修改并没有commit的内容)合并到切换的分支下  
+- **-\-merge** 将当前分支工作区和暂存区的修改内容(修改并没有commit的内容)合并到切换的分支下  
 ```
 #需要注意的问题
 #1.合并可能产生冲突
