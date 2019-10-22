@@ -47,9 +47,9 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
     },
     sidebarPadding: 40
   };
@@ -134,7 +134,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -154,7 +154,7 @@
       
     
 
-    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
       
@@ -165,7 +165,7 @@
       
     
 
-    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
   </ul>
@@ -217,13 +217,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
               
 
-              <time title="Created: 2019-07-18 16:23:19" itemprop="dateCreated datePublished" datetime="2019-07-18T16:23:19+08:00">2019-07-18</time>
+              <time title="Erstellt: 2019-07-18 16:23:19" itemprop="dateCreated datePublished" datetime="2019-07-18T16:23:19+08:00">2019-07-18</time>
             </span>
           
             
@@ -233,8 +233,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-20 10:35:49" itemprop="dateModified" datetime="2019-09-20T10:35:49+08:00">2019-09-20</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-10-22 18:25:59" itemprop="dateModified" datetime="2019-10-22T18:25:59+08:00">2019-10-22</time>
               </span>
             
           
@@ -281,10 +281,9 @@
 <li>解决冲突: 随便右键一个文件选择Git -&gt; Resolve Conflicts…  左边是合并分支,右边是当前分支,中间是修改后的代码.</li>
 <li>逐行查看文件更改记录 右键文件打断点的行数位置 选择annotate</li>
 <li>查看版本提交记录和修改 Ctrl + F12(打开控制台) -&gt; Version Control -&gt; log</li>
-<li>webStrom无法识别@符号跳转文件<br><code>`</code>js<br>// 如果是vue-cli 3以上隐藏别名配置的这种情况,在根目录添加alias.config.js文件,再指定webpack配置文件,文件内容如下<br>const resolve = dir =&gt; require(‘path’).join(__dirname, dir);</li>
+<li>webStrom无法识别@符号跳转文件<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果是vue-cli 3以上隐藏别名配置的这种情况,在根目录添加alias.config.js文件,再指定webpack配置文件,文件内容如下</span></span><br><span class="line"><span class="keyword">const</span> resolve = <span class="function"><span class="params">dir</span> =&gt;</span> <span class="built_in">require</span>(<span class="string">'path'</span>).join(__dirname, dir);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    resolve: &#123;</span><br><span class="line">        alias: &#123;</span><br><span class="line">            <span class="string">'@'</span>: resolve(<span class="string">'src'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 指定webpack配置文件</span></span><br><span class="line"><span class="comment">// file -&gt; setting -&gt; 搜索webpack -&gt; webpack configuration file </span></span><br><span class="line"><span class="comment">// 在这里输入webpack别名配置文件地址 例: D:\react-learn\vueinit\alias.config.js.</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>module.exports = {<br>    resolve: {<br>        alias: {<br>            ‘@’: resolve(‘src’)<br>        }<br>    }<br>};</p>
-<p>// 指定webpack配置文件<br>// file -&gt; setting -&gt; 搜索webpack -&gt; webpack configuration file<br>// 在这里输入webpack别名配置文件地址 例: D:\react-learn\vueinit\alias.config.js.<br><code>`</code> </p>
 <h2 id="webStrom-插件推荐"><a href="#webStrom-插件推荐" class="headerlink" title="webStrom 插件推荐"></a>webStrom 插件推荐</h2><p>webStrom本身就已经集成大部分功能而且占用CPU较高不建议安装太多没必要的插件</p>
 <ul>
 <li>Atom OneDark Theme 个人最喜欢的主题,用完一改webstrom丑丑的外观</li>
@@ -338,13 +337,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
               
 
-              <time title="Created: 2019-07-17 15:59:50" itemprop="dateCreated datePublished" datetime="2019-07-17T15:59:50+08:00">2019-07-17</time>
+              <time title="Erstellt: 2019-07-17 15:59:50" itemprop="dateCreated datePublished" datetime="2019-07-17T15:59:50+08:00">2019-07-17</time>
             </span>
           
             
@@ -354,8 +353,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-19 14:46:26" itemprop="dateModified" datetime="2019-09-19T14:46:26+08:00">2019-09-19</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-10-07 18:05:33" itemprop="dateModified" datetime="2019-10-07T18:05:33+08:00">2019-10-07</time>
               </span>
             
           
@@ -372,7 +371,7 @@
 
       
           <h2 id="XOR"><a href="#XOR" class="headerlink" title="XOR"></a>XOR</h2><p>XOR 运算有一个很奇妙的特点：如果对一个值连续做两次 XOR，会返回这个值本身。XOR 的这个特点，使得它可以用于信息的加密。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * xor 加密程序 唯一区别添加了xor和hex默认值</span></span><br><span class="line"><span class="comment"> * @param &#123;Strng&#125; str 待加密字符串</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; xor 异或值</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; hex 加密后的进制数</span></span><br><span class="line"><span class="comment"> * @return &#123;Strng&#125; 加密后的字符串</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypto</span>(<span class="params"> str, xor, hex </span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 设置默认值</span></span><br><span class="line">    xor = xor || <span class="number">1</span>;</span><br><span class="line">    hex = hex || <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> str !== <span class="string">'string'</span> || <span class="keyword">typeof</span> xor !== <span class="string">'number'</span> || <span class="keyword">typeof</span> hex !== <span class="string">'number'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> resultList = [];</span><br><span class="line">    hex = hex &lt;= <span class="number">25</span> ? hex : hex % <span class="number">25</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">var</span> i=<span class="number">0</span>; i&lt;str.length; i++ ) &#123;</span><br><span class="line">        <span class="comment">// 提取字符串每个字符的ascll码</span></span><br><span class="line">        <span class="keyword">var</span> charCode = str.charCodeAt(i);</span><br><span class="line">        <span class="comment">// 进行异或加密</span></span><br><span class="line">        charCode = (charCode * <span class="number">1</span>) ^ xor;</span><br><span class="line">        <span class="comment">// 异或加密后的字符转成 hex 位数的字符串</span></span><br><span class="line">        charCode = charCode.toString(hex);</span><br><span class="line">        resultList.push(charCode);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> splitStr = <span class="built_in">String</span>.fromCharCode(hex + <span class="number">97</span>);</span><br><span class="line">    <span class="keyword">var</span> resultStr = resultList.join( splitStr );</span><br><span class="line">    <span class="keyword">return</span> resultStr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * xor 解密程序 唯一区别添加了xor和hex默认值</span></span><br><span class="line"><span class="comment"> * @param &#123;Strng&#125; str 待加密字符串</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; xor 异或值</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; hex 加密后的进制数</span></span><br><span class="line"><span class="comment"> * @return &#123;Strng&#125; 加密后的字符串</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrypto</span>(<span class="params"> str, xor, hex </span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 设置默认值</span></span><br><span class="line">    xor = xor || <span class="number">1</span>;</span><br><span class="line">    hex = hex || <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> str !== <span class="string">'string'</span> || <span class="keyword">typeof</span> xor !== <span class="string">'number'</span> || <span class="keyword">typeof</span> hex !== <span class="string">'number'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> strCharList = [];</span><br><span class="line">    <span class="keyword">var</span> resultList = [];</span><br><span class="line">    hex = hex &lt;= <span class="number">25</span> ? hex : hex % <span class="number">25</span>;</span><br><span class="line">    <span class="comment">// 解析出分割字符</span></span><br><span class="line">    <span class="keyword">var</span> splitStr = <span class="built_in">String</span>.fromCharCode(hex + <span class="number">97</span>);</span><br><span class="line">    <span class="comment">// 分割出加密字符串的加密后的每个字符</span></span><br><span class="line">    strCharList = str.split(splitStr);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">var</span> i=<span class="number">0</span>; i&lt;strCharList.length; i++ ) &#123;</span><br><span class="line">        <span class="comment">// 将加密后的每个字符转成加密后的ascll码</span></span><br><span class="line">        <span class="keyword">var</span> charCode = <span class="built_in">parseInt</span>(strCharList[i], hex);</span><br><span class="line">        <span class="comment">// 异或解密出原字符的ascll码</span></span><br><span class="line">        charCode = (charCode * <span class="number">1</span>) ^ xor;</span><br><span class="line">        <span class="keyword">var</span> strChar = <span class="built_in">String</span>.fromCharCode(charCode);</span><br><span class="line">        resultList.push(strChar);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> resultStr = resultList.join(<span class="string">''</span>);</span><br><span class="line">    <span class="keyword">return</span> resultStr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">const</span> text = <span class="string">'aaaaaa'</span>;</span><br><span class="line"><span class="keyword">const</span> testText = encrypto(text); <span class="comment">// "60q60q60"</span></span><br><span class="line">decrypto(testText); <span class="comment">// "aaa"</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">GRLC</span> (<span class="params">newC, MB, JX</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> HL = <span class="number">7.2</span>;</span><br><span class="line">	<span class="keyword">var</span> GZ = <span class="number">22000</span> + <span class="number">25000</span> / HL + <span class="number">13000</span> / HL + <span class="number">5000</span> / HL;</span><br><span class="line">	<span class="keyword">var</span> HX = (<span class="number">30000</span> + <span class="number">20000</span> + <span class="number">5000</span>) / HL + <span class="number">700</span>;</span><br><span class="line">	<span class="keyword">var</span> SY = GZ - HX + JX;</span><br><span class="line">	<span class="built_in">console</span>.log(SY)</span><br><span class="line">	<span class="keyword">var</span> SUM = newC;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">5</span>;i&lt;<span class="number">1000</span>;i++) &#123;</span><br><span class="line">		SUM += SY;</span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">12</span> === <span class="number">0</span>) &#123;</span><br><span class="line">			SUM += SY * <span class="number">1.5</span>;</span><br><span class="line">			SUM += SY * <span class="number">6</span> / <span class="number">22</span>;</span><br><span class="line">			</span><br><span class="line">			SUM -= <span class="number">30000</span>;</span><br><span class="line">			SUM -= <span class="number">10000</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		SUM *= <span class="number">1.01</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (SUM &gt;= MB) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(i<span class="number">-5</span>, SUM);</span><br><span class="line">			<span class="keyword">return</span> i - <span class="number">5</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">GRLC(<span class="number">165000</span>, <span class="number">1000000</span>, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ck = <span class="number">150954</span>;</span><br><span class="line"><span class="keyword">var</span> gz = <span class="number">22000</span>;</span><br><span class="line"><span class="keyword">var</span> mb = <span class="number">1000000</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">ck, gz, mb</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> HL = <span class="number">7.3</span>;</span><br><span class="line">    <span class="keyword">var</span> GZ = gz + <span class="number">25000</span> / HL + <span class="number">13000</span> / HL + <span class="number">5000</span> / HL;</span><br><span class="line">    <span class="keyword">var</span> HX = (<span class="number">3000</span> + <span class="number">20000</span> + <span class="number">5000</span>) / HL + <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">var</span> SY = GZ - HX;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> SUM = ck;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> nowDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">var</span> nowMonth = nowDate.getMonth();</span><br><span class="line">    <span class="keyword">var</span> nowDay = nowDate.getDate();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> monthSum;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=nowMonth; i&lt;<span class="number">1000</span>; i++) &#123;</span><br><span class="line">        SUM += SY;</span><br><span class="line">        <span class="keyword">if</span> (i % <span class="number">12</span> === <span class="number">0</span>) &#123;</span><br><span class="line">            SUM += SY;</span><br><span class="line">            </span><br><span class="line">            SUM -= <span class="number">30000</span>;</span><br><span class="line">            SUM -= <span class="number">10000</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        SUM *= <span class="number">1.01</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (SUM &gt;= mb) &#123;</span><br><span class="line">            monthSum = i - <span class="number">5</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (nowDay &gt; <span class="number">10</span>) &#123;</span><br><span class="line">                monthSum ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">var</span> nowDateCopy = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">            nowDateCopy.setMonth(monthSum + nowMonth);</span><br><span class="line">            nowDateCopy.setDate(<span class="number">10</span>);</span><br><span class="line">            <span class="keyword">var</span> day = (nowDateCopy - nowDate) / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>);</span><br><span class="line">            <span class="built_in">console</span>.log(day, nowDateCopy.toLocaleString(), monthSum);</span><br><span class="line">            <span class="keyword">return</span> nowDateCopy;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> mbDate = test(ck, gz, mb);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test2</span>(<span class="params">addCk, addGz</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (addCk) &#123;</span><br><span class="line">        <span class="keyword">var</span> sumMonth =  (mbDate - <span class="keyword">new</span> <span class="built_in">Date</span>()) / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) / (<span class="number">365</span>/<span class="number">12</span>);       </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://github.com/chenshenhai/blog/issues/21" target="_blank" rel="noopener">js加密解密的方法</a></p>
 
         
@@ -421,13 +420,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
               
 
-              <time title="Created: 2019-07-15 18:15:38" itemprop="dateCreated datePublished" datetime="2019-07-15T18:15:38+08:00">2019-07-15</time>
+              <time title="Erstellt: 2019-07-15 18:15:38" itemprop="dateCreated datePublished" datetime="2019-07-15T18:15:38+08:00">2019-07-15</time>
             </span>
           
             
@@ -437,8 +436,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
@@ -556,13 +555,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
               
 
-              <time title="Created: 2019-07-12 15:57:38" itemprop="dateCreated datePublished" datetime="2019-07-12T15:57:38+08:00">2019-07-12</time>
+              <time title="Erstellt: 2019-07-12 15:57:38" itemprop="dateCreated datePublished" datetime="2019-07-12T15:57:38+08:00">2019-07-12</time>
             </span>
           
             
@@ -572,8 +571,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
@@ -696,13 +695,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
               
 
-              <time title="Created: 2019-07-10 16:17:40" itemprop="dateCreated datePublished" datetime="2019-07-10T16:17:40+08:00">2019-07-10</time>
+              <time title="Erstellt: 2019-07-10 16:17:40" itemprop="dateCreated datePublished" datetime="2019-07-10T16:17:40+08:00">2019-07-10</time>
             </span>
           
             
@@ -712,8 +711,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
               </span>
             
           
@@ -869,7 +868,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/h5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/h5/">1</a><span class="page-number current">2</span><a class="page-number" href="/h5/page/3/">3</a><a class="extend next" rel="next" href="/h5/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/h5/"><i class="fa fa-angle-left" aria-label="Vorherige Seite"></i></a><a class="page-number" href="/h5/">1</a><span class="page-number current">2</span><a class="page-number" href="/h5/page/3/">3</a><a class="extend next" rel="next" href="/h5/page/3/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
   </nav>
 
 
@@ -892,10 +891,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          Inhaltsverzeichnis
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          Übersicht
         </li>
       </ul>
 
@@ -915,7 +914,7 @@
           <a href="/h5/archives/">
         
           <span class="site-state-item-count">14</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
     
@@ -924,7 +923,7 @@
       <div class="site-state-item site-state-tags">
         
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">schlagwörter</span>
         
       </div>
     
@@ -950,9 +949,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
 
         
 

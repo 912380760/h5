@@ -49,7 +49,7 @@ C:\Windows\System32\drivers\etc
 - 逐行查看文件更改记录 右键文件打断点的行数位置 选择annotate
 - 查看版本提交记录和修改 Ctrl + F12(打开控制台) -> Version Control -> log
 - webStrom无法识别@符号跳转文件
-```js
+```javascript
 // 如果是vue-cli 3以上隐藏别名配置的这种情况,在根目录添加alias.config.js文件,再指定webpack配置文件,文件内容如下
 const resolve = dir => require('path').join(__dirname, dir);
 
@@ -64,7 +64,7 @@ module.exports = {
 // 指定webpack配置文件
 // file -> setting -> 搜索webpack -> webpack configuration file 
 // 在这里输入webpack别名配置文件地址 例: D:\react-learn\vueinit\alias.config.js.
-``` 
+```
 
 ## webStrom 插件推荐
 webStrom本身就已经集成大部分功能而且占用CPU较高不建议安装太多没必要的插件

@@ -31,7 +31,7 @@ const element2 = <img src={avatarUrl} />;
 - JSX防注入攻击 React DOM在渲染所有输入内容前默认会进行转译,所有内容在渲染前都被转成字符串.
 
 ## 组件&Props
-组件,接受任意的入参(即"**props**"),并返回用于描述页面展示内容的React元素
+组件接受任意的入参(即"**props**"),并返回用于描述页面展示内容的React元素
 - React会将以小写字母开头的组件视为原生DOM标签,大写字母开头的为自定义组件.
 - 函数组件和Class组件
 ```jsx harmony

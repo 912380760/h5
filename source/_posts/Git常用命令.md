@@ -142,8 +142,8 @@ git checkout --merge <branch>
 # 放弃工作区对该文件的修改
 git checkout -- <filename>
 
-# 指定从某个commit恢复指定文件
-git checkout <commitID>~ -- <filename>
+# 指定从某个commit恢复指定文件到暂存区
+git checkout <HASH>~ -- <filename>
 ```
 - **-p** 进入交互模式,只恢复部分变化
 

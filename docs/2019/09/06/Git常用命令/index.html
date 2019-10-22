@@ -47,26 +47,26 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
     },
     sidebarPadding: 40
   };
 </script>
 
-  <meta name="description" content="Git 基本概念 分支本地分支(工作分支/开发分支)远端分支HEAD 当前分支引用的指针（上一次提交的快照，下一次提交的父结点） 文件状态未纳入版本控制已纳入版本控制冲突文件 存储工作区 (还未纳入版本控制)暂存区 git add后的区域仓库区 git commit后但并未 push 的区域贮藏区 (stash) 临时保存文件修改的区域  git add用于将变化的文件从工作区提交到暂存区,可以使">
+  <meta name="description" content="Git 基本概念 分支本地分支(工作分支/开发分支)远端分支HEAD 当前分支引用的指针（上一次提交的快照，下一次提交的父结点） 文件状态未纳入版本控制已纳入版本控制冲突文件 存储工作区 (还未纳入版本控制)暂存区 git add后的区域仓库区 git commit后但并未 push 的区域贮藏区 (stash) 临时保存文件修改的区域 HEADHEAD^ 上一个commit的HEADHEAD~N">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令">
 <meta property="og:url" content="https://912380760.github.io/2019/09/06/Git常用命令/index.html">
 <meta property="og:site_name" content="note">
-<meta property="og:description" content="Git 基本概念 分支本地分支(工作分支/开发分支)远端分支HEAD 当前分支引用的指针（上一次提交的快照，下一次提交的父结点） 文件状态未纳入版本控制已纳入版本控制冲突文件 存储工作区 (还未纳入版本控制)暂存区 git add后的区域仓库区 git commit后但并未 push 的区域贮藏区 (stash) 临时保存文件修改的区域  git add用于将变化的文件从工作区提交到暂存区,可以使">
+<meta property="og:description" content="Git 基本概念 分支本地分支(工作分支/开发分支)远端分支HEAD 当前分支引用的指针（上一次提交的快照，下一次提交的父结点） 文件状态未纳入版本控制已纳入版本控制冲突文件 存储工作区 (还未纳入版本控制)暂存区 git add后的区域仓库区 git commit后但并未 push 的区域贮藏区 (stash) 临时保存文件修改的区域 HEADHEAD^ 上一个commit的HEADHEAD~N">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-25T02:26:14.035Z">
+<meta property="og:updated_time" content="2019-10-22T10:23:04.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用命令">
-<meta name="twitter:description" content="Git 基本概念 分支本地分支(工作分支/开发分支)远端分支HEAD 当前分支引用的指针（上一次提交的快照，下一次提交的父结点） 文件状态未纳入版本控制已纳入版本控制冲突文件 存储工作区 (还未纳入版本控制)暂存区 git add后的区域仓库区 git commit后但并未 push 的区域贮藏区 (stash) 临时保存文件修改的区域  git add用于将变化的文件从工作区提交到暂存区,可以使">
+<meta name="twitter:description" content="Git 基本概念 分支本地分支(工作分支/开发分支)远端分支HEAD 当前分支引用的指针（上一次提交的快照，下一次提交的父结点） 文件状态未纳入版本控制已纳入版本控制冲突文件 存储工作区 (还未纳入版本控制)暂存区 git add后的区域仓库区 git commit后但并未 push 的区域贮藏区 (stash) 临时保存文件修改的区域 HEADHEAD^ 上一个commit的HEADHEAD~N">
   <link rel="canonical" href="https://912380760.github.io/2019/09/06/Git常用命令/">
 
 
@@ -135,7 +135,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -155,7 +155,7 @@
       
     
 
-    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
       
@@ -166,7 +166,7 @@
       
     
 
-    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
   </ul>
@@ -218,13 +218,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
               
 
-              <time title="Created: 2019-09-06 16:26:19" itemprop="dateCreated datePublished" datetime="2019-09-06T16:26:19+08:00">2019-09-06</time>
+              <time title="Erstellt: 2019-09-06 16:26:19" itemprop="dateCreated datePublished" datetime="2019-09-06T16:26:19+08:00">2019-09-06</time>
             </span>
           
             
@@ -234,8 +234,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-25 10:26:14" itemprop="dateModified" datetime="2019-09-25T10:26:14+08:00">2019-09-25</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-10-22 18:23:04" itemprop="dateModified" datetime="2019-10-22T18:23:04+08:00">2019-10-22</time>
               </span>
             
           
@@ -255,6 +255,7 @@
 <li>分支<br><strong>本地分支</strong>(工作分支/开发分支)<br><strong>远端分支</strong><br><strong>HEAD</strong> 当前分支引用的指针（上一次提交的快照，下一次提交的父结点）</li>
 <li>文件状态<br>未纳入版本控制<br>已纳入版本控制<br>冲突文件</li>
 <li>存储<br><strong>工作区</strong> (还未纳入版本控制)<br><strong>暂存区</strong> git add后的区域<br><strong>仓库区</strong> git commit后但并未 push 的区域<br><strong>贮藏区</strong> (stash) 临时保存文件修改的区域</li>
+<li>HEAD<br><strong>HEAD^</strong> 上一个commit的HEAD<br><strong>HEAD~N</strong> 上N个commit的HEAD</li>
 </ul>
 <h2 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h2><p>用于将变化的文件从工作区提交到暂存区,可以使用<strong>git status</strong>命令查看目前的暂存区放置了哪些文件.</p>
 <ul>
@@ -282,13 +283,14 @@
 <li><p><a href="https://www.zhihu.com/question/19946553/answer/29033220" target="_blank" rel="noopener">为什么要先 git add 才能 git commit ？</a></p>
 </li>
 </ul>
-<h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h2><p>将HEAD引用指向给定提交</p>
+<h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h2><p>将HEAD引用指向给定commit</p>
 <ul>
 <li><strong>--mixed</strong> git reset默认模式，将修改的代码添加入工作区</li>
 <li><strong>--soft</strong> 将修改的代码加入暂存区（add后还未commit）</li>
 <li><strong>--hard</strong> 将修改的代码丢弃<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#撤销commit修改，存储代码</span><br><span class="line">git reset &lt;HEAD&gt; #回退到指定commit</span><br><span class="line">git stash #存储代码</span><br><span class="line"></span><br><span class="line">#回退已push到远程分支的代码，并舍弃修改</span><br><span class="line">git reset --hard &lt;HEAD&gt; #回退到指定提交，丢弃修改</span><br><span class="line">git push -f origin &lt;branchName&gt; #强制将远端分支的HEAD指向本地分支 （有很大的风险，push到远程分支后，HEAD后commit会在远程分支上会消失）</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h2 id="git-revert"><a href="#git-revert" class="headerlink" title="git revert"></a>git revert</h2><p>恢复某个commit的代码<br>这个命令相当于手工回退某个commit的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">## 输入后会进入一个交互界面让你确认更改内容和commit内容，一般:q退出就行了</span><br><span class="line">git revert [HEAD] </span><br><span class="line">## 推送到远端仓库</span><br><span class="line">git push origin [branch]</span><br></pre></td></tr></table></figure></p>
 <h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2><p>将代码推送到远端分支</p>
 <ul>
 <li><strong>git push</strong> 将当前分支推送到默认的master分支</li>
@@ -315,11 +317,11 @@
 <li><p><strong>--orphan</strong>  将当前内容切换到新分支,当前分支会是一个全新的分支没有任何提交记录(和-b|-B的区别)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan &lt;new_branch&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>--merge</strong> 将当前分支工作区的修改内容(修改并没有commit的内容)合并到切换的分支下  </p>
+<li><p><strong>--merge</strong> 将当前分支工作区和暂存区的修改内容(修改并没有commit的内容)合并到切换的分支下  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#需要注意的问题</span><br><span class="line">#1.合并可能产生冲突</span><br><span class="line">#2.切换到新分支后,前分支的修改内容会消失</span><br><span class="line">git checkout --merge &lt;branch&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>-- 用于恢复文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 放弃工作区对该文件的修改</span><br><span class="line">git checkout -- &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"># 指定从某个commit恢复指定文件</span><br><span class="line">git checkout &lt;commitID&gt;~ -- &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 放弃工作区对该文件的修改</span><br><span class="line">git checkout -- &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"># 指定从某个commit恢复指定文件到暂存区</span><br><span class="line">git checkout &lt;HASH&gt;~ -- &lt;filename&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>-p</strong> 进入交互模式,只恢复部分变化</p>
 </li>
@@ -404,16 +406,16 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          Inhaltsverzeichnis
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          Übersicht
         </li>
       </ul>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-基本概念"><span class="nav-number">1.</span> <span class="nav-text">Git 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-add"><span class="nav-number">2.</span> <span class="nav-text">git add</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">2.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-commit"><span class="nav-number">3.</span> <span class="nav-text">git commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-reset"><span class="nav-number">4.</span> <span class="nav-text">git reset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-push"><span class="nav-number">5.</span> <span class="nav-text">git push</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数-1"><span class="nav-number">5.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-branch"><span class="nav-number">6.</span> <span class="nav-text">git branch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数-2"><span class="nav-number">6.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-checkout"><span class="nav-number">7.</span> <span class="nav-text">git checkout</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数-3"><span class="nav-number">7.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-stash"><span class="nav-number">8.</span> <span class="nav-text">git stash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-merge"><span class="nav-number">9.</span> <span class="nav-text">git merge</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-基本概念"><span class="nav-number">1.</span> <span class="nav-text">Git 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-add"><span class="nav-number">2.</span> <span class="nav-text">git add</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">2.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-commit"><span class="nav-number">3.</span> <span class="nav-text">git commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-reset"><span class="nav-number">4.</span> <span class="nav-text">git reset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-revert"><span class="nav-number">5.</span> <span class="nav-text">git revert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-push"><span class="nav-number">6.</span> <span class="nav-text">git push</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数-1"><span class="nav-number">6.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-branch"><span class="nav-number">7.</span> <span class="nav-text">git branch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数-2"><span class="nav-number">7.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-checkout"><span class="nav-number">8.</span> <span class="nav-text">git checkout</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数-3"><span class="nav-number">8.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-stash"><span class="nav-number">9.</span> <span class="nav-text">git stash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-merge"><span class="nav-number">10.</span> <span class="nav-text">git merge</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -429,7 +431,7 @@
           <a href="/h5/archives/">
         
           <span class="site-state-item-count">14</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
     
@@ -438,7 +440,7 @@
       <div class="site-state-item site-state-tags">
         
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">schlagwörter</span>
         
       </div>
     
@@ -464,9 +466,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
 
         
 
