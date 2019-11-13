@@ -82,6 +82,24 @@ class Clock extends React.Component {
         });
     }
 }
+
+// babel已经对JSX做了优化，上面的例子也可以这样简写
+class Clock extends React.Component {
+    state = {date: new Date()};
+    
+    componentDidMount = () => {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    };
+    
+    tick = () => {
+        this.setState({
+            date: new Date()
+        });
+    };
+}
 ```
 - **State** 的更新可能是异步的, 所以不要依赖他们的值来更新下一个状态  
 解决办法: 让 **setState()** 接收一个函数而不是一个对象.这个函数用上一个state作为第一个参数,将此次更新被应用时的props作为第二个参数
@@ -90,6 +108,10 @@ class Clock extends React.Component {
 this.setState({
     counter: this.state.counter + this.props.increment,
 });
+// Correct 如果情况不复杂可以用这种简写方法
+this.setState((state, props) => ({
+    counter: state.counter + props.increment,
+}));
 // Correct
 this.setState((state, props) => {
     return {
@@ -98,16 +120,22 @@ this.setState((state, props) => {
 })
 ```
 - 数据是向下流动的, 任何的state总是所属于特定的组件,而且从该state派生的任何数据或UI只能影响树中"低于"它们的组件.
+### React生命周期
+![avatar](/h5/images/react生命周期.png)
+- constructor()
+在React逐渐挂载之前调用，babel已经自动调用 **super(props)**,所以可以直接使用this.props。  
+注意避免将props的值赋值给state！这是一个常见的错误（更新prop中的color时，并不会影响state）
+- forceUpdate() 强制让逐渐重新渲染  
+默认情况下，当组件的state或props发生变化时，组件将重新渲染。如果**render()**方法依赖于其他数据，则可以调用**this.forceUpdate()**强制让组件重新渲染。
+- shouldComponentUpdate(nextProps, nextState) 根据返回值判断是否重新渲染组件  
+当 **props** 或 **state** 发生变化时，**shouldComponentUpdate()** 会在渲染执行之前被调用。返回值默认为 true。首次渲染或使用 **forceUpdate()** 时不会调用该方法。  
+此方法仅作为性能优化的方式而存在。不要企图依靠此方法来“阻止”渲染，因为这可能会产生 bug。你应该考虑使用内置的 PureComponent 组件，而不是手动编写 shouldComponentUpdate()。PureComponent 会对 props 和 state 进行浅层比较，并减少了跳过必要更新的可能性。
+- 
 
 ## 事件处理
 - React 事件采用小驼峰式,而不是纯小写.
 - 使用JSX语法时你需要传一个函数作为事件处理函数,而不是一个字符串
 ```jsx harmony
-// 传统HTML
-<button onclick="activateLasers()">
-  Activate Lasers
-</button>
-
 // React
 <button onClick={activateLasers}>
     Activate Lasers
@@ -115,11 +143,6 @@ this.setState((state, props) => {
 ```
 - 不能通过返回false的方式阻止默认行为,必须显示的调用**preventDefault**
 ```jsx harmony
-// 传统HTML
-<a href="#" onclick="console.log('The link was clicked.'); return false">
-  Click me
-</a>
-
 // React
 function ActionLink() {
     function handleClick(e) {
@@ -136,40 +159,48 @@ function ActionLink() {
 ```
 - 绑定this的三种方法
 ```jsx harmony
-// 通过bind绑定
 class Toggle extends React.Component {
+    // 通过箭头函数,默认e参数为事件的event对象(这种事最常用的方式)
+    handleClick = (e) => {
+        
+    }
+    
+    render() {
+        return (
+            <button onClick={this.handleClick}></button>
+        ) 
+    }
+}
+
+// 通过bind绑定
+class Toggle2 extends React.Component {
     constructor(props) {
+        super(props);
         this.handleClick = this.handleClick.bind(this);
     }
+    
+    render() {
+        return (
+            // 通过在事件内写箭头函数,需要显示的传递e(event合成事件)
+            <button onClick={(e) => this.handleClick(e)}></button>
+        );
+    }
 }
 
-class Toggle extends React.Component {
-    // 通过箭头函数
-    handleClick = () => {
-        
-    }    
-}
-
+// 通过在事件内使用bind绑定
 class Toggle extends React.Component {
     handleClick () {
         
     }
     render() {
-        // 通过在事件内写箭头函数,需要显示的传递e(event合成事件)
-        <button onClick={(e) => this.handleClick(e)}></button>
-    }
-}
-
-class Toggle extends React.Component {
-    handleClick () {
-        
-    }
-    render() {
-        // 通过在事件内使用bind绑定
-        <button onClick={this.handleClick.bind(this)}></button>
+        return (
+            <button onClick={this.handleClick.bind(this)}></button>    
+        );
     }
 }
 ``` 
+
+
 - 向事件处理程序传递参数
 ```jsx harmony
 // 通过箭头函数

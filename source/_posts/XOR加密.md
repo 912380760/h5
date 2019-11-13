@@ -82,13 +82,13 @@ decrypto(testText); // "aaa"
 ```
 
 ```js
-var ck = 150954;
+var ck = 190000;
 var gz = 22000;
 var mb = 1000000;
 function test(ck, gz, mb) {
-    var HL = 7.3;
+    var HL = 7.2;
     var GZ = gz + 25000 / HL + 13000 / HL + 5000 / HL;
-    var HX = (3000 + 20000 + 5000) / HL + 1000;
+    var HX = (30000 + 20000 + 5000) / HL + 1000;
     var SY = GZ - HX;
     
     var SUM = ck;
@@ -97,24 +97,22 @@ function test(ck, gz, mb) {
     var nowMonth = nowDate.getMonth();
     var nowDay = nowDate.getDate();
     
-    var monthSum;
+    var monthSum = 0;
     
     for (var i=nowMonth; i<1000; i++) {
         SUM += SY;
+        // SUM += 18000;
         if (i % 12 === 0) {
             SUM += SY;
             
-            SUM -= 30000;
+            SUM -= 20000;
             SUM -= 10000;
         }
         SUM *= 1.01;
+        monthSum++;
+        console.log(SUM)
 
         if (SUM >= mb) {
-            monthSum = i - 5;
-            
-            if (nowDay > 10) {
-                monthSum ++;
-            }
             var nowDateCopy = new Date();
             nowDateCopy.setMonth(monthSum + nowMonth);
             nowDateCopy.setDate(10);
