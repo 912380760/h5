@@ -8,15 +8,7 @@ tags: editor
 建议从官网下载最新版本[webStorm](https://www.jetbrains.com/webstorm/download/#section=windows)
 
 ## 注册
-修改hosts文件,用自带的文本编辑器可能无法保存host文件,建议用notePad++打开
-```
-# windows下的位置
-C:\Windows\System32\drivers\etc
-
-# 将下面代码放在最后一行
-0.0.0.0 account.jetbrains.com
-
-# 网上随意找一个激活码就可以激活了
+[IDEA 最新破解方法，2019.3已支持](https://www.algerfan.cn/articles/2019/03/06/1551868940012.html)
 ```
 
 ## 常用快捷键
@@ -48,8 +40,10 @@ C:\Windows\System32\drivers\etc
 - 解决冲突: 随便右键一个文件选择Git -> Resolve Conflicts...  左边是合并分支,右边是当前分支,中间是修改后的代码.
 - 逐行查看文件更改记录 右键文件打断点的行数位置 选择annotate
 - 查看版本提交记录和修改 Ctrl + F12(打开控制台) -> Version Control -> log
+- 同步设置 登录账号后右下角可以同步设置,选择Sync Plugins Silently
 - webStrom无法识别@符号跳转文件
 ```javascript
+// webstrom9.3已经支持
 // 如果是vue-cli 3以上隐藏别名配置的这种情况,在根目录添加alias.config.js文件,再指定webpack配置文件,文件内容如下
 const resolve = dir => require('path').join(__dirname, dir);
 
@@ -72,4 +66,4 @@ webStrom本身就已经集成大部分功能而且占用CPU较高不建议安装
 - codeGlance 右侧代码预览(如果没有显示,尝试使用Ctrl+Shift+G快捷键切换关闭开启)
 
 ## 参考资料
-[Meet WebStorm - Help | WebStorm](https://www.jetbrains.com/help/webstorm/2019.1/meet-webstorm.html)
+[IDE功能 - 功能 | WebStorm](https://www.jetbrains.com/zh-cn/webstorm/features/ide-features.html)

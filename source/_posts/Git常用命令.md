@@ -27,7 +27,7 @@ tags: Git
 - ** git add <file\> ** 将指定文件放入暂存区
 - ** git add <directory\> ** 将指定目录下所有的变化放入暂存区
 - **git add .** 将当前目录所有变化的文件放入暂存区
-### 参数
+
 - **-f** 强制添加某个文件,不管 **.gitignore** 是否包含这个文件
  ```
  git add -f <fileName>
@@ -69,7 +69,7 @@ git push -f origin <branchName> #强制将远端分支的HEAD指向本地分支 
 恢复某个commit的代码
 这个命令相当于手工回退某个commit的代码
 ```
-## 输入后会进入一个交互界面让你确认更改内容和commit内容，一般:q退出就行了
+## 输入后进入一个vim界面让你确认更改内容和commit内容，按ESC后再按i编辑内容 :q退出
 git revert [HEAD] 
 ## 推送到远端仓库
 git push origin [branch]
@@ -79,7 +79,7 @@ git push origin [branch]
 将代码推送到远端分支
 - **git push** 将当前分支推送到默认的master分支
 - **git push origin <branchName\>** 将当前分支推送到指定的远端分支
-### 参数
+
 - **-\-delete** 删除指定的远程分支
 ```
 git push origin --delete <branchName>
@@ -89,7 +89,6 @@ git push origin --delete <branchName>
 分支操作命令,需要特别注意,**git branch**操作的都是当前分支
 **git branch** 列出所有本地分支
 **git branch <newBranch\>** 新建分支,clone当前分支内容到新分支,与 **git checkout -b** 的区别是并不会切换到新分支
-### 参数
 - **-a** 列出所有本地分支和远程分支
 - **-d | -D** 删除本地分支
 ```
@@ -123,7 +122,8 @@ git push origin <new branchName> #推送当前分支到远端
 - **git checkout <branch\>** 切换本地分支
 - **git checkout <commitID\>** 切换到指定快照(commit),在快照上修改无法提交到此快照上,提交需要 **git checkout <new branch>** 把快照切换到新分支.
 - **git checkout tags/1.1.4** 切换到某个tags
-### 参数
+- **git checkout .** 将本地没有提交的修改撤回
+ 
 - **-b | -B** 创建新分支,clone当前分支内容,切换到该分支(保留分支的提交记录) **git checkout -b <new branch>**     
 如果存在同名分支 -b 会提示错误,-B 会强制创建新分支,并且会覆盖原来存在的同名分支
 - **-\-orphan**  将当前内容切换到新分支,当前分支会是一个全新的分支没有任何提交记录(和-b|-B的区别)
@@ -149,9 +149,15 @@ git checkout <HASH>~ -- <filename>
 
 ## git stash
 将工作区和暂存区的修改添加到储藏区
-- **git stash** 将工作区和暂存区的修改添加到储藏区，已经commit到仓库区的代码并不会被储藏
+- **git stash** 将工作区和暂存区的修改添加到储藏区(已经commit到仓库区的代码并不会被储藏)
 - **git stash list** 查看现有的储藏列表
 - **git stash apply <stashName\>** 应用储藏, 不指定stashName会应用最近的储藏
 
 ## git merge
-将指定分支与当前分支合并（注意这里的合并是相反的，还有需要注意的是需要合并远程分支而不是本地分支）
+将指定分支合并到当前分支,分支不加origin默认合并的是本地分支
+
+## git clean
+从本地中删除没有被跟踪的文件
+- **git clean -f <path>** 删除指定路径下没有被跟踪的文件
+- **git clean -df** 删除当前路径下没有被跟踪的文件
+- **git clean -xf** 删除当前路径下没有被跟踪的文件,不管是否在.gitignore文件中
