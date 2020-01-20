@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/h5/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/h5/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+<meta name="keywords" content="个人博客，前端学习，前端笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="note">
+<meta property="og:url" content="https://912380760.github.io/index.html">
+<meta property="og:site_name" content="note">
+<meta property="og:description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="note">
+<meta name="twitter:description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+  <link rel="canonical" href="https://912380760.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>note</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/h5/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2020/01/15/JavaScript类型：关于类型，有哪些你不知道的细节？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2020/01/15/JavaScript类型：关于类型，有哪些你不知道的细节？/" class="post-title-link" itemprop="url">JavaScript类型：关于类型，有哪些你不知道的细节？</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2020-01-15 18:30:22" itemprop="dateCreated datePublished" datetime="2020-01-15T18:30:22+08:00">2020-01-15</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-01-20 15:55:45" itemprop="dateModified" datetime="2020-01-20T15:55:45+08:00">2020-01-20</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><ul>
+<li>Undefined</li>
+<li>Null</li>
+<li>Boolean</li>
+<li>String</li>
+<li>Number</li>
+<li>Symbol</li>
+<li>Object</li>
+</ul>
+<h2 id="Undefined、Null"><a href="#Undefined、Null" class="headerlink" title="Undefined、Null"></a>Undefined、Null</h2><p>Undefined类型只有一个值undefined,表示未定义.任何变量在赋值前值为undefined.<br>Null类型只有一个值null,表示值定义了但为空.</p>
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><p>Boolean类型只有两个值,true和false,表示逻辑意义上的真和假.</p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>String的意义并非”字符串”,而是字符串的UTF16编码</p>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><p>Number类型为双精度浮点数规则,但是为了表达几个额外语言场景,规定了几个例外情况:</p>
+<ul>
+<li>NaN 错误数值</li>
+<li>Infinity 无穷大</li>
+<li>-Infinity, 负无穷大<br>根据浮点数的定义,非整数的Number类型无法用==和===来比较,正确的方法是使用JavaScript提供的最小精度值:<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.abs(<span class="number">0.1</span> + <span class="number">0.2</span> - <span class="number">0.3</span>) &lt; <span class="built_in">Number</span>.EPSILON;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><p> Symbol是ES6中引入的新类型,它是一切非字符串的对象key的集合,在ES6规范中,整个对象系统被Symbol重塑,可以重新定义对象的一些行为.<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建Symbol的方式</span></span><br><span class="line"><span class="keyword">const</span> mySymbol = <span class="built_in">Symbol</span>(<span class="string">"my symbol"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 即使Symbol描述相同,不同Symbol也不相等</span></span><br><span class="line"><span class="keyword">const</span> mySymbol2 = <span class="built_in">Symbol</span>(<span class="string">"my symbol2"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(mySymbol === mySymbol2); <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用Symbo.iterator自定义for...of行为</span></span><br><span class="line"><span class="keyword">const</span> o = &#123;&#125;;</span><br><span class="line">o[<span class="built_in">Symbol</span>.iterator] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> v = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        next: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="attr">value</span>: v++, <span class="attr">done</span>: v &gt; <span class="number">10</span>&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> v <span class="keyword">of</span> o) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v); <span class="comment">// 0 1 2 3 ...9</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>对象的定义是”属性的集合”,一个key-value结构,属性分为数据属性和访问属性.<br>JavaScript中的基本类型都在对象类型中有构造器:</p>
+<ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Symbol</li>
+</ul>
+<p>我们必须意识到true与new Boolean(true)是完全不同的值,一个是布尔类型,一个是对象类型.<br>Number、String和Boolean,三个构造器是两用的,当跟new搭配时产生对象,当直接调用是表示类型转换.<br>Symbol类型比较特殊,直接用new调用会抛错.<br>JavaScript语言设计上试图模糊基本类型和对象之间的关系,通过 <strong>.</strong> 运算符提供装箱操作,它会根据基础类型构造一个临时对象,使得能在基础类型上调用对应对象的方法.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在原型上添加方法都可以应用于基本类型</span></span><br><span class="line"><span class="built_in">String</span>.prototype.hello = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'hello'</span>);</span><br><span class="line"><span class="string">'test'</span>.hello(); <span class="comment">// 'hello'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="StringToNumber"><a href="#StringToNumber" class="headerlink" title="StringToNumber"></a>StringToNumber</h3><p>字符串到数字的转换支持十进制、二进制、八进制和十六进制.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'30'</span> == <span class="number">30</span>; <span class="comment">// true</span></span><br><span class="line"><span class="string">'0b11'</span> == <span class="number">3</span>; <span class="comment">// true</span></span><br><span class="line"><span class="string">'0o13'</span> == <span class="number">11</span>; <span class="comment">// true</span></span><br><span class="line"><span class="string">'oxf'</span> == <span class="number">15</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+<p>此外，JavaScript 支持的字符串语法还包括正负号科学计数法，可以使用大写或者小写的 e.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'1e4'</span> == <span class="number">10000</span>; <span class="comment">// true</span></span><br><span class="line"><span class="string">'-1e4'</span> == <span class="number">-0.0001</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="装箱转换"><a href="#装箱转换" class="headerlink" title="装箱转换"></a>装箱转换</h3><p>每一种基本类型Number、String、Boolean、Symbol在对象中都有对应的类.所谓装箱转换,正是把基本类型转换为对应的对象.<br>每个装箱对象皆有私有的Class属性,这些属性可以用<strong>Object.prototype.toString</strong>获取:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="string">''</span>)); <span class="comment">// "[object String]"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">123</span>)); <span class="comment">// "[object Number]"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>)); <span class="comment">// "[object Boolean]"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Symbol</span>(<span class="string">'a'</span>))); <span class="comment">// "[object Symbol]"</span></span><br></pre></td></tr></table></figure></p>
+<p>在JS中没有任何方法可以更改私有的Class属性,因此<strong>Object.prototype.toString</strong>是可以准确识别对象对应的基本类型的方法,它比instanceof更加准确.</p>
+<h3 id="拆箱转换"><a href="#拆箱转换" class="headerlink" title="拆箱转换"></a>拆箱转换</h3><p>在JS标准中,规定了ToPrimitive函数,它是对象类型到基本类型的转换.<br>对象到String和Nmber的转换都遵循”先拆箱再转换”的规则.通过拆箱转换,把对象变成基本类型,再从基本类型转换为对应的String或者Number.<br>拆箱转换会尝试调用valueOf和toString来获得拆箱后的基本类型.如果valueOf和toString都不存在或者没有返回基本类型,则会产生类型错误TypeError.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 到Number转换会优先调用valueOf</span></span><br><span class="line"><span class="keyword">let</span> o = &#123; </span><br><span class="line">    valueOf: <span class="function"><span class="params">()</span> =&gt;</span> &#123;<span class="built_in">console</span>.log(<span class="string">'valueOf'</span>); <span class="keyword">return</span> &#123;&#125;&#125;, </span><br><span class="line">    toString: <span class="function"><span class="params">()</span> =&gt;</span> &#123;<span class="built_in">console</span>.log(<span class="string">'toString'</span>); <span class="keyword">return</span> &#123;&#125;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">o * <span class="number">2</span>;</span><br><span class="line"><span class="comment">// valueOf</span></span><br><span class="line"><span class="comment">// toString</span></span><br><span class="line"><span class="comment">// TypeError</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 到String的转换会优先toString</span></span><br><span class="line"><span class="built_in">String</span>(o);</span><br><span class="line"><span class="comment">// toString</span></span><br><span class="line"><span class="comment">// valueOf</span></span><br><span class="line"><span class="comment">// TypeError</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 在ES6中,还允许通过显示指定@@toPrimitive Symbol来覆盖原有的行为</span></span><br><span class="line">o[<span class="built_in">Symbol</span>.toPrimitive] = <span class="function"><span class="params">()</span> =&gt;</span> &#123;<span class="built_in">console</span>.log(<span class="string">'toPrimitive'</span>); <span class="keyword">return</span> <span class="string">'hello'</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(o + <span class="string">''</span>);</span><br><span class="line"><span class="comment">// toPrimitive</span></span><br><span class="line"><span class="comment">// hello</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>JS提供了typeof运算符,用来返回操作数的类型,但typeof的运算结果,与运行时时的规定有不一致的地方.我们可以看下表来对照一下.<br><img src="/h5/images/ec4299a73fb84c732efcd360fed6e16b.png" alt="avatar"><br>在表格中,多数项都是对应的,但是请提别注意null和function是特例.</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/09/06/Git常用命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/09/06/Git常用命令/" class="post-title-link" itemprop="url">Git常用命令</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-09-06 16:26:19" itemprop="dateCreated datePublished" datetime="2019-09-06T16:26:19+08:00">2019-09-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-01-15 12:01:13" itemprop="dateModified" datetime="2020-01-15T12:01:13+08:00">2020-01-15</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Git-基本概念"><a href="#Git-基本概念" class="headerlink" title="Git 基本概念"></a>Git 基本概念</h2><ul>
+<li>分支<br><strong>本地分支</strong>(工作分支/开发分支)<br><strong>远端分支</strong><br><strong>HEAD</strong> 当前分支引用的指针（上一次提交的快照，下一次提交的父结点）</li>
+<li>文件状态<br>未纳入版本控制<br>已纳入版本控制<br>冲突文件</li>
+<li>存储<br><strong>工作区</strong> (还未纳入版本控制)<br><strong>暂存区</strong> git add后的区域<br><strong>仓库区</strong> git commit后但并未 push 的区域<br><strong>贮藏区</strong> (stash) 临时保存文件修改的区域</li>
+<li>HEAD<br><strong>HEAD^</strong> 上一个commit的HEAD<br><strong>HEAD~N</strong> 上N个commit的HEAD</li>
+</ul>
+<h2 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h2><p>用于将变化的文件从工作区提交到暂存区,可以使用<strong>git status</strong>命令查看目前的暂存区放置了哪些文件.</p>
+<ul>
+<li><strong> git add &lt;file> </strong> 将指定文件放入暂存区</li>
+<li><strong> git add &lt;directory> </strong> 将指定目录下所有的变化放入暂存区</li>
+<li><p><strong>git add .</strong> 将当前目录所有变化的文件放入暂存区</p>
+</li>
+<li><p><strong>-f</strong> 强制添加某个文件,不管 <strong>.gitignore</strong> 是否包含这个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add -f &lt;fileName&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>-u</strong> 参数表示只添加暂存区已有的文件(包括删除操作),但不添加新增的文件</p>
+</li>
+<li><strong>-A | --all</strong> 参数表示追踪所有操作</li>
+<li><strong>-p</strong> 进入交互模式,指定哪些修改需要添加到暂存区,即使是同一个文件,也可以只提交部分改动.</li>
+</ul>
+<h2 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h2><p>将暂存区中的变化提交到仓库区  </p>
+<ul>
+<li><p><strong>-m</strong> 用于指定commit信息,是必须的,如果省略 <strong>-m</strong> 参数,<strong>git commit</strong> 会自动打开文本编辑器,要求输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 跳过 git add 暂存区,直接将指定文件从工作区提交到仓库区 </span><br><span class="line">git commit &lt;filename&gt; -m &apos;message&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>-am</strong> 将所有修改和删除的文件添加进暂存区(不包括新增文件),指定commit信息后推送到仓库区</p>
+</li>
+<li><p><strong>--amend</strong> 修改最近一次的提交信息 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend -m &quot;New commit message&quot;**</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://www.zhihu.com/question/19946553/answer/29033220" target="_blank" rel="noopener">为什么要先 git add 才能 git commit ？</a></p>
+</li>
+</ul>
+<h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h2><p>将HEAD引用指向给定commit</p>
+<ul>
+<li><strong>--mixed</strong> git reset默认模式，将修改的代码添加入工作区</li>
+<li><strong>--soft</strong> 将修改的代码加入暂存区（add后还未commit）</li>
+<li><strong>--hard</strong> 将修改的代码丢弃<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#撤销commit修改，存储代码</span><br><span class="line">git reset &lt;HEAD&gt; #回退到指定commit</span><br><span class="line">git stash #存储代码</span><br><span class="line"></span><br><span class="line">#回退已push到远程分支的代码，并舍弃修改</span><br><span class="line">git reset --hard &lt;HEAD&gt; #回退到指定提交，丢弃修改</span><br><span class="line">git push -f origin &lt;branchName&gt; #强制将远端分支的HEAD指向本地分支 （有很大的风险，push到远程分支后，HEAD后commit会在远程分支上会消失）</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="git-revert"><a href="#git-revert" class="headerlink" title="git revert"></a>git revert</h2><p>恢复某个commit的代码<br>这个命令相当于手工回退某个commit的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">## 输入后进入一个vim界面让你确认更改内容和commit内容，按ESC后再按i编辑内容 :q退出</span><br><span class="line">git revert [HEAD] </span><br><span class="line">## 推送到远端仓库</span><br><span class="line">git push origin [branch]</span><br></pre></td></tr></table></figure></p>
+<h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2><p>将代码推送到远端分支</p>
+<ul>
+<li><strong>git push</strong> 将当前分支推送到默认的master分支</li>
+<li><p><strong>git push origin &lt;branchName></strong> 将当前分支推送到指定的远端分支</p>
+</li>
+<li><p><strong>--delete</strong> 删除指定的远程分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete &lt;branchName&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h2><p>分支操作命令,需要特别注意,<strong>git branch</strong>操作的都是当前分支<br><strong>git branch</strong> 列出所有本地分支<br><strong>git branch &lt;newBranch></strong> 新建分支,clone当前分支内容到新分支,与 <strong>git checkout -b</strong> 的区别是并不会切换到新分支</p>
+<ul>
+<li><strong>-a</strong> 列出所有本地分支和远程分支</li>
+<li><p><strong>-d | -D</strong> 删除本地分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#删除本地分支,前提是该分支没有为合并的变动</span><br><span class="line">git branch -d &lt;branchName&gt;</span><br><span class="line"></span><br><span class="line">#强制删除本地分支,不管有没有未合并变化</span><br><span class="line">git branch -D &lt;branchName&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>-m</strong> 重命名本地分支(远程分支)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 为当前分支重命名</span><br><span class="line">git branch -m &lt;branchName&gt;</span><br><span class="line"></span><br><span class="line"># 为指定分支重命名</span><br><span class="line">git branch -m &lt;new branchName&gt; &lt;old branchName&gt;</span><br><span class="line"></span><br><span class="line"># 为远程分支重命名,其实就是先删除远程分支，然后重命名本地分支，再重新提交一个远程分支。</span><br><span class="line">git checkout &lt;old branchName&gt; #切换到远程分支</span><br><span class="line">git pull #拉去最新的分支内容</span><br><span class="line">git branch -m &lt;new branchName&gt; &lt;old branchName&gt; #修改本地分支名称</span><br><span class="line">git push origin --delete &lt;old branchName&gt; #删除远程分支</span><br><span class="line">git push origin &lt;new branchName&gt; #推送当前分支到远端</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout"></a>git checkout</h2><p>用于切换分支和恢复文件<br><strong>checkout</strong> 分支时需要将当前改动 <strong>commit</strong> 或者 <strong>stash</strong> 起来, 不然会有以下两个问题:<br>如果已纳入版本控制的文件有改动将无法切换,<br>未纳入版控的文件将随着 <strong>checkout</strong> 到新的分支</p>
+<ul>
+<li><strong>git checkout &lt;branch></strong> 切换本地分支</li>
+<li><strong>git checkout &lt;commitID></strong> 切换到指定快照(commit),在快照上修改无法提交到此快照上,提交需要 <strong>git checkout <new branch=""></new></strong> 把快照切换到新分支.</li>
+<li><strong>git checkout tags/1.1.4</strong> 切换到某个tags</li>
+<li><p><strong>git checkout .</strong> 将本地没有提交的修改撤回</p>
+</li>
+<li><p><strong>-b | -B</strong> 创建新分支,clone当前分支内容,切换到该分支(保留分支的提交记录) <strong>git checkout -b <new branch=""></new></strong><br>如果存在同名分支 -b 会提示错误,-B 会强制创建新分支,并且会覆盖原来存在的同名分支</p>
+</li>
+<li><p><strong>--orphan</strong>  将当前内容切换到新分支,当前分支会是一个全新的分支没有任何提交记录(和-b|-B的区别)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan &lt;new_branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>--merge</strong> 将当前分支工作区和暂存区的修改内容(修改并没有commit的内容)合并到切换的分支下  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#需要注意的问题</span><br><span class="line">#1.合并可能产生冲突</span><br><span class="line">#2.切换到新分支后,前分支的修改内容会消失</span><br><span class="line">git checkout --merge &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>-- 用于恢复文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 放弃工作区对该文件的修改</span><br><span class="line">git checkout -- &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"># 指定从某个commit恢复指定文件到暂存区</span><br><span class="line">git checkout &lt;HASH&gt;~ -- &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>-p</strong> 进入交互模式,只恢复部分变化</p>
+</li>
+</ul>
+<h2 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h2><p>将工作区和暂存区的修改添加到储藏区</p>
+<ul>
+<li><strong>git stash</strong> 将工作区和暂存区的修改添加到储藏区(已经commit到仓库区的代码并不会被储藏)</li>
+<li><strong>git stash list</strong> 查看现有的储藏列表</li>
+<li><strong>git stash apply &lt;stashName></strong> 应用储藏, 不指定stashName会应用最近的储藏</li>
+</ul>
+<h2 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h2><p>将指定分支合并到当前分支,分支不加origin默认合并的是本地分支</p>
+<h2 id="git-clean"><a href="#git-clean" class="headerlink" title="git clean"></a>git clean</h2><p>从本地中删除没有被跟踪的文件</p>
+<ul>
+<li><strong>git clean -f <path></path></strong> 删除指定路径下没有被跟踪的文件</li>
+<li><strong>git clean -df</strong> 删除当前路径下没有被跟踪的文件</li>
+<li><strong>git clean -xf</strong> 删除当前路径下没有被跟踪的文件,不管是否在.gitignore文件中</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/27/Markdown基本语法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/08/27/Markdown基本语法/" class="post-title-link" itemprop="url">Markdown基本语法</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-08-27 10:47:28" itemprop="dateCreated datePublished" datetime="2019-08-27T10:47:28+08:00">2019-08-27</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>两种形式：<br>1）使用<code>=</code>和<code>-</code>标记一级和二级标题。</p>
+<blockquote>
+<p>一级标题<br><code>=========</code><br>二级标题<br><code>---------</code></p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题   "></a>一级标题   </h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2></blockquote>
+<p>2）使用<code>#</code>，可表示1-6级标题。</p>
+<blockquote>
+<p># 一级标题<br>## 二级标题<br>### 三级标题<br>#### 四级标题<br>##### 五级标题<br>###### 六级标题    </p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<h1 id="一级标题-1"><a href="#一级标题-1" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6></blockquote>
+<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>段落的前后要有空行，所谓的空行是指没有文字内容。若想在段内强制换行的方式是使用<strong>两个以上</strong>空格加上回车（引用中换行省略回车）。</p>
+<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>在段落的每行或者只在第一行使用符号<code>&gt;</code>,还可使用多个嵌套引用，如：</p>
+<blockquote>
+<p>> 区块引用<br>>&gt; 嵌套引用  </p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<p>区块引用  </p>
+<blockquote>
+<p>嵌套引用</p>
+</blockquote>
+</blockquote>
+<h2 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h2><p>代码区块的建立是在每行加上4个空格或者一个制表符（如同写代码一样）。如<br>普通段落：</p>
+<p>void main()<br>{<br>    printf(“Hello, Markdown.”);<br>}    </p>
+<p>代码区块：</p>
+<pre><code>void main()
+{
+    printf(&quot;Hello, Markdown.&quot;);
+}
+</code></pre><p><strong>注意</strong>:需要和普通段落之间存在空行。</p>
+<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>在强调内容两侧分别加上<code>*</code>或者<code>_</code>，如：</p>
+<blockquote>
+<p>*斜体*，_斜体_<br>**粗体**，__粗体__</p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<p><em>斜体</em>，_斜体_<br><strong>粗体</strong>，<strong>粗体</strong></p>
+</blockquote>
+<h4 id="4-6-列表"><a href="#4-6-列表" class="headerlink" title="4.6 列表"></a>4.6 列表</h4><p>使用<code>·</code>、<code>+</code>、或<code>-</code>标记无序列表，如：</p>
+<blockquote>
+<p>-（+*） 第一项<br>-（+*） 第二项<br>- （+*）第三项</p>
+</blockquote>
+<p><strong>注意</strong>：标记后面最少有一个_空格_或<em>制表符</em>。若不在引用区块中，必须和前方段落之间存在空行。</p>
+<p>效果：</p>
+<blockquote>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+</blockquote>
+<p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code>，如：</p>
+<blockquote>
+<p>1 . 第一项<br>2 . 第二项<br>3 . 第三项    </p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+</blockquote>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>分割线最常使用就是三个或以上<code>*</code>，还可以使用<code>-</code>和<code>_</code>。</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接可以由两种形式生成：<strong>行内式</strong>和<strong>参考式</strong>。<br><strong>行内式</strong>：</p>
+<blockquote>
+<p>[younghz的Markdown库](https:://github.com/younghz/Markdown “Markdown”)。</p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<p><a href="https:://github.com/younghz/Markdown" title="Markdown" target="_blank" rel="noopener">younghz的Markdown库</a>。</p>
+</blockquote>
+<p><strong>参考式</strong>：</p>
+<blockquote>
+<p>[younghz的Markdown库1][1]<br>[younghz的Markdown库2][2]<br>[1]:https:://github.com/younghz/Markdown “Markdown”<br>[2]:https:://github.com/younghz/Markdown “Markdown”    </p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<p><a href="https:://github.com/younghz/Markdown" title="Markdown" target="_blank" rel="noopener">younghz的Markdown库1</a><br><a href="https:://github.com/younghz/Markdown" title="Markdown" target="_blank" rel="noopener">younghz的Markdown库2</a></p>
+</blockquote>
+<p><strong>注意</strong>：上述的<code>[1]:https:://github.com/younghz/Markdown &quot;Markdown&quot;</code>不出现在区块中。</p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>！</code>。</p>
+<h2 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠\"></a>反斜杠<code>\</code></h2><p>相当于<strong>反转义</strong>作用。使符号成为普通符号。</p>
+<h2 id="符号’-’"><a href="#符号’-’" class="headerlink" title="符号’`’"></a>符号’`’</h2><p>起到标记作用。如：</p>
+<blockquote>
+<p>`ctrl+a`</p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<p><code>ctrl+a</code>    </p>
+</blockquote>
+<hr>
+<p><strong>注意</strong>：不同的Markdown解释器或工具对相应语法（扩展语法）的解释效果不尽相同，具体可参见工具的使用说明。</p>
+<hr>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/14/HTTP缓存/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/08/14/HTTP缓存/" class="post-title-link" itemprop="url">HTTP缓存</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-08-14 18:07:49" itemprop="dateCreated datePublished" datetime="2019-08-14T18:07:49+08:00">2019-08-14</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><a href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久" class="headerlink" title="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"></a>浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</h2><h2 id="通过-ETag-验证令牌-If-None-Match"><a href="#通过-ETag-验证令牌-If-None-Match" class="headerlink" title="通过 ETag(验证令牌) / If-None-Match"></a>通过 ETag(验证令牌) / If-None-Match</h2><p>服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),<br>下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,<br>服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”.<br><img src="/h5/images/etag.png" alt="avatar"></p>
+<h2 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h2><ul>
+<li>no-cache<br>必须先与服务器确认响应是否发生变化,因此如果同时存在ETag,no-cache是可以缓存的</li>
+<li>no-store<br>直接禁止浏览器以及所有中间缓存存储任何版本的响应.</li>
+<li>public<br>浏览器和CDN(代理服务器)都可缓存</li>
+<li>private<br>只有浏览器能缓存,CDN不能缓存</li>
+<li>max-age<br>缓存最长时间(单位秒),例如,”max-age=60”表示接下来的60秒缓存和重用响应</li>
+</ul>
+<h2 id="Last-Modified-If-Modified-Since"><a href="#Last-Modified-If-Modified-Since" class="headerlink" title="Last-Modified / If-Modified-Since"></a>Last-Modified / If-Modified-Since</h2><ul>
+<li>Last-Modified<br>服务器在响应请求时，告诉浏览器资源的最后修改时间。</li>
+<li>If-Modified-Since<br>再次请求服务器时，通过此字段通知服务器上次请求时，服务器返回的资源最后修改时间。<br>服务器收到请求后发现有头If-Modified-Since 则与被请求资源的最后修改时间进行比对。<br>若资源的最后修改时间大于If-Modified-Since，说明资源又被改动过，则响应整片资源内容，返回状态码200；<br>若资源的最后修改时间小于或等于If-Modified-Since，说明资源无新修改，则响应HTTP 304，告知浏览器继续使用所保存的cache。</li>
+</ul>
+<h2 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a>Expires</h2><p>Expires的值为服务端返回的到期时间,即下一次请求时,请求时间小于服务端返回的到期时间,直接使用缓存数据.<br>不过Expires是HTTP 1.0的东西,另一个问题是到期时间由服务端生成,但是客户端时间和服务端时间有误差,可能导致存储命中误差.所以现在一般使用<a href="#Cache-Control">Cache-Control</a>.</p>
+<p><img src="/h5/images/snipaste.png" alt="avatar"></p>
+<h2 id="各种刷新"><a href="#各种刷新" class="headerlink" title="各种刷新"></a>各种刷新</h2><ul>
+<li>浏览器中输入地址,回车<br>服务器缓存策略</li>
+<li>F5<br>去服务器检验缓存是否过期,再使用服务器缓存策略</li>
+<li>Ctrl + F5<br>不缓存,所有请求都直接去服务器拿</li>
+</ul>
+<h2 id="使用node-js模拟演示"><a href="#使用node-js模拟演示" class="headerlink" title="使用node.js模拟演示"></a>使用node.js模拟演示</h2>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/07/React核心概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/08/07/React核心概念/" class="post-title-link" itemprop="url">React核心概念</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-08-07 18:56:28" itemprop="dateCreated datePublished" datetime="2019-08-07T18:56:28+08:00">2019-08-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-10-23 14:12:44" itemprop="dateModified" datetime="2019-10-23T14:12:44+08:00">2019-10-23</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><ul>
+<li><p>JSX中用 <strong>{}</strong> 嵌入表达式</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">'Josh Perez'</span>;</span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JSX也是一个表达式<br>可以在if语句和for循环的代码块中使用JSX,将JSX赋值给变量,把JSX当作参数传入,从函数中返回JSX</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGreeting</span>(<span class="params">user</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;formatName(user)&#125;!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, stranger.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JSX特定属性<br>可以通过引号或大括号来赋值DOM属性值,同一个属性只能选择其中一种方式,JSX里的class变成<strong>className</strong>.</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过引号</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">tabIndex</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line"><span class="comment">// 通过大括号</span></span><br><span class="line"><span class="keyword">const</span> element2 = <span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#123;avatarUrl&#125;</span> /&gt;</span>;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JSX防注入攻击 React DOM在渲染所有输入内容前默认会进行转译,所有内容在渲染前都被转成字符串.</p>
+</li>
+</ul>
+<h2 id="组件-amp-Props"><a href="#组件-amp-Props" class="headerlink" title="组件&amp;Props"></a>组件&amp;Props</h2><p>组件接受任意的入参(即”<strong>props</strong>“),并返回用于描述页面展示内容的React元素</p>
+<ul>
+<li>React会将以小写字母开头的组件视为原生DOM标签,大写字母开头的为自定义组件.</li>
+<li><p>函数组件和Class组件</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Class组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Welcome</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>渲染组件<br>React元素既可以是DOM标签,也可以是自定义的组件,当React元素为自定义组件时,它会将JSX所接受的属性转换为单个对象传递给组件,这个对象被称为”<strong>Props</strong>“.</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DOM元素</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line"><span class="comment">// 自定义组件</span></span><br><span class="line"><span class="keyword">const</span> element2 = <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span> /&gt;</span>;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组件最外层只能有一标签</p>
+</li>
+</ul>
+<h2 id="State-amp-生命周期"><a href="#State-amp-生命周期" class="headerlink" title="State &amp; 生命周期"></a>State &amp; 生命周期</h2><h3 id="state"><a href="#state" class="headerlink" title="state"></a>state</h3><ul>
+<li>构造函数是唯一可以给 <strong>this.state</strong> 赋值的地方</li>
+<li><p>不要直接修改 <strong>State</strong> ,不会重新渲染组件,应该使用 <strong>setState()</strong> 修改state,使用constructor需要把 <strong>props</strong> 传递到父类的构造函数中</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例子</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Clock</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">        <span class="keyword">this</span>.state = &#123;<span class="attr">date</span>: <span class="keyword">new</span> <span class="built_in">Date</span>()&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    componentDidMount() &#123;</span><br><span class="line">        <span class="keyword">this</span>.timerID = setInterval(</span><br><span class="line">            () =&gt; <span class="keyword">this</span>.tick(),</span><br><span class="line">            <span class="number">1000</span></span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    tick() &#123;</span><br><span class="line">        <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">            date: <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// babel已经对JSX做了优化，上面的例子也可以这样简写</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Clock</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;<span class="attr">date</span>: <span class="keyword">new</span> <span class="built_in">Date</span>()&#125;;</span><br><span class="line">    </span><br><span class="line">    componentDidMount = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.timerID = setInterval(</span><br><span class="line">            () =&gt; <span class="keyword">this</span>.tick(),</span><br><span class="line">            <span class="number">1000</span></span><br><span class="line">        );</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    tick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">            date: <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>State</strong> 的更新可能是异步的, 所以不要依赖他们的值来更新下一个状态<br>解决办法: 让 <strong>setState()</strong> 接收一个函数而不是一个对象.这个函数用上一个state作为第一个参数,将此次更新被应用时的props作为第二个参数</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Wrong</span></span><br><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    counter: <span class="keyword">this</span>.state.counter + <span class="keyword">this</span>.props.increment,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Correct 如果情况不复杂可以用这种简写方法</span></span><br><span class="line"><span class="keyword">this</span>.setState(<span class="function">(<span class="params">state, props</span>) =&gt;</span> (&#123;</span><br><span class="line">    counter: state.counter + props.increment,</span><br><span class="line">&#125;));</span><br><span class="line"><span class="comment">// Correct</span></span><br><span class="line"><span class="keyword">this</span>.setState(<span class="function">(<span class="params">state, props</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        counter: state.counter + props.increment,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数据是向下流动的, 任何的state总是所属于特定的组件,而且从该state派生的任何数据或UI只能影响树中”低于”它们的组件.</p>
+<h3 id="React生命周期"><a href="#React生命周期" class="headerlink" title="React生命周期"></a>React生命周期</h3><p><img src="/h5/images/react生命周期.png" alt="avatar"></p>
+</li>
+<li>constructor()<br>在React逐渐挂载之前调用，babel已经自动调用 <strong>super(props)</strong>,所以可以直接使用this.props。<br>注意避免将props的值赋值给state！这是一个常见的错误（更新prop中的color时，并不会影响state）</li>
+<li>forceUpdate() 强制让逐渐重新渲染<br>默认情况下，当组件的state或props发生变化时，组件将重新渲染。如果<strong>render()</strong>方法依赖于其他数据，则可以调用<strong>this.forceUpdate()</strong>强制让组件重新渲染。</li>
+<li>shouldComponentUpdate(nextProps, nextState) 根据返回值判断是否重新渲染组件<br>当 <strong>props</strong> 或 <strong>state</strong> 发生变化时，<strong>shouldComponentUpdate()</strong> 会在渲染执行之前被调用。返回值默认为 true。首次渲染或使用 <strong>forceUpdate()</strong> 时不会调用该方法。<br>此方法仅作为性能优化的方式而存在。不要企图依靠此方法来“阻止”渲染，因为这可能会产生 bug。你应该考虑使用内置的 PureComponent 组件，而不是手动编写 shouldComponentUpdate()。PureComponent 会对 props 和 state 进行浅层比较，并减少了跳过必要更新的可能性。</li>
+<li></li>
+</ul>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><ul>
+<li>React 事件采用小驼峰式,而不是纯小写.</li>
+<li><p>使用JSX语法时你需要传一个函数作为事件处理函数,而不是一个字符串</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// React</span></span><br><span class="line">&lt;button onClick=&#123;activateLasers&#125;&gt;</span><br><span class="line">    Activate Lasers</span><br><span class="line">&lt;<span class="regexp">/button&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不能通过返回false的方式阻止默认行为,必须显示的调用<strong>preventDefault</strong></p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// React</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ActionLink</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'The link was clicked.'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;a href=<span class="string">"#"</span> onClick=&#123;handleClick&#125;&gt;</span><br><span class="line">            Click me</span><br><span class="line">        &lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绑定this的三种方法</p>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 通过箭头函数,默认e参数为事件的event对象(这种事最常用的方式)</span></span><br><span class="line">    handleClick = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">        ) </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过bind绑定</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle2</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">        <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="comment">// 通过在事件内写箭头函数,需要显示的传递e(event合成事件)</span></span><br><span class="line">            &lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.handleClick(e)&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过在事件内使用bind绑定</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toggle</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    handleClick () &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>)&#125;&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>    </span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 向事件处理程序传递参数</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>jsx harmony</span><br><span class="line"><span class="comment">// 通过箭头函数</span></span><br><span class="line">&lt;button onClick=&#123;(e) =&gt; <span class="keyword">this</span>.deleteRow(id, e)&#125;&gt;Delete Row&lt;<span class="regexp">/button&gt;;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 通过bind, 事件对象e会被作为第二个参数隐形传递</span></span><br><span class="line"><span class="regexp">&lt;button onClick=&#123;this.deleteRow.bind(this, id)&#125;&gt;Delete Row&lt;/</span>button&gt;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/18/webStorm使用技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/07/18/webStorm使用技巧/" class="post-title-link" itemprop="url">webStorm使用技巧</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-18 16:23:19" itemprop="dateCreated datePublished" datetime="2019-07-18T16:23:19+08:00">2019-07-18</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-01-15 15:16:18" itemprop="dateModified" datetime="2020-01-15T15:16:18+08:00">2020-01-15</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>建议从官网下载最新版本<a href="https://www.jetbrains.com/webstorm/download/#section=windows" target="_blank" rel="noopener">webStorm</a></p>
+<h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p><a href="https://www.algerfan.cn/articles/2019/03/06/1551868940012.html" target="_blank" rel="noopener">IDEA 最新破解方法，2019.3已支持</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 常用快捷键</span><br><span class="line">- 删除当前行 Ctrl + Y</span><br><span class="line">- 下方插入新行 Shift + Enter</span><br><span class="line">- 当前文件搜索 Ctrl + F</span><br><span class="line">- 当前文件搜索替换 Ctrl + R</span><br><span class="line">- 全局搜索 Ctrl + Shift + F</span><br><span class="line">- 全局搜索替换 Ctrl + Shift + R</span><br><span class="line">- 全局搜索文件 Ctrl + Shift + N</span><br><span class="line">- 代码检查设置 Ctrl + Shift + Alt + H</span><br><span class="line">- 跳转到指定行 Ctrl + G(输入行数)</span><br><span class="line">- 控制台 Ctrl + F12</span><br><span class="line">- 重命名文件 Shift + F6</span><br><span class="line">- 打开当前文件 右键 -&gt; Show in Explorer</span><br><span class="line">- 展开/关闭左侧项目 Alt + 1</span><br><span class="line">- 版本控制 Alt + 9</span><br><span class="line">- git commit: Ctrl + K</span><br><span class="line">- push到当前远程分支 Ctrl + Shift + K</span><br><span class="line">- 格式化文件 Ctrl + Alt + L</span><br><span class="line">- 格式化选定区域 Ctrl + Alt + I</span><br><span class="line">- 删除文件 Delete</span><br><span class="line"></span><br><span class="line">## 常用操作</span><br><span class="line">- 查看文件本地历史记录: VCS | Local History | Show History 左上角的返回标志是还原文件</span><br><span class="line">- 重构命名,WebStorm会自动重命名其所有引用和import语句: Ctrl + Shift + Alt + T -&gt; rename  -&gt; refactor</span><br><span class="line">- webStrom安装插件 File | Settings | plugins </span><br><span class="line">- webStrom修改主题 File | Settings | 搜索theme</span><br><span class="line">- 解决冲突: 随便右键一个文件选择Git -&gt; Resolve Conflicts...  左边是合并分支,右边是当前分支,中间是修改后的代码.</span><br><span class="line">- 逐行查看文件更改记录 右键文件打断点的行数位置 选择annotate</span><br><span class="line">- 查看版本提交记录和修改 Ctrl + F12(打开控制台) -&gt; Version Control -&gt; log</span><br><span class="line">- 同步设置 登录账号后右下角可以同步设置,选择Sync Plugins Silently</span><br><span class="line">- webStrom无法识别@符号跳转文件</span><br><span class="line">```javascript</span><br><span class="line">// webstrom9.3已经支持</span><br><span class="line">// 如果是vue-cli 3以上隐藏别名配置的这种情况,在根目录添加alias.config.js文件,再指定webpack配置文件,文件内容如下</span><br><span class="line">const resolve = dir =&gt; require(&apos;path&apos;).join(__dirname, dir);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">    resolve: &#123;</span><br><span class="line">        alias: &#123;</span><br><span class="line">            &apos;@&apos;: resolve(&apos;src&apos;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 指定webpack配置文件</span><br><span class="line">// file -&gt; setting -&gt; 搜索webpack -&gt; webpack configuration file </span><br><span class="line">// 在这里输入webpack别名配置文件地址 例: D:\react-learn\vueinit\alias.config.js.</span><br></pre></td></tr></table></figure></p>
+<h2 id="webStrom-插件推荐"><a href="#webStrom-插件推荐" class="headerlink" title="webStrom 插件推荐"></a>webStrom 插件推荐</h2><p>webStrom本身就已经集成大部分功能而且占用CPU较高不建议安装太多没必要的插件</p>
+<ul>
+<li>Atom OneDark Theme 个人最喜欢的主题,用完一改webstrom丑丑的外观</li>
+<li>codeGlance 右侧代码预览(如果没有显示,尝试使用Ctrl+Shift+G快捷键切换关闭开启)</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jetbrains.com/zh-cn/webstorm/features/ide-features.html" target="_blank" rel="noopener">IDE功能 - 功能 | WebStorm</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/17/XOR加密/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/07/17/XOR加密/" class="post-title-link" itemprop="url">XOR加密</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-17 15:59:50" itemprop="dateCreated datePublished" datetime="2019-07-17T15:59:50+08:00">2019-07-17</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-11-13 19:04:35" itemprop="dateModified" datetime="2019-11-13T19:04:35+08:00">2019-11-13</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="XOR"><a href="#XOR" class="headerlink" title="XOR"></a>XOR</h2><p>XOR 运算有一个很奇妙的特点：如果对一个值连续做两次 XOR，会返回这个值本身。XOR 的这个特点，使得它可以用于信息的加密。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * xor 加密程序 唯一区别添加了xor和hex默认值</span></span><br><span class="line"><span class="comment"> * @param &#123;Strng&#125; str 待加密字符串</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; xor 异或值</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; hex 加密后的进制数</span></span><br><span class="line"><span class="comment"> * @return &#123;Strng&#125; 加密后的字符串</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypto</span>(<span class="params"> str, xor, hex </span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 设置默认值</span></span><br><span class="line">    xor = xor || <span class="number">1</span>;</span><br><span class="line">    hex = hex || <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> str !== <span class="string">'string'</span> || <span class="keyword">typeof</span> xor !== <span class="string">'number'</span> || <span class="keyword">typeof</span> hex !== <span class="string">'number'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> resultList = [];</span><br><span class="line">    hex = hex &lt;= <span class="number">25</span> ? hex : hex % <span class="number">25</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">var</span> i=<span class="number">0</span>; i&lt;str.length; i++ ) &#123;</span><br><span class="line">        <span class="comment">// 提取字符串每个字符的ascll码</span></span><br><span class="line">        <span class="keyword">var</span> charCode = str.charCodeAt(i);</span><br><span class="line">        <span class="comment">// 进行异或加密</span></span><br><span class="line">        charCode = (charCode * <span class="number">1</span>) ^ xor;</span><br><span class="line">        <span class="comment">// 异或加密后的字符转成 hex 位数的字符串</span></span><br><span class="line">        charCode = charCode.toString(hex);</span><br><span class="line">        resultList.push(charCode);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> splitStr = <span class="built_in">String</span>.fromCharCode(hex + <span class="number">97</span>);</span><br><span class="line">    <span class="keyword">var</span> resultStr = resultList.join( splitStr );</span><br><span class="line">    <span class="keyword">return</span> resultStr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * xor 解密程序 唯一区别添加了xor和hex默认值</span></span><br><span class="line"><span class="comment"> * @param &#123;Strng&#125; str 待加密字符串</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; xor 异或值</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; hex 加密后的进制数</span></span><br><span class="line"><span class="comment"> * @return &#123;Strng&#125; 加密后的字符串</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrypto</span>(<span class="params"> str, xor, hex </span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 设置默认值</span></span><br><span class="line">    xor = xor || <span class="number">1</span>;</span><br><span class="line">    hex = hex || <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> str !== <span class="string">'string'</span> || <span class="keyword">typeof</span> xor !== <span class="string">'number'</span> || <span class="keyword">typeof</span> hex !== <span class="string">'number'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> strCharList = [];</span><br><span class="line">    <span class="keyword">var</span> resultList = [];</span><br><span class="line">    hex = hex &lt;= <span class="number">25</span> ? hex : hex % <span class="number">25</span>;</span><br><span class="line">    <span class="comment">// 解析出分割字符</span></span><br><span class="line">    <span class="keyword">var</span> splitStr = <span class="built_in">String</span>.fromCharCode(hex + <span class="number">97</span>);</span><br><span class="line">    <span class="comment">// 分割出加密字符串的加密后的每个字符</span></span><br><span class="line">    strCharList = str.split(splitStr);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">var</span> i=<span class="number">0</span>; i&lt;strCharList.length; i++ ) &#123;</span><br><span class="line">        <span class="comment">// 将加密后的每个字符转成加密后的ascll码</span></span><br><span class="line">        <span class="keyword">var</span> charCode = <span class="built_in">parseInt</span>(strCharList[i], hex);</span><br><span class="line">        <span class="comment">// 异或解密出原字符的ascll码</span></span><br><span class="line">        charCode = (charCode * <span class="number">1</span>) ^ xor;</span><br><span class="line">        <span class="keyword">var</span> strChar = <span class="built_in">String</span>.fromCharCode(charCode);</span><br><span class="line">        resultList.push(strChar);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> resultStr = resultList.join(<span class="string">''</span>);</span><br><span class="line">    <span class="keyword">return</span> resultStr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">const</span> text = <span class="string">'aaaaaa'</span>;</span><br><span class="line"><span class="keyword">const</span> testText = encrypto(text); <span class="comment">// "60q60q60"</span></span><br><span class="line">decrypto(testText); <span class="comment">// "aaa"</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ck = <span class="number">190000</span>;</span><br><span class="line"><span class="keyword">var</span> gz = <span class="number">22000</span>;</span><br><span class="line"><span class="keyword">var</span> mb = <span class="number">1000000</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">ck, gz, mb</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> HL = <span class="number">7.2</span>;</span><br><span class="line">    <span class="keyword">var</span> GZ = gz + <span class="number">25000</span> / HL + <span class="number">13000</span> / HL + <span class="number">5000</span> / HL;</span><br><span class="line">    <span class="keyword">var</span> HX = (<span class="number">30000</span> + <span class="number">20000</span> + <span class="number">5000</span>) / HL + <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">var</span> SY = GZ - HX;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> SUM = ck;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> nowDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">var</span> nowMonth = nowDate.getMonth();</span><br><span class="line">    <span class="keyword">var</span> nowDay = nowDate.getDate();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> monthSum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=nowMonth; i&lt;<span class="number">1000</span>; i++) &#123;</span><br><span class="line">        SUM += SY;</span><br><span class="line">        <span class="comment">// SUM += 18000;</span></span><br><span class="line">        <span class="keyword">if</span> (i % <span class="number">12</span> === <span class="number">0</span>) &#123;</span><br><span class="line">            SUM += SY;</span><br><span class="line">            </span><br><span class="line">            SUM -= <span class="number">20000</span>;</span><br><span class="line">            SUM -= <span class="number">10000</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        SUM *= <span class="number">1.01</span>;</span><br><span class="line">        monthSum++;</span><br><span class="line">        <span class="built_in">console</span>.log(SUM)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (SUM &gt;= mb) &#123;</span><br><span class="line">            <span class="keyword">var</span> nowDateCopy = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">            nowDateCopy.setMonth(monthSum + nowMonth);</span><br><span class="line">            nowDateCopy.setDate(<span class="number">10</span>);</span><br><span class="line">            <span class="keyword">var</span> day = (nowDateCopy - nowDate) / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>);</span><br><span class="line">            <span class="built_in">console</span>.log(day, nowDateCopy.toLocaleString(), monthSum);</span><br><span class="line">            <span class="keyword">return</span> nowDateCopy;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> mbDate = test(ck, gz, mb);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test2</span>(<span class="params">addCk, addGz</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (addCk) &#123;</span><br><span class="line">        <span class="keyword">var</span> sumMonth =  (mbDate - <span class="keyword">new</span> <span class="built_in">Date</span>()) / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) / (<span class="number">365</span>/<span class="number">12</span>);       </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://github.com/chenshenhai/blog/issues/21" target="_blank" rel="noopener">js加密解密的方法</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/15/前端100问-第1-10题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/07/15/前端100问-第1-10题/" class="post-title-link" itemprop="url">前端100问 第1-10题</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-15 18:15:38" itemprop="dateCreated datePublished" datetime="2019-07-15T18:15:38+08:00">2019-07-15</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="写-React-Vue-项目时为什么要在列表组件中写key-其作用是什么"><a href="#写-React-Vue-项目时为什么要在列表组件中写key-其作用是什么" class="headerlink" title="写 React/Vue 项目时为什么要在列表组件中写key,其作用是什么?"></a>写 React/Vue 项目时为什么要在列表组件中写key,其作用是什么?</h1><h2 id="不带key的作用"><a href="#不带key的作用" class="headerlink" title="不带key的作用"></a>不带key的作用</h2><p>不带有key,并且使用简单的模板,可以更有效的复用节点,diff速度也更块,因为带key在增删节点上有耗时,这就是vue的默认模式.<br>这种模式会带来一些隐晦的副作用,比如可能不会产生过渡效果,或者某些节点有绑定数据状态(表单),会出现状态错位.<br>vue文档也说明了<strong>这个默认模式是高效的,但是只适用于不依赖只组件状态或临时DOM状态的列表渲染输出</strong>.</p>
+<p>以下是简单的例子:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">""</span><span class="attr">i</span> <span class="attr">in</span> <span class="attr">dataList</span>&gt;</span>&#123;&#123;i&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        datalist: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>],</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 我们给每个节点标记一个ID来标明身份</span></span><br><span class="line">[</span><br><span class="line">    <span class="string">'&lt;div&gt;1&lt;/div&gt;'</span>, <span class="comment">// id： A</span></span><br><span class="line">    <span class="string">'&lt;div&gt;2&lt;/div&gt;'</span>, <span class="comment">// id:  B</span></span><br><span class="line">    <span class="string">'&lt;div&gt;3&lt;/div&gt;'</span>, <span class="comment">// id:  C</span></span><br><span class="line">    <span class="string">'&lt;div&gt;4&lt;/div&gt;'</span>, <span class="comment">// id:  D</span></span><br><span class="line">    <span class="string">'&lt;div&gt;5&lt;/div&gt;'</span>  <span class="comment">// id:  E</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 进行数据位置替换</span></span><br><span class="line">vm.dataList = [<span class="number">4</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">2</span>];</span><br><span class="line"><span class="comment">// 没key的情况,节点位置没变,innerText内容更新了</span></span><br><span class="line">[</span><br><span class="line">    <span class="string">'&lt;div&gt;4&lt;/div&gt;'</span>, <span class="comment">// id： A</span></span><br><span class="line">    <span class="string">'&lt;div&gt;1&lt;/div&gt;'</span>, <span class="comment">// id:  B</span></span><br><span class="line">    <span class="string">'&lt;div&gt;3&lt;/div&gt;'</span>, <span class="comment">// id:  C</span></span><br><span class="line">    <span class="string">'&lt;div&gt;5&lt;/div&gt;'</span>, <span class="comment">// id:  D</span></span><br><span class="line">    <span class="string">'&lt;div&gt;2&lt;/div&gt;'</span>  <span class="comment">// id:  E</span></span><br><span class="line">]</span><br><span class="line"><span class="comment">// 有key的情况,dom节点位置交换了,内容没有更新</span></span><br><span class="line"><span class="comment">// &lt;div v-for="i in dataList" :key='i'&gt;&#123;&#123; i &#125;&#125;&lt;/div&gt;</span></span><br><span class="line">[</span><br><span class="line">    <span class="string">'&lt;div&gt;4&lt;/div&gt;'</span>, <span class="comment">// id:  D</span></span><br><span class="line">    <span class="string">'&lt;div&gt;1&lt;/div&gt;'</span>, <span class="comment">// id： A</span></span><br><span class="line">    <span class="string">'&lt;div&gt;3&lt;/div&gt;'</span>, <span class="comment">// id:  C</span></span><br><span class="line">    <span class="string">'&lt;div&gt;5&lt;/div&gt;'</span>  <span class="comment">// id:  E</span></span><br><span class="line">    <span class="string">'&lt;div&gt;2&lt;/div&gt;'</span>, <span class="comment">// id:  B</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 增删列表项</span></span><br><span class="line">vm.dataList = [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line"><span class="comment">// 没有key的情况,节点位置不变,innerText内容更新了</span></span><br><span class="line">[</span><br><span class="line">    <span class="string">'&lt;div&gt;3&lt;/div&gt;'</span>, <span class="comment">// id： A</span></span><br><span class="line">    <span class="string">'&lt;div&gt;4&lt;/div&gt;'</span>, <span class="comment">// id:  B</span></span><br><span class="line">    <span class="string">'&lt;div&gt;5&lt;/div&gt;'</span>, <span class="comment">// id:  C</span></span><br><span class="line">    <span class="string">'&lt;div&gt;6&lt;/div&gt;'</span>, <span class="comment">// id:  D</span></span><br><span class="line">    <span class="string">'&lt;div&gt;7&lt;/div&gt;'</span>  <span class="comment">// id:  E</span></span><br><span class="line">]</span><br><span class="line"><span class="comment">// 有key的情况,删除了 A,B 节点,新增了 F,G 节点</span></span><br><span class="line">[</span><br><span class="line">    <span class="string">'&lt;div&gt;3&lt;/div&gt;'</span>, <span class="comment">// id： C</span></span><br><span class="line">    <span class="string">'&lt;div&gt;4&lt;/div&gt;'</span>, <span class="comment">// id:  D</span></span><br><span class="line">    <span class="string">'&lt;div&gt;5&lt;/div&gt;'</span>, <span class="comment">// id:  E</span></span><br><span class="line">    <span class="string">'&lt;div&gt;6&lt;/div&gt;'</span>, <span class="comment">// id:  F</span></span><br><span class="line">    <span class="string">'&lt;div&gt;7&lt;/div&gt;'</span>  <span class="comment">// id:  G</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h2 id="key的作用"><a href="#key的作用" class="headerlink" title="key的作用"></a>key的作用</h2><p>key是给每个vnode(虚拟DOM)的唯一id,可以<strong>依靠key</strong>更<strong>准确</strong>、更<strong>快</strong>的拿到oldVnode中对应的vnode节点.</p>
+<ol>
+<li>更准确<br>因为不带啊key就不是就地复用了,会对比新旧节点key是否相等,所以会更加准确</li>
+<li>更快<br>利用key的唯一性生成map对象遍历来获取对应节点,比遍历方式更快(map对象是通过key/value直接获取值对比,而遍历需要遍历整个数组).</li>
+</ol>
+<h2 id="‘1’-‘2’-‘3’-map-parseInt-what-amp-why"><a href="#‘1’-‘2’-‘3’-map-parseInt-what-amp-why" class="headerlink" title="[‘1’, ‘2’, ‘3’].map(parseInt) what &amp; why ?"></a>[‘1’, ‘2’, ‘3’].map(parseInt) what &amp; why ?</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面两个写法相等</span></span><br><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="built_in">parseInt</span>);</span><br><span class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>].map(<span class="function">(<span class="params">element, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(element, index);</span><br><span class="line">&#125;) <span class="comment">// [1, NaN, NaN]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>parseInt(string, radix) 解析字符串为数字,第一个参数为字符串,第二个参数为基数</li>
+<li>parseInt(‘1’, 0) //radix为0时，且string参数不以“0x”和“0”开头时，按照10为基数处理。这个时候返回1</li>
+<li>parseInt(‘2’, 1) //基数为1（1进制）表示的数中，最大值小于2，所以无法解析，返回NaN</li>
+<li>parseInt(‘3’, 2) //基数为2（2进制）表示的数中，最大值小于3，所以无法解析，返回NaN</li>
+<li>map函数返回每次return的结果,所以返回[1, NaN, NaN]</li>
+</ul>
+<h2 id="什么是防抖和节流？有什么区别？如何实现？"><a href="#什么是防抖和节流？有什么区别？如何实现？" class="headerlink" title="什么是防抖和节流？有什么区别？如何实现？"></a>什么是防抖和节流？有什么区别？如何实现？</h2><h3 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h3><p>触发高频时间后n秒内只执行一次,如果n秒内时间再被触发,重新计算时间.<br>利用闭包保存定时器状态,解决计时问题<br>使用apply修改this指向外部函数,保持原有上下文<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 防抖函数</span></span><br><span class="line"><span class="comment">* @param fn 防抖成功回调函数</span></span><br><span class="line"><span class="comment">* @param time 高频事件间隔时间</span></span><br><span class="line"><span class="comment">* @returns &#123;Function&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, time = <span class="number">500</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> timeout = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        clearTimeout(timeout);</span><br><span class="line">        timeout = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">// 为了将debounce</span></span><br><span class="line">            fn.appaly(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">        &#125;, time);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'防抖成功'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> input = <span class="built_in">document</span>.getElementById(<span class="string">'input'</span>);</span><br><span class="line">input.addEventListener(<span class="string">'input'</span>, debounce(test));</span><br></pre></td></tr></table></figure></p>
+<h3 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h3><p>高频事件一定时间间隔内只能触发一次<br>利用闭包保存一个标记初始化为true,执行时判断状态是否为true,通过后把标记修改为false,事件执行后修改状态为true.<br>使用apply修改this指向外部函数,保持原有上下文<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn, time = <span class="number">1000</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> canRun  = <span class="literal">true</span>; <span class="comment">// </span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!canRun) <span class="keyword">return</span>;</span><br><span class="line">        canRun = <span class="literal">false</span>;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            fn.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">            canRun = <span class="literal">true</span>;</span><br><span class="line">        &#125;, time);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'节流'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> input = <span class="built_in">document</span>.getElementById(<span class="string">'input'</span>);</span><br><span class="line">input.addEventListener(<span class="string">'input'</span>, throttle(test));</span><br></pre></td></tr></table></figure></p>
+<h2 id="介绍下-Set、Map、WeakSet-和-WeakMap-的区别？"><a href="#介绍下-Set、Map、WeakSet-和-WeakMap-的区别？" class="headerlink" title="介绍下 Set、Map、WeakSet 和 WeakMap 的区别？"></a>介绍下 Set、Map、WeakSet 和 WeakMap 的区别？</h2><p><strong>Set</strong>和<strong>Map</strong>主要应用场景在于<strong>数据重组</strong>和数据存储</p>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><ul>
+<li>Set类似数组,但成员有唯一性,通过全等(===)判断(区别:NaN等于NaN)</li>
+<li>Set的遍历的时候index从1开始</li>
+<li>Set默认可遍历</li>
+<li>Set本身是一个构造函数,用来生成Set数据格式,接受一个<strong>iterable</strong>(可迭代对象)</li>
+</ul>
+<p><strong>实例属性</strong><br>size: 元素个数<br><strong>操作方法</strong></p>
+<ul>
+<li>add(value): 新增,相当于array的push(返回Set对象本身,可以链式调用)</li>
+<li>delete(value): 存在即删除集合中的value</li>
+<li>has(value): 判断集合中是否存在value</li>
+<li>clear(): 清空集合<br><strong>遍历方法</strong>  </li>
+<li>keys(): 返回集合中所有的键的SetIterator(迭代器)</li>
+<li>values(): 返回集合中所有值得SetIterator(和keys全等)</li>
+<li>entries(): 返回集合中所有元素的键值对(数组形式)的迭代器</li>
+<li>forEach(callbackFn, thisArg): 和原生forEach方法区别在于没有第三个数组本身的参数<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</span><br><span class="line"><span class="built_in">console</span>.log(set.keys()); <span class="comment">// SetIterator &#123;1, 2, 3&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(set.values()); <span class="comment">// SetIterator &#123;1, 2, 3&#125; </span></span><br><span class="line"><span class="built_in">console</span>.log(set.entries()); <span class="comment">// SetIterator &#123;1 =&gt; 1, 2 =&gt; 2, 3 =&gt; 3&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> set.keys()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item); <span class="comment">// 1 2 3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> set.entries()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item); <span class="comment">// [1, 1] [2, 2] [3, 3]</span></span><br><span class="line">&#125;</span><br><span class="line">set.forEach(<span class="function">(<span class="params">value, key</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;value&#125;</span> : <span class="subst">$&#123;key&#125;</span>`</span>); <span class="comment">// 1 : 1   2 : 2  3 : 3</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log([...set]); <span class="comment">// [1,2,3];</span></span><br><span class="line">set.add(<span class="number">4</span>).add(<span class="number">5</span>); <span class="comment">// Set(3) &#123;2, 3, 4&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> set1 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line"><span class="keyword">let</span> set2 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>]);</span><br><span class="line"><span class="comment">// 交集</span></span><br><span class="line">[...set1].filter(<span class="function"><span class="params">value</span> =&gt;</span> set2.has(value)); <span class="comment">// [2, 3];</span></span><br><span class="line"><span class="comment">// 并集</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Set</span>([...set1, ...set2]); <span class="comment">// Set(4) &#123;1, 2, 3, 4&#125;</span></span><br><span class="line"><span class="comment">// 差集</span></span><br><span class="line">[...set1].filter(<span class="function"><span class="params">value</span> =&gt;</span> !set2.has(value)); <span class="comment">// [1]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p>Map对象主要是为了解决对象不能作为键名的问题<br>Map还可以接受一个数组和Iterator接口且成员都是双元素的数组结构(也就是说<strong>Set</strong>和<strong>Map</strong>都可以用来生成新的Map)<br>实例属性和方法和Set类似,以下只详细介绍不同点<br><strong>操作方法</strong></p>
+<ul>
+<li>set(key, value) 添加新的属性</li>
+<li>get(key) 读取<strong>key</strong>对应的属性,找不到返回<strong>undefined</strong></li>
+<li>has(key)</li>
+<li>delete(key)<br><strong>遍历方法</strong></li>
+<li>keys() </li>
+<li>values() </li>
+<li>entries()</li>
+<li>forEach(callbackFn, thisArg)<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置对象为键名</span></span><br><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"><span class="keyword">const</span> o = &#123;<span class="attr">p</span>: <span class="string">'Hello World'</span>&#125;;</span><br><span class="line">m.set(o, <span class="string">'content'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过数组生成Map</span></span><br><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [<span class="string">'name'</span>, <span class="string">'张三'</span>],</span><br><span class="line">  [<span class="string">'title'</span>, <span class="string">'Author'</span>]</span><br><span class="line">]); <span class="comment">// Map(2) &#123;"name" =&gt; "张三", "title" =&gt; "Author"&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过set生成Map</span></span><br><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([</span><br><span class="line">  [<span class="string">'foo'</span>, <span class="number">1</span>],</span><br><span class="line">  [<span class="string">'bar'</span>, <span class="number">2</span>]</span><br><span class="line">]);</span><br><span class="line"><span class="keyword">const</span> m1 = <span class="keyword">new</span> <span class="built_in">Map</span>(set); <span class="comment">// Map(2) &#123;"foo" =&gt; 1, "bar" =&gt; 2&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="WeakSet-WeakMap"><a href="#WeakSet-WeakMap" class="headerlink" title="WeakSet WeakMap"></a>WeakSet WeakMap</h3><ul>
+<li>weakSet和WeakMap都是弱引用版的 <strong>Set</strong> 和 <strong>Map</strong> ,主要作用就是为了存储数据的同时不增加变量的引用计数,让变量正常被垃圾回收机制处理,避免造成内存泄漏</li>
+<li>weakSet的成员都只能是对象</li>
+<li>WeakMap的键名只能是对象</li>
+</ul>
+<h2 id="深度遍历和广度遍历"><a href="#深度遍历和广度遍历" class="headerlink" title="深度遍历和广度遍历"></a>深度遍历和广度遍历</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-1-1"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-1-1-1"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-1-2"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-1-2-1"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-1-3"</span>&gt;</span>c<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-2"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-2-1"</span>&gt;</span>d<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-2-2"</span>&gt;</span>e<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-3"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-3-1"</span>&gt;</span>f<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/12/Flexbox/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/07/12/Flexbox/" class="post-title-link" itemprop="url">Flexbox</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-12 15:57:38" itemprop="dateCreated datePublished" datetime="2019-07-12T15:57:38+08:00">2019-07-12</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="基础知识和术语"><a href="#基础知识和术语" class="headerlink" title="基础知识和术语"></a>基础知识和术语</h1><h2 id="flex容器-flex-container"><a href="#flex容器-flex-container" class="headerlink" title="flex容器(flex container)"></a><strong>flex容器(flex container)</strong></h2><p>flex布局的容器</p>
+<h2 id="flex项-flex-items"><a href="#flex项-flex-items" class="headerlink" title="flex项(flex items)"></a><strong>flex项(flex items)</strong></h2><p>flex容器的直接子元素</p>
+<h2 id="main-axis"><a href="#main-axis" class="headerlink" title="main axis"></a><strong>main axis</strong></h2><p>flex容器的主轴,flex项沿着主轴排布,注意主轴不一定是水平的,这取决于 <strong><a href="#flex-direction">flex-direction</a></strong> 属性.</p>
+<h2 id="main-start-main-end"><a href="#main-start-main-end" class="headerlink" title="main-start|main-end"></a><strong>main-start|main-end</strong></h2><p>分别表示主轴的开始位置和结束位置,flex项在容器中会从main-start到main-end排布.</p>
+<h2 id="main-size"><a href="#main-size" class="headerlink" title="main size"></a><strong>main size</strong></h2><p>flex项占据主轴的宽度或高度.flex项的main size 属性是要么是”宽度”,要么是”高度”,这取决于主轴方向.</p>
+<h2 id="cross-axis"><a href="#cross-axis" class="headerlink" title="cross axis"></a><strong>cross axis</strong></h2><p>垂直于主轴的轴线称为交叉轴,其方向取决于主轴方向.</p>
+<h2 id="cross-start-cross-end"><a href="#cross-start-cross-end" class="headerlink" title="cross-start|cross-end"></a><strong>cross-start|cross-end</strong></h2><p>分别表示交叉轴的开始位置和结束位置</p>
+<h2 id="cross-size"><a href="#cross-size" class="headerlink" title="cross size"></a><strong>cross size</strong></h2><p>flex项占据交叉轴的宽度或高度.<br><img src="/h5/images/flex.png" alt="avatar"></p>
+<h1 id="父元素属性-flex-container"><a href="#父元素属性-flex-container" class="headerlink" title="父元素属性(flex container)"></a>父元素属性(flex container)</h1><h2 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h2><p>定义flex项在flex容器中的排布方向.</p>
+<ul>
+<li><strong>row</strong>: 行排布,从左到有(默认值)</li>
+<li><strong>row-reverse</strong>: 反向行布局,从右到左</li>
+<li><strong>column</strong>: 列布局,从上到下</li>
+<li><strong>column-reverse</strong>: 反向列布局,从下到上.<br><img src="/h5/images/flex-direction.png" alt="avatar"></li>
+</ul>
+<h2 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h2><p>默认情况下,flex项会尽可能尝试排在同一行,通过设置 <strong>flex-wrap</strong> 来决定flex项是否允许换行.</p>
+<ul>
+<li><strong>nowrap</strong>: 所有的flex项都会在同一行上排布,不换行.(默认值)</li>
+<li><strong>wrap</strong>: flex项将从上往下根据实际情况换行</li>
+<li><strong>wrap-reverse</strong>: flex项从下往上根据实际情况换行.<br><img src="/h5/images/flex-wrap.png" alt="avatar"></li>
+</ul>
+<h2 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h2><p>这是 <strong><a href="#flex-direction">flex-direction</a></strong> 和 <strong><a href="#flex-wrap">flex-wrap</a></strong> 属性的缩写.同时定义flex容器的主轴和交叉轴.默认是 <strong>row nowrap</strong>.</p>
+<h2 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h2><p>定义flex项沿主轴方向的对齐方式</p>
+<ul>
+<li><strong>flex-start</strong>: flex项从主轴开始位置(main-start)开始排布(默认值)</li>
+<li><strong>flex-end</strong>: flex项从主轴的结束位置(main-end)开始布局</li>
+<li><strong>center</strong>: flex项沿主轴居中排布</li>
+<li><strong>space-between</strong>: flex项之间间隙均匀,两端没有空间,即我们常说的沿主轴两端对齐</li>
+<li><strong>space-around</strong>: flex项之间间隙均匀,两端只有一半的空间</li>
+<li><strong>space-evenly</strong>: flex项之间间隙均匀,两端空间也是均匀的.<br><img src="/h5/images/flex-justify-content.png" alt="avatar"></li>
+</ul>
+<h2 id="align-items-这是一个单行属性-当多行的时候时行为可能不准确"><a href="#align-items-这是一个单行属性-当多行的时候时行为可能不准确" class="headerlink" title="align-items(这是一个单行属性,当多行的时候时行为可能不准确)"></a>align-items(这是一个单行属性,当多行的时候时行为可能不准确)</h2><p>定义flex项沿当前行在交叉轴上排布的默认行为,可以视为交叉轴上的对齐方式.</p>
+<ul>
+<li><strong>stretch</strong>: 拉伸flex项以填满整个容器(这里需要特别注意: 如果flex项有尺寸属性(height/width/min系列/max系列,那么不会拉伸),(默认值).</li>
+<li><strong>flex-start</strong>: flex项按照交叉轴的开始位置(cross-start)对齐</li>
+<li><strong>flex-end</strong>: flex项按照交叉轴的结束位置(cross-start)对齐</li>
+<li><strong>center</strong>: flex项以交叉轴为中心,居中对齐</li>
+<li><strong>baseline</strong>: flex项按照他们的文字基线对齐<br><img src="/h5/images/flex-align-items.png" alt="avatar"></li>
+</ul>
+<h2 id="align-content-这是一个多行属性-单行不生效"><a href="#align-content-这是一个多行属性-单行不生效" class="headerlink" title="align-content(这是一个多行属性,单行不生效)"></a>align-content(这是一个多行属性,单行不生效)</h2><p>当交叉轴有剩余空间时, <strong>align-content</strong>可以设置flex容器中的行在交叉轴上如何分配剩余空间,与 <strong><a href="#justify-content">justify-content</a></strong>相反.</p>
+<ul>
+<li><strong>strech</strong>：多行拉伸以填充满整个剩余空间(默认值)</li>
+<li><strong>flex-start</strong>: 多行在容器的开始位置排布</li>
+<li><strong>flex-end</strong>: 多行在容器的结束位置排布</li>
+<li><strong>center</strong>: 多行在容器的总结位置排布</li>
+<li><strong>space-between</strong>: 多行均匀分布,两端没有空间</li>
+<li><strong>space-around</strong>: 多行之间间隙均匀,两端只有一半的空间</li>
+<li><strong>space-evenly</strong>: 多行之间间隙均匀,两端空间也是均匀的.<br><img src="/h5/images/flex-align-content.png" alt="avatar"></li>
+</ul>
+<h1 id="flex项属性-flex-items"><a href="#flex项属性-flex-items" class="headerlink" title="flex项属性(flex items)"></a>flex项属性(flex items)</h1><h2 id="order"><a href="#order" class="headerlink" title="order"></a>order</h2><p>flex项按源顺序排布,控制它们在flex容器中显示顺序,默认值是0.</p>
+<h2 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h2><p>定义flex项在有可用剩余空间时拉伸比例,它接受的值作为比例,无单位,它规定了flex项应该占flex容器中可用空间比例.(默认值为0,负值无效).</p>
+<h2 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h2><p>定义flex项的收缩能力.(与flex-grow拉伸正好相反)</p>
+<h2 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h2><p>定义了在分配剩余空间之前flex项默认的大小.</p>
+<ul>
+<li><strong>auto</strong>: 按照其本来大小显示(默认值)</li>
+<li><strong>length</strong>: 可以是长度值,也可以是数字单位.</li>
+</ul>
+<h2 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h2><p><strong>flex</strong> 是 <strong><a href="#flex-grow">flex-grow</a></strong> 、 <strong><a href="#flex-shrink">flex-shrink</a></strong> 、 <strong><a href="#flex-basis">flex-basis</a></strong> 三个属性的简写.其中第二个参数和第三个参数是可选的,默认值为<strong>0 1 auto</strong>.</p>
+<h2 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h2><p>允许某个单独的flex项覆盖默认的对齐方式(或由 <strong><a href="#align-items">align-items</a></strong> 指定的对齐方式).注意: <strong>float</strong>, <strong>clear</strong> 和 <strong>vertical-align</strong> 对flex项没有任何作用.</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://www.html.cn/archives/8629" target="_blank" rel="noopener">CSS3 Flexbox 布局完全指南(图解 Flexbox 布局详细教程)-WEB前端开发</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/07/10/Grid/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/h5/2019/07/10/Grid/" class="post-title-link" itemprop="url">Grid</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-10 16:17:40" itemprop="dateCreated datePublished" datetime="2019-07-10T16:17:40+08:00">2019-07-10</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="重要术语"><a href="#重要术语" class="headerlink" title="重要术语"></a>重要术语</h1><h2 id="网格容器-Grid-Container"><a href="#网格容器-Grid-Container" class="headerlink" title="网格容器(Grid Container)"></a>网格容器(Grid Container)</h2><p>应用 <strong>display: grid</strong> 的元素.</p>
+<h2 id="网格项-Grid-Item"><a href="#网格项-Grid-Item" class="headerlink" title="网格项(Grid Item)"></a>网格项(Grid Item)</h2><p>网格容器的直接子元素.这里<strong>item</strong>就是网各项,但是<strong>sub-item</strong>不是.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"sub-item"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="网格线-Grid-Line"><a href="#网格线-Grid-Line" class="headerlink" title="网格线(Grid Line)"></a>网格线(Grid Line)</h2><p>构成网格结构的分界线.它们既可以是垂直的(列网格线column grid lines),也可以是水平的(行网格线row grid lines).</p>
+<h2 id="网格轨道-Grid-Track"><a href="#网格轨道-Grid-Track" class="headerlink" title="网格轨道(Grid Track)"></a>网格轨道(Grid Track)</h2><p>两条相邻网格线之间的空间,你可以把它们想象成网格的行或者列.</p>
+<h2 id="网格单元格-Grid-Cell"><a href="#网格单元格-Grid-Cell" class="headerlink" title="网格单元格(Grid Cell)"></a>网格单元格(Grid Cell)</h2><p>网格线之间形成的单元格</p>
+<h2 id="网格区域-Grid-Area"><a href="#网格区域-Grid-Area" class="headerlink" title="网格区域(Grid Area)"></a>网格区域(Grid Area)</h2><p>任意数量的网络单元格组成的网络区域</p>
+<h1 id="父元素-网格容器-Grid-Container-属性"><a href="#父元素-网格容器-Grid-Container-属性" class="headerlink" title="父元素 网格容器(Grid Container) 属性"></a>父元素 网格容器(Grid Container) 属性</h1><h2 id="grid-template-columns-grid-template-rows"><a href="#grid-template-columns-grid-template-rows" class="headerlink" title="grid-template-columns / grid-template-rows"></a>grid-template-columns / grid-template-rows</h2><p>设置网格轨道(行或列)宽度和网格线名称<br>值:</p>
+<ul>
+<li><strong>track-size</strong>: 长度值,百分比,或者等份网络容器可用空间(fr单位)</li>
+<li><strong>line-name</strong>: 任意名称<br>使用空格分隔值列表,用来定义网格的行和列.这些值表示网格轨道大小(行和列的宽度),它们之间的[]表示网格线名称.  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*不填写网格线名称时,网格线会自动分配正数和负数(倒数)名称.*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">40px</span> <span class="number">50px</span> auto <span class="number">50px</span> <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: <span class="number">25%</span> <span class="number">100px</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/h5/images/grid-columns.png" alt="avatar"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*明确的指定网格线(Grid Line)名称*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: [first] <span class="number">40px</span> [line2] <span class="number">50px</span> [line3] auto [col4-start] <span class="number">50px</span> [five] <span class="number">40px</span> [end];</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: [row1-start] <span class="number">25%</span> [row1-end] <span class="number">100px</span> [third-line] auto [last-line];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/h5/images/grid-columns2.png" alt="avatar"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*一条线可以有多个名称,名称可以相同*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: [row1-start] <span class="number">25%</span> [row1-end row2-start] <span class="number">25%</span> [row2-end];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*如果你定义多个重复值,可以使用repeat()表示法来简化定义*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(3, 20px [col-start]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*等价于*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">20px</span> [col-start] <span class="number">20px</span> [col-start] <span class="number">20px</span> [col-start];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*fr单位用等份网络容器剩余空间来设置网络轨道的大小*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">1</span>fr <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*剩余可用空间是出去所有非灵活网各项之后计算得到的*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">50px</span> <span class="number">1</span>fr <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="grid-template-areas"><a href="#grid-template-areas" class="headerlink" title="grid-template-areas"></a>grid-template-areas</h2><p>指定网格区域名称来定义网格模板,点号(.)代表空单元格.这个语法本身可视作网格的可视化结构.<br>值:</p>
+<ul>
+<li><strong>grid-area-name</strong>: 网格区域名称</li>
+<li><strong>.</strong>(点号): 代表空的单元格</li>
+<li><strong>none</strong>: 不定义网格区域<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">50px</span> <span class="number">50px</span> <span class="number">50px</span> <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: auto;</span><br><span class="line">    <span class="attribute">grid-template-areas</span>: </span><br><span class="line">        <span class="string">"header header header header"</span></span><br><span class="line">        <span class="string">"main main . sidebar"</span></span><br><span class="line">        <span class="string">"footer footer footer footer"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>当你使用这种语法时,区域两端的网格线会自动命名,如你的网格区域的名字是header,该区域的起始行和起始列的名称将为header-start,而最后一行网格线和最后一列的名称为header-end.<br><img src="/h5/images/grid-areas.png" alt="avatar"></p>
+<h2 id="grid-template"><a href="#grid-template" class="headerlink" title="grid-template"></a>grid-template</h2><p><strong><a href="#grid-template-columns-grid-template-rows">grid-template-rows</a></strong> , <strong><a href="#grid-template-columns-grid-template-rows">grid-template-columns</a></strong> , <strong><a href="#grid-template-areas">grid-template-areas</a></strong> 的简写属性.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template</span>:</span><br><span class="line">        [row1-start] <span class="string">"header header header"</span> <span class="number">25px</span> [row1-end]</span><br><span class="line">        [row2-start] <span class="string">"footer footer footer"</span> <span class="number">25px</span> [row2-end]</span><br><span class="line">        / auto <span class="number">50px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*等价于*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: [row1-start] <span class="number">25px</span> [row1-end row2-start] <span class="number">25px</span> [row2-end];</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: auto <span class="number">50px</span> auto;</span><br><span class="line">    <span class="attribute">grid-template-areas</span>: </span><br><span class="line">        <span class="string">"header header header"</span> </span><br><span class="line">        <span class="string">"footer footer footer"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>由于<strong>grid-template</strong>不会重置隐式网格属性<strong><a href="#grid-template-columns-grid-template-rows">grid-template-rows</a></strong>, <strong><a href="#grid-template-columns-grid-template-rows">grid-template-columns</a></strong>, <strong><a href="#grid-template-areas">grid-template-areas</a></strong>,建议使用<strong><a href="#grid">grid</a></strong>属性而不是<strong>grid-template</strong>.</p>
+<h2 id="grid-column-gap-grid-row-gap"><a href="#grid-column-gap-grid-row-gap" class="headerlink" title="grid-column-gap / grid-row-gap"></a>grid-column-gap / grid-row-gap</h2><p> 指定网格线的大小,只能在列/行之间创建间距，网格外部边缘不会有这个间距.<br> 注意这两个属性在现代浏览器已经可以删除grid-前缀,重命名为<strong>column-gap</strong>和<strong>row-gap</strong>.<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">100px</span> <span class="number">50px</span> <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: <span class="number">80px</span> auto <span class="number">80px</span>; </span><br><span class="line">    <span class="attribute">grid-column-gap</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">grid-row-gap</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/h5/images/grid-gap.png" alt="avatar"></p>
+<h2 id="grid-gap"><a href="#grid-gap" class="headerlink" title="grid-gap"></a>grid-gap</h2><p><strong><a href="#grid-column-gap-grid-row-gap">grid-column-gap</a></strong> 和 <strong><a href="#grid-column-gap-grid-row-gap">grid-row-gap</a></strong> 的简写<br>如果值设置一个值,第二个值会默认位相同<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;</span><br><span class="line">    grid-gap: &lt;grid-row-gap&gt; &lt;grid-column-gap&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container&#123;</span><br><span class="line">    /* 设置 grid-column-gap 和 grid-row-gap */  </span><br><span class="line">    grid-column-gap: 10px;</span><br><span class="line">    grid-row-gap: 10px; </span><br><span class="line">    </span><br><span class="line">    /* 等价于 */  </span><br><span class="line">    grid-gap: 10px 10px;</span><br><span class="line">    </span><br><span class="line">    /* 等价于 */  </span><br><span class="line">    grid-gap: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="justify-items"><a href="#justify-items" class="headerlink" title="justify-items"></a>justify-items</h2><p>水平方向的单元格对齐方式(相反的属性是<strong><a href="#align-items">align-items</a></strong>)<br>值:</p>
+<ul>
+<li><strong>start</strong>: 左侧对齐</li>
+<li><strong>end</strong>: 右侧对齐</li>
+<li><strong>center</strong>: 水平居中对齐</li>
+<li><strong>stretch</strong>: 填满单元格的宽度(默认值)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    justify-items: start | end | center | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/h5/images/justify-items.png" alt="avatar"></p>
+<h2 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h2><p>垂直方向的单元格对齐方式<br>值:</p>
+<ul>
+<li><strong>start</strong>: 顶部对齐</li>
+<li><strong>end</strong>: 底部对齐</li>
+<li><strong>center</strong>: 垂直居中对齐</li>
+<li><strong>stretch</strong>: 填满单元格的宽度(默认值)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    align-items: start | end | center | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/h5/images/align-items.png" alt="avatar"></p>
+<h2 id="place-items"><a href="#place-items" class="headerlink" title="place-items"></a>place-items</h2><p><strong><a href="#align-items">align-items</a></strong> 和 <strong><a href="#justify-items">justify-items</a></strong> 的简写形式.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    place-items: &lt;align-items&gt; &lt;justify-items&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h2><p>你的网格大小小于网格容器大小时,设置网格容器内的网格对齐方式.此属性是水平对齐方式.<br>值:</p>
+<ul>
+<li><strong>start</strong>: 左侧对齐</li>
+<li><strong>end</strong>: 右侧对齐</li>
+<li><strong>center</strong>: 水平居中对齐</li>
+<li><strong>stretch</strong>: 调整网格项的宽度,允许该网格填充满整个网格容器的宽度</li>
+<li><strong>space-around</strong>: 每个网格项之间间隙均匀,左右两端只有一半的空间</li>
+<li><strong>space-between</strong>: 每个网格项之间间隙均匀,左右两端没有空间</li>
+<li><strong>space-evenly</strong>: 每个网格项之间间隙均匀,左右两端空间也是均匀的.<br><img src="/h5/images/justify-content.png" alt="avatar"></li>
+</ul>
+<h2 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h2><p>你的网格大小小于网格容器大小时,设置网格容器内的网格的对齐方式,此属性垂直对齐方式.<br>值:</p>
+<ul>
+<li><strong>start</strong>: 顶部对齐</li>
+<li><strong>end</strong>: 底部对齐</li>
+<li><strong>center</strong>: 垂直居中对齐</li>
+<li><strong>stretch</strong>: 调整网格项的高度,允许该网格填充满整个网格容器的高度</li>
+<li><strong>space-around</strong>: 每个网格项之间间隙均匀,上下两端只有一半的空间</li>
+<li><strong>space-between</strong>: 每个网格项之间间隙均匀,上下两端没有空间</li>
+<li><strong>space-evenly</strong>: 每个网格项之间间隙均匀,上下两端空间也是均匀的.<br><img src="/h5/images/align-content.png" alt="avatar"></li>
+</ul>
+<h2 id="place-content"><a href="#place-content" class="headerlink" title="place-content"></a>place-content</h2><p><strong><a href="#align-content">align-content</a></strong> 和 <strong><a href="#justify-content">justify-content</a></strong> 的简写形式.除了Edge之外所有主要浏览器都支持 <strong>place-content</strong> 简写属性.</p>
+<h2 id="grid-auto-columns-grid-auto-rows"><a href="#grid-auto-columns-grid-auto-rows" class="headerlink" title="grid-auto-columns / grid-auto-rows"></a>grid-auto-columns / grid-auto-rows</h2><p>任何自动生成的网络轨道(隐式轨道行或列)的大小,当网格中的网格项多于单元格时,或者网格项位于显示网格之外,会创建隐式轨道.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-a"</span>&gt;</span>item-a<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-b"</span>&gt;</span>item-b<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="comment">/*生成一个2*2的网格*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-template-columns: 60px 60px;</span></span><br><span class="line"><span class="undefined">    grid-template-rows: 90px 90px</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.item-a</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-column: 1 / 2;</span></span><br><span class="line"><span class="undefined">    grid-row: 2 / 3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="comment">/*.item-b 从第 5 条列网格线开始到第 6 条列网格线结束，*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.item-b</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-column: 5 / 6;</span></span><br><span class="line"><span class="undefined">    grid-row: 2 / 3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/h5/images/grid-auto.png" alt="avatar"></p>
+<h2 id="grid-auto-flow"><a href="#grid-auto-flow" class="headerlink" title="grid-auto-flow"></a>grid-auto-flow</h2><p>如果你没有明确放置网格项,自动放置算法会自动放置这些网格项<br>值:<br><strong>row</strong>: 依次填充每行,根据需要添加新行(默认值)<br><strong>column</strong>: 依次填入每列,根据需要添加新列<br><strong>dense</strong>: 在稍后出现较小的网格项时,尝试填充网格项中较早的空缺<br>请注意,<strong>dense</strong>只会更改网格项的可视顺序,并可能导致它们出现乱序,这对可访问性不利.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-a"</span>&gt;</span>item-a<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-b"</span>&gt;</span>item-b<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-c"</span>&gt;</span>item-c<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-d"</span>&gt;</span>item-d<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-e"</span>&gt;</span>item-e<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="comment">/*定义一个5列2行的网格*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">    display: grid;</span></span><br><span class="line"><span class="undefined">    grid-template-columns: 60px 60px 60px 60px 60px;</span></span><br><span class="line"><span class="undefined">    grid-template-rows: 30px 30px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="comment">/*指定两个item位置*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.item-a</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-column: 1;</span></span><br><span class="line"><span class="undefined">    grid-row: 1 / 3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.item-e</span> &#123;</span></span><br><span class="line"><span class="undefined">    grid-column: 5;</span></span><br><span class="line"><span class="undefined">    grid-row: 1 / 3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/h5/images/auto-flow1.png" alt="avatar"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*把 grid-auto-flow 设成了 column*/</span></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">60px</span> <span class="number">60px</span> <span class="number">60px</span> <span class="number">60px</span> <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: <span class="number">30px</span> <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">grid-auto-flow</span>: column;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/h5/images/auto-flow2.png" alt="avatar"></p>
+<h2 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h2><p>未理解透彻<br>以下属性的简写: <strong><a href="#grid-template-columns-grid-template-rows">grid-template-rows</a></strong>, <strong><a href="#grid-template-columns-grid-template-rows">grid-template-columns</a></strong>, <strong><a href="#grid-template-areas">grid-template-areas</a></strong>, <strong><a href="#grid-auto-columns-grid-auto-rows">grid-auto-rows</a></strong>, <strong><a href="#grid-auto-columns-grid-auto-rows">grid-auto-columns</a></strong>, 和 <strong><a href="#grid-auto-flow">grid-auto-flow</a></strong>.<br>以下两个紧挨着的代码是等效的<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid</span>: <span class="number">100px</span> <span class="number">300px</span> / <span class="number">3</span>fr <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: <span class="number">100px</span> <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">3</span>fr <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid</span>: auto-flow / <span class="number">200px</span> <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-auto-flow</span>: row;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">200px</span> <span class="number">1</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid</span>: auto-flow dense <span class="number">100px</span> / <span class="number">1</span>fr <span class="number">2</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-auto-flow</span>: row dense;</span><br><span class="line">    <span class="attribute">grid-auto-rows</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">2</span>fr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid</span>: <span class="number">100px</span> <span class="number">300px</span> / auto-flow <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: <span class="number">100px</span> <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">grid-auto-flow</span>: column;</span><br><span class="line">    <span class="attribute">grid-auto-columns</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid</span>: [row1-start] <span class="string">"header header header"</span> <span class="number">1</span>fr [row1-end]</span><br><span class="line">        [row2-start] <span class="string">"footer footer footer"</span> <span class="number">25px</span> [row2-end]</span><br><span class="line">        / auto <span class="number">50px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-areas</span>: </span><br><span class="line">        <span class="string">"header header header"</span></span><br><span class="line">        <span class="string">"footer footer footer"</span>;</span><br><span class="line">    <span class="attribute">grid-template-rows</span>: [row1-start] <span class="number">1</span>fr [row1-end row2-start] <span class="number">25px</span> [row2-end];</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: auto <span class="number">50px</span> auto;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="子元素-网格项-Grid-Items-属性"><a href="#子元素-网格项-Grid-Items-属性" class="headerlink" title="子元素 网格项(Grid Items) 属性"></a>子元素 网格项(Grid Items) 属性</h1><h2 id="grid-column-start-grid-column-end-grid-row-start-grid-row-end"><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end" class="headerlink" title="grid-column-start / grid-column-end / grid-row-start / grid-row-end"></a>grid-column-start / grid-column-end / grid-row-start / grid-row-end</h2><p>通过引用特定网格线来确定网格项在网格内的位置.grid-column-start / grid-row-start 是网格项开始的网格线，grid-column-end / grid-row-end 是网格项结束的网格线。<br>如果没有声明指定 grid-column-end / grid-row-end，默认情况下，该网格项将占据 1 个轨道。<br>项目可以相互重叠。您可以使用 z-index 来控制它们的重叠顺序。<br>值:</p>
+<ul>
+<li><strong>line</strong>: 可以是数字网格线编号,也可以是一个网格线名.</li>
+<li><strong>span(number)</strong>: 该网格项将跨越多少行或者列</li>
+<li><strong>span(name)</strong>: 该网格项将跨越到名称位置</li>
+<li><strong>auto</strong>: 自动放置,默认占一个单元格(默认值)</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-a</span> &#123;</span><br><span class="line">    <span class="attribute">grid-column-start</span>: <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">grid-column-end</span>: five;</span><br><span class="line">    <span class="attribute">grid-row-start</span>: row1-start</span><br><span class="line">    grid-row-end: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-b</span> &#123;</span><br><span class="line">    <span class="attribute">grid-column-start</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">grid-column-end</span>: span col4-start;</span><br><span class="line">    <span class="attribute">grid-row-start</span>: <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">grid-row-end</span>: span <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/h5/images/itema.png" alt="avatar"><br><img src="/h5/images/itemb.png" alt="avatar"></p>
+<h2 id="grid-column-grid-row"><a href="#grid-column-grid-row" class="headerlink" title="grid-column / grid-row"></a>grid-column / grid-row</h2><p>分别为 <strong><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end">grid-column-start</a></strong> + <strong><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end">grid-column-end</a></strong> 和 <strong><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end">grid-row-start</a></strong> + <strong><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end">grid-row-end</a></strong> 的简写形式,使用/分隔开.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">    grid-column: &lt;start-line&gt; / &lt;end-line&gt; | &lt;start-line&gt; / span &lt;value&gt;;</span><br><span class="line">    grid-row: &lt;start-line&gt; / &lt;end-line&gt; | &lt;start-line&gt; / span &lt;value&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.item-c &#123;</span><br><span class="line">    grid-column: 3 / span 2;</span><br><span class="line">    grid-row: third-line / 4;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="grid-area"><a href="#grid-area" class="headerlink" title="grid-area"></a>grid-area</h2><p>为网格项提供一个名称,对应<strong><a href="#grid-template-areas">grid-template-areas</a></strong>的名称,另外这个属性可以用作<strong><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end">grid-row-start</a></strong> + <strong><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end">grid-column-start</a></strong> + <strong><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end">grid-row-end</a></strong> + <strong><a href="#grid-column-start-grid-column-end-grid-row-start-grid-row-end">grid-column-end</a></strong>的简写.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">    grid-area: &lt;name&gt; | &lt;row-start&gt; / &lt;column-start&gt; / &lt;row-end&gt; / &lt;column-end&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="justify-self"><a href="#justify-self" class="headerlink" title="justify-self"></a>justify-self</h2><p>水平对齐网格项,此值使用于单个网格项内容.<br>值:</p>
+<ul>
+<li><strong>start</strong>: 相对于单元格左对齐</li>
+<li><strong>end</strong>: 相对于单元格右对齐</li>
+<li><strong>center</strong>: 相对于单元格水平居中对齐</li>
+<li><strong>stretch</strong>: 填满单元格的宽度(默认值)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item&#123;</span><br><span class="line">    justify-self: start | end | center | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/h5/images/justify-self.png" alt="avatar"></p>
+<h2 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h2><p>垂直对其网格项,此值使用于单个网格项内容.<br>值:</p>
+<ul>
+<li><strong>start</strong>: 相对于单元格顶部对齐</li>
+<li><strong>end</strong>: 相对于单元格底部对齐</li>
+<li><strong>center</strong>: 相对于单元格垂直居中对齐</li>
+<li><strong>stretch</strong>: 填满单元格的高度(默认值)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item&#123;</span><br><span class="line">    align-self: start | end | center | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/h5/images/align-self.png" alt="avatar"></p>
+<h2 id="place-self"><a href="#place-self" class="headerlink" title="place-self"></a>place-self</h2><p><strong><a href="#align-self">align-self</a></strong> 和 <strong><a href="#justify-self">justify-self</a></strong> 的简写形式.<br>值:</p>
+<ul>
+<li><strong>auto</strong>: 默认对齐方式.</li>
+<li><strong>align-self justify-self</strong>: 第一个值 <strong><a href="#align-self">align-self</a></strong> ,第二个值 <strong><a href="#justify-self">justify-self</a></strong> .如果省略第二个值,会默认为第一个值.</li>
+</ul>
+<h1 id="动画-Animation"><a href="#动画-Animation" class="headerlink" title="动画(Animation)"></a>动画(Animation)</h1><p>根据 CSS Grid 布局模块 Level 1 规范，有 5 个可应用动画的网格属性：</p>
+<ul>
+<li><strong><a href="#grid-gap">grid-gap</a></strong>， <strong><a href="#grid-column-gap-grid-row-gap">grid-row-gap</a></strong>，<strong><a href="#grid-column-gap-grid-row-gap">grid-column-gap</a></strong> 作为长度，百分比或 calc。</li>
+<li><strong><a href="#grid-template-columns-grid-template-rows">grid-template-columns</a></strong>，<strong><a href="#grid-template-columns-grid-template-rows">grid-template-rows</a></strong> 作为长度，百分比或 calc 的简单列表，只要列表中长度、百分比或calc组件的值不同即可。</li>
+</ul>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://www.html.cn/archives/8510#prop-grid-column-row" target="_blank" rel="noopener">CSS Grid 布局完全指南(图解 Grid 详细教程)-WEB前端开发</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </div>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/h5/page/2/">2</a><a class="extend next" rel="next" href="/h5/page/2/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
+  </nav>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lucien Huang</p>
+  <div class="site-description" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/h5/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">schlagwörter</span>
+        
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/h5/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/h5/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/h5/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/h5/js/utils.js?v=7.4.0"></script><script src="/h5/js/motion.js?v=7.4.0"></script>
+<script src="/h5/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/h5/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

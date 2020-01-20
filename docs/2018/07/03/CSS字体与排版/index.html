@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/h5/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/h5/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod粗体 lighter细体 100-900">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS字体与排版">
+<meta property="og:url" content="https://912380760.github.io/2018/07/03/CSS字体与排版/index.html">
+<meta property="og:site_name" content="note">
+<meta property="og:description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod粗体 lighter细体 100-900">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-17T08:34:50.022Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS字体与排版">
+<meta name="twitter:description" content="font大部分字体属性的默认值是normal；可以使用&amp;lt; br &amp;gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。 字体样式 color 字体颜色 font-family 字体种类 font-size 字体大小 font-style 斜体 italic oblique font-weight 字体粗细 blod粗体 lighter细体 100-900">
+  <link rel="canonical" href="https://912380760.github.io/2018/07/03/CSS字体与排版/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>CSS字体与排版 | note</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/h5/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2018/07/03/CSS字体与排版/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">CSS字体与排版
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2018-07-03 00:12:04" itemprop="dateCreated datePublished" datetime="2018-07-03T00:12:04+08:00">2018-07-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="font"><a href="#font" class="headerlink" title="font"></a>font</h2><p>大部分字体属性的默认值是normal；可以使用&lt; br &gt;标签手动换行，回车默认是不会换行的；字体属性的简写顺序实在太难记了，一般不用简写。</p>
+<h3 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h3><ul>
+<li><strong>color</strong> 字体颜色</li>
+<li><strong>font-family</strong> 字体种类</li>
+<li><strong>font-size</strong> 字体大小</li>
+<li><strong>font-style</strong> 斜体 italic oblique</li>
+<li><strong>font-weight</strong> 字体粗细 blod粗体 lighter细体 100-900</li>
+<li><strong>text-transform</strong> 字体大小写转换 uppercase lowercase capitalize full-width</li>
+<li><strong>text-decoration</strong> 上下中划线 underline overline line-through</li>
+<li><strong>text-shadow</strong> 文本阴影 可以应用多个，以逗号隔开 1px 1px 2px #aaa</li>
+<li><strong>font-variant</strong> 把字体设置为小型大写字母 small-caps</li>
+</ul>
+<h3 id="字体布局"><a href="#字体布局" class="headerlink" title="字体布局"></a>字体布局</h3><ul>
+<li><strong>text-align</strong> 文本对齐 left right center justify</li>
+<li><strong>line-height</strong> 行高 不带单位默认为字体的倍数</li>
+<li><strong>letter-spacing</strong> 字母间距 中文</li>
+<li><strong>word-spacing</strong> 单词间距 </li>
+<li><strong>text-indent</strong> 首行留白，可以为负数</li>
+<li><strong>white-space</strong> 文本空白和换行 nowrap </li>
+<li><strong>text-overflow</strong> 文本溢出  clip ellipsis</li>
+<li><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break" target="_blank" rel="noopener">word-break</a></strong> 单词内部换行 break-all keep-all</li>
+</ul>
+<h2 id="display"><a href="#display" class="headerlink" title="display"></a>display</h2><h3 id="block"><a href="#block" class="headerlink" title="block"></a>block</h3><ul>
+<li>可以设置宽高，默认独占一行，宽度默认100%</li>
+<li>可以自由设置margin 和 padding</li>
+<li>常见的标签 div p h1-h6 ul ol dl </li>
+</ul>
+<h3 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h3><ul>
+<li>宽高靠内容撑开，可以和其他元素在一行</li>
+<li>无法设置宽高</li>
+<li>margin 和 padding 左右有效 上下无效</li>
+<li>常见的标签 span a</li>
+</ul>
+<h3 id="inline-block"><a href="#inline-block" class="headerlink" title="inline-block"></a>inline-block</h3><p>综合了block 和 inline 的特性</p>
+<ul>
+<li>可以设置宽高，也可以让内容撑开作为宽高</li>
+<li>可以和其他元素在一行</li>
+<li>可以自由设置margin 和 padding</li>
+<li>常见的标签 img</li>
+</ul>
+<h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><p>float的值有<strong>left</strong> <strong>right</strong> <strong>none</strong>；<br>浮动主要的作用是为了排版，让元素向左或向右对其；<br>使用浮动后会造成高度塌陷，需要使用clear: both;清除浮动带来的高度塌陷问题；<br>现在最主流的清除浮动方法：after伪元素清除浮动；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.fix &#123;</span><br><span class="line">  zoom:1;</span><br><span class="line">&#125;</span><br><span class="line">.fix::after &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  content: &apos;clear&apos;;</span><br><span class="line">  height: 0;</span><br><span class="line">  clear: both;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  visibility: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="visibility-opacity"><a href="#visibility-opacity" class="headerlink" title="visibility opacity"></a>visibility opacity</h2><h3 id="visibility"><a href="#visibility" class="headerlink" title="visibility"></a>visibility</h3><p>设置元素是否隐藏，但是并不脱离文本流，元素的位置还是被占用的，hidden 隐藏，visible 显示。</p>
+<h3 id="opacity"><a href="#opacity" class="headerlink" title="opacity"></a>opacity</h3><p>设置元素的透明度，值为0-1；因为浏览器渲染机制的问题，background: rgba(0,0,0,.1);并不等于background: rgb(0,0,0); opacity: .1; </p>
+<h2 id="position"><a href="#position" class="headerlink" title="position"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position#Sticky_positioning" target="_blank" rel="noopener">position</a></h2><p>设置元素的定位属性<br>文档流：正常的元素堆叠效果。<br>absolute 和 fixed 会脱离文档流，元素并不占用正常文档流的空间。</p>
+<ul>
+<li><strong>relative</strong><br>静态定位，根据自身定位</li>
+<li><strong>absolute</strong><br>相对定位，根据最近的有定位属性的父元素定位</li>
+<li><strong>fixed</strong><br>固定定位，根据浏览器视口定位</li>
+<li><strong>sticky</strong><br>浏览器滚动到该元素后再悬浮，有点像relative和fixed的结合</li>
+</ul>
+<p><strong>left</strong> <strong>right</strong> <strong>top</strong> <strong>bottom</strong><br>规定具体的定位值，可以是负数，可以使用%；</p>
+<p><strong>z-index</strong><br>元素的层级，只有有定位属性的元素才可以设置，越大的显示在越上方，可以为负数，小于-1会隐藏元素</p>
+<h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><p>内容溢出时的现实方法</p>
+<ul>
+<li><strong>visible</strong> 默认值，内容可以超出元素</li>
+<li><strong>hidden</strong> 超出隐藏</li>
+<li><strong>scroll</strong> 始终显示滚动条</li>
+<li><strong>auto</strong> 只有在内容超过是显示滚动条</li>
+<li><strong>overflow-x</strong> 水平方向的内容溢出</li>
+<li><strong>overflow-y</strong> 垂直方向的内容溢出 </li>
+</ul>
+<h2 id="list-style"><a href="#list-style" class="headerlink" title="list-style"></a>list-style</h2><p>简写属性，定义如何显示一个列表中的编号标记</p>
+<ul>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type" target="_blank" rel="noopener"><strong>list-style-type</strong></a><br>指定列表项元素的外观，disc实心圆，circle空心圆，decimal阿拉伯数字，upper-roman大写罗马数字。</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position" target="_blank" rel="noopener"><strong>list-style-position</strong></a><br>指定标记是否位于元素content内部，outside位于content外，inside位于content内。</p>
+</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image" target="_blank" rel="noopener"><strong>list-style-image</strong></a><br>会覆盖list-style-type，使用图标来做标记，例子：list-style-image: url(“../../media/examples/rocket.svg”);</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/h5/tags/css/" rel="tag"># css</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/h5/2018/06/27/选择器与盒子模型/" rel="next" title="选择器与盒子模型">
+                  <i class="fa fa-chevron-left"></i> 选择器与盒子模型
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/h5/2018/07/17/background/" rel="prev" title="background">
+                  background <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#font"><span class="nav-number">1.</span> <span class="nav-text">font</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字体样式"><span class="nav-number">1.1.</span> <span class="nav-text">字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体布局"><span class="nav-number">1.2.</span> <span class="nav-text">字体布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#display"><span class="nav-number">2.</span> <span class="nav-text">display</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#block"><span class="nav-number">2.1.</span> <span class="nav-text">block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline"><span class="nav-number">2.2.</span> <span class="nav-text">inline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-block"><span class="nav-number">2.3.</span> <span class="nav-text">inline-block</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#float"><span class="nav-number">3.</span> <span class="nav-text">float</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#visibility-opacity"><span class="nav-number">4.</span> <span class="nav-text">visibility opacity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#visibility"><span class="nav-number">4.1.</span> <span class="nav-text">visibility</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#opacity"><span class="nav-number">4.2.</span> <span class="nav-text">opacity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position"><span class="nav-number">5.</span> <span class="nav-text">position</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overflow"><span class="nav-number">6.</span> <span class="nav-text">overflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list-style"><span class="nav-number">7.</span> <span class="nav-text">list-style</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lucien Huang</p>
+  <div class="site-description" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/h5/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">schlagwörter</span>
+        
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/h5/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/h5/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/h5/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/h5/js/utils.js?v=7.4.0"></script><script src="/h5/js/motion.js?v=7.4.0"></script>
+<script src="/h5/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/h5/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

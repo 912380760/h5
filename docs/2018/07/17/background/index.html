@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/h5/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/h5/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="background background-color背景颜色, 可以使用linear-gradient和radial-gradient background-image背景图片，可以写多个，用逗号隔开，也可以使用渐变 background-repeat背景重复repeat默认值 repeat-x repeat-y no-repeatspace 图片会尽可能的重复，不会裁切，第一个和最后一个固定在">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="background">
+<meta property="og:url" content="https://912380760.github.io/2018/07/17/background/index.html">
+<meta property="og:site_name" content="note">
+<meta property="og:description" content="background background-color背景颜色, 可以使用linear-gradient和radial-gradient background-image背景图片，可以写多个，用逗号隔开，也可以使用渐变 background-repeat背景重复repeat默认值 repeat-x repeat-y no-repeatspace 图片会尽可能的重复，不会裁切，第一个和最后一个固定在">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-17T08:34:50.022Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="background">
+<meta name="twitter:description" content="background background-color背景颜色, 可以使用linear-gradient和radial-gradient background-image背景图片，可以写多个，用逗号隔开，也可以使用渐变 background-repeat背景重复repeat默认值 repeat-x repeat-y no-repeatspace 图片会尽可能的重复，不会裁切，第一个和最后一个固定在">
+  <link rel="canonical" href="https://912380760.github.io/2018/07/17/background/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>background | note</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/h5/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2018/07/17/background/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">background
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2018-07-17 15:21:37" itemprop="dateCreated datePublished" datetime="2018-07-17T15:21:37+08:00">2018-07-17</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="background"><a href="#background" class="headerlink" title="background"></a>background</h2><ul>
+<li><strong>background-color</strong><br>背景颜色, 可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">linear-gradient</a>和<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient" target="_blank" rel="noopener">radial-gradient</a></li>
+<li><strong>background-image</strong><br>背景图片，可以写多个，用逗号隔开，也可以使用渐变</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat" target="_blank" rel="noopener"><strong>background-repeat</strong></a><br>背景重复<br>repeat默认值 repeat-x repeat-y no-repeat<br>space 图片会尽可能的重复，不会裁切，第一个和最后一个固定在左右两边，多余间距平均分配<br>round 缩放图片的大小，，让图片刚好铺满整个背景。</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment" target="_blank" rel="noopener"><strong>background-attachment</strong></a><br>背景在视口中是否随包含它的区块滚动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 背景相对于元素本身固定，而不是随着它的内容滚动</span><br><span class="line"><span class="selector-tag">background-attachment</span>: <span class="selector-tag">scroll</span>;</span><br><span class="line">// 背景相对于视口固定</span><br><span class="line"><span class="selector-tag">background-attachment</span>: <span class="selector-tag">fixed</span>;</span><br><span class="line">// 背景相对于元素的内容固定，背景将随着元素内容滚动</span><br><span class="line"><span class="selector-tag">background-attachment</span>: <span class="selector-tag">local</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>background-position</strong><br>背景定位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/* 关键字 */</span><br><span class="line">background-position: top;</span><br><span class="line">background-position: bottom;</span><br><span class="line">background-position: left;</span><br><span class="line">background-position: right;</span><br><span class="line">background-position: center;</span><br><span class="line"></span><br><span class="line">/* 百分比 */</span><br><span class="line">background-position: 25% 75%;</span><br><span class="line"></span><br><span class="line">/* 长度 */</span><br><span class="line">background-position: 20px 20px;</span><br><span class="line">background-position: 1cm 2cm;</span><br><span class="line">background-position: 10ch 8em;</span><br><span class="line"></span><br><span class="line">/* 多个背景图 */</span><br><span class="line">background-position: 0 0, center;</span><br><span class="line"></span><br><span class="line">/* 怪异的简写语法 */</span><br><span class="line">// 在 background 简写属性中指定 background-size 时，需要同时提供一个 background-position 值</span><br><span class="line">// (哪怕它的值就是其初始值也需要写出来)，而且还要使 用一个斜杠(/)作为分隔</span><br><span class="line">background: url(tr.png) no-repeat top right / 2em 2em;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size" target="_blank" rel="noopener"><strong>background-size</strong></a><br>背景大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">/* 关键字 */</span><br><span class="line">background-size: cover;  // 居中裁剪</span><br><span class="line">background-size: contain; // 按比例最大化显示</span><br><span class="line"></span><br><span class="line">/* 一个值: 这个值指定图片的宽度，图片的高度隐式的为auto */</span><br><span class="line">background-size: 50%;</span><br><span class="line">background-size: 3em;</span><br><span class="line">background-size: 12px;</span><br><span class="line">background-size: auto;</span><br><span class="line"></span><br><span class="line">/* 两个值 */</span><br><span class="line">/* 第一个值指定图片的宽度，第二个值指定图片的高度 */</span><br><span class="line">background-size: 50% auto;</span><br><span class="line">background-size: 3em 25%;</span><br><span class="line">background-size: auto 6px;</span><br><span class="line">background-size: auto auto;</span><br><span class="line"></span><br><span class="line">/* 逗号分隔的多个值：设置多重背景 */</span><br><span class="line">background-size: auto, auto; // 不同background-size:auto auto;</span><br><span class="line">background-size: 50%, 25%, 25%;</span><br><span class="line">background-size: 6px, auto, contain;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin" target="_blank" rel="noopener"><strong>background-origin</strong></a><br>背景圆点位置<br>border-box<br>padding-box<br>content-box </p>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip" target="_blank" rel="noopener"><strong>background-clip</strong></a><br>背景范围<br>border-box 背景范围到border<br>padding-box 背景范围到padding<br>content-box 背景范围只有content<br>text 背景被剪切到前景文本中</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode" target="_blank" rel="noopener"><strong>background-blend-mode</strong></a><br>定义该元素的背景图片，以及背景色如何混合。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/h5/tags/css/" rel="tag"># css</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/h5/2018/07/03/CSS字体与排版/" rel="next" title="CSS字体与排版">
+                  <i class="fa fa-chevron-left"></i> CSS字体与排版
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/h5/2019/07/09/BFC/" rel="prev" title="BFC">
+                  BFC <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#background"><span class="nav-number">1.</span> <span class="nav-text">background</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lucien Huang</p>
+  <div class="site-description" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/h5/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">schlagwörter</span>
+        
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/h5/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/h5/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/h5/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/h5/js/utils.js?v=7.4.0"></script><script src="/h5/js/motion.js?v=7.4.0"></script>
+<script src="/h5/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/h5/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

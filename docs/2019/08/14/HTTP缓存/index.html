@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/h5/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/h5/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/h5/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/h5/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久通过 ETag(验证令牌) / If-None-Match服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”. Cache-Control no-cache必须先与">
+<meta name="keywords" content="http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP缓存">
+<meta property="og:url" content="https://912380760.github.io/2019/08/14/HTTP缓存/index.html">
+<meta property="og:site_name" content="note">
+<meta property="og:description" content="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久通过 ETag(验证令牌) / If-None-Match服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”. Cache-Control no-cache必须先与">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://912380760.github.io/h5/images/etag.png">
+<meta property="og:image" content="https://912380760.github.io/h5/images/snipaste.png">
+<meta property="og:updated_time" content="2019-09-17T08:34:50.022Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP缓存">
+<meta name="twitter:description" content="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久通过 ETag(验证令牌) / If-None-Match服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”. Cache-Control no-cache必须先与">
+<meta name="twitter:image" content="https://912380760.github.io/h5/images/etag.png">
+  <link rel="canonical" href="https://912380760.github.io/2019/08/14/HTTP缓存/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>HTTP缓存 | note</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/h5/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/h5/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/h5/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/h5/2019/08/14/HTTP缓存/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">HTTP缓存
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-08-14 18:07:49" itemprop="dateCreated datePublished" datetime="2019-08-14T18:07:49+08:00">2019-08-14</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-09-17 16:34:50" itemprop="dateModified" datetime="2019-09-17T16:34:50+08:00">2019-09-17</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><a href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久" class="headerlink" title="浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"></a>浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</h2><h2 id="通过-ETag-验证令牌-If-None-Match"><a href="#通过-ETag-验证令牌-If-None-Match" class="headerlink" title="通过 ETag(验证令牌) / If-None-Match"></a>通过 ETag(验证令牌) / If-None-Match</h2><p>服务器生成并返回一个随机令牌(通常是文件内容的哈希值或某个其他指纹),<br>下次请求时客户端自动在”If-None-Match” HTTP请求标头内提供ETag令牌,<br>服务器根据当前资源核对令牌.如果未发生变化,服务器将返回”304”.<br><img src="/h5/images/etag.png" alt="avatar"></p>
+<h2 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h2><ul>
+<li>no-cache<br>必须先与服务器确认响应是否发生变化,因此如果同时存在ETag,no-cache是可以缓存的</li>
+<li>no-store<br>直接禁止浏览器以及所有中间缓存存储任何版本的响应.</li>
+<li>public<br>浏览器和CDN(代理服务器)都可缓存</li>
+<li>private<br>只有浏览器能缓存,CDN不能缓存</li>
+<li>max-age<br>缓存最长时间(单位秒),例如,”max-age=60”表示接下来的60秒缓存和重用响应</li>
+</ul>
+<h2 id="Last-Modified-If-Modified-Since"><a href="#Last-Modified-If-Modified-Since" class="headerlink" title="Last-Modified / If-Modified-Since"></a>Last-Modified / If-Modified-Since</h2><ul>
+<li>Last-Modified<br>服务器在响应请求时，告诉浏览器资源的最后修改时间。</li>
+<li>If-Modified-Since<br>再次请求服务器时，通过此字段通知服务器上次请求时，服务器返回的资源最后修改时间。<br>服务器收到请求后发现有头If-Modified-Since 则与被请求资源的最后修改时间进行比对。<br>若资源的最后修改时间大于If-Modified-Since，说明资源又被改动过，则响应整片资源内容，返回状态码200；<br>若资源的最后修改时间小于或等于If-Modified-Since，说明资源无新修改，则响应HTTP 304，告知浏览器继续使用所保存的cache。</li>
+</ul>
+<h2 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a>Expires</h2><p>Expires的值为服务端返回的到期时间,即下一次请求时,请求时间小于服务端返回的到期时间,直接使用缓存数据.<br>不过Expires是HTTP 1.0的东西,另一个问题是到期时间由服务端生成,但是客户端时间和服务端时间有误差,可能导致存储命中误差.所以现在一般使用<a href="#Cache-Control">Cache-Control</a>.</p>
+<p><img src="/h5/images/snipaste.png" alt="avatar"></p>
+<h2 id="各种刷新"><a href="#各种刷新" class="headerlink" title="各种刷新"></a>各种刷新</h2><ul>
+<li>浏览器中输入地址,回车<br>服务器缓存策略</li>
+<li>F5<br>去服务器检验缓存是否过期,再使用服务器缓存策略</li>
+<li>Ctrl + F5<br>不缓存,所有请求都直接去服务器拿</li>
+</ul>
+<h2 id="使用node-js模拟演示"><a href="#使用node-js模拟演示" class="headerlink" title="使用node.js模拟演示"></a>使用node.js模拟演示</h2>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/h5/tags/http/" rel="tag"># http</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/h5/2019/08/07/React核心概念/" rel="next" title="React核心概念">
+                  <i class="fa fa-chevron-left"></i> React核心概念
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/h5/2019/08/27/Markdown基本语法/" rel="prev" title="Markdown基本语法">
+                  Markdown基本语法 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久"><span class="nav-number">1.</span> <span class="nav-text">浏览器通过HTTP标头指令来指示浏览器何时缓存响应及缓存多久</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-ETag-验证令牌-If-None-Match"><span class="nav-number">2.</span> <span class="nav-text">通过 ETag(验证令牌) / If-None-Match</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cache-Control"><span class="nav-number">3.</span> <span class="nav-text">Cache-Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Last-Modified-If-Modified-Since"><span class="nav-number">4.</span> <span class="nav-text">Last-Modified / If-Modified-Since</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Expires"><span class="nav-number">5.</span> <span class="nav-text">Expires</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种刷新"><span class="nav-number">6.</span> <span class="nav-text">各种刷新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用node-js模拟演示"><span class="nav-number">7.</span> <span class="nav-text">使用node.js模拟演示</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lucien Huang</p>
+  <div class="site-description" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/h5/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">schlagwörter</span>
+        
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/h5/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/h5/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/h5/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/h5/js/utils.js?v=7.4.0"></script><script src="/h5/js/motion.js?v=7.4.0"></script>
+<script src="/h5/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/h5/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
