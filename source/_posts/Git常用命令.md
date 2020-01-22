@@ -161,3 +161,7 @@ git checkout <HASH>~ -- <filename>
 - **git clean -f <path>** 删除指定路径下没有被跟踪的文件
 - **git clean -df** 删除当前路径下没有被跟踪的文件
 - **git clean -xf** 删除当前路径下没有被跟踪的文件,不管是否在.gitignore文件中
+```
+## 放弃工作区更改,清空新增的文件
+git checkout . && git clean -xf
+```

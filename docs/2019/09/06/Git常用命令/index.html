@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="note">
 <meta property="og:description" content="Git 基本概念 分支本地分支(工作分支/开发分支)远端分支HEAD 当前分支引用的指针（上一次提交的快照，下一次提交的父结点） 文件状态未纳入版本控制已纳入版本控制冲突文件 存储工作区 (还未纳入版本控制)暂存区 git add后的区域仓库区 git commit后但并未 push 的区域贮藏区 (stash) 临时保存文件修改的区域 HEADHEAD^ 上一个commit的HEADHEAD~N">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-15T04:01:13.908Z">
+<meta property="og:updated_time" content="2020-01-22T06:46:43.139Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用命令">
 <meta name="twitter:description" content="Git 基本概念 分支本地分支(工作分支/开发分支)远端分支HEAD 当前分支引用的指针（上一次提交的快照，下一次提交的父结点） 文件状态未纳入版本控制已纳入版本控制冲突文件 存储工作区 (还未纳入版本控制)暂存区 git add后的区域仓库区 git commit后但并未 push 的区域贮藏区 (stash) 临时保存文件修改的区域 HEADHEAD^ 上一个commit的HEADHEAD~N">
@@ -235,7 +235,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2020-01-15 12:01:13" itemprop="dateModified" datetime="2020-01-15T12:01:13+08:00">2020-01-15</time>
+                <time title="Geändert am: 2020-01-22 14:46:43" itemprop="dateModified" datetime="2020-01-22T14:46:43+08:00">2020-01-22</time>
               </span>
             
           
@@ -343,7 +343,8 @@
 <ul>
 <li><strong>git clean -f <path></path></strong> 删除指定路径下没有被跟踪的文件</li>
 <li><strong>git clean -df</strong> 删除当前路径下没有被跟踪的文件</li>
-<li><strong>git clean -xf</strong> 删除当前路径下没有被跟踪的文件,不管是否在.gitignore文件中</li>
+<li><strong>git clean -xf</strong> 删除当前路径下没有被跟踪的文件,不管是否在.gitignore文件中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 放弃工作区更改,清空新增的文件</span><br><span class="line">git checkout . &amp;&amp; git clean -xf</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
     </div>
@@ -446,7 +447,7 @@
         
           <a href="/h5/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
