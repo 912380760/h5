@@ -1,4 +1,10 @@
-## Git clone失败方法会中
+---
+title: Git无法clone项目问题汇总
+date: 2020-08-19 18:11:26
+tags: Git
+---
+
+## Git clone失败方法汇总
 - 提高git下载速度
 ```
 git config --global http.postBuffer 524288000
@@ -62,6 +68,7 @@ git fetch -v
 - vim分为插入模式和正常模式，正常模式只能阅读不能修改，按i进入插入模式，按esc退出。
 - 退出命令:q
 - 保存退出:wq
+
 ## 参考链接
 [git clone --depth=1 之后怎样获取完整仓库?](https://segmentfault.com/q/1010000000409170)
 [vim 操作命令大全](https://blog.csdn.net/weixin_37657720/article/details/80645991)
