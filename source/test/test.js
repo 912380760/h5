@@ -1,4 +1,4 @@
-export default {
-  a: 1,
-  b: 2,
+function test() {
+  console.log('test1');
 }
+test();
