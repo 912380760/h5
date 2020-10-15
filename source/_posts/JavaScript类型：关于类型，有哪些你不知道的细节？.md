@@ -27,7 +27,7 @@ String的意义并非"字符串",而是字符串的UTF16编码
 Number类型为双精度浮点数规则,但是为了表达几个额外语言场景,规定了几个例外情况:
 - NaN 错误数值
 - Infinity 无穷大
-- -Infinity, 负无穷大
+- -Infinity, 负无穷大  
 根据浮点数的定义,非整数的Number类型无法用==和===来比较,正确的方法是使用JavaScript提供的最小精度值:
 ```js
 Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON;
