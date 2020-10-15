@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/h5/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/h5/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/h5/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/h5/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/h5/css/main.css">
+
+
+<link rel="stylesheet" href="/h5/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"912380760.github.io","root":"/h5/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;lt;script&amp;gt;标签属性 async: 可选.表示立即开始下载脚本,但不阻止其他页面动作,比如下载资源或等待其他脚本加载.只对外部脚本文件有效.不能保证脚本加载顺序,需要保证脚本之间没有依赖关系. charset: 可选.使用src属性指定的代码字符集.这个属性很少使用,因为浏览器不在乎它的值. crossorigin: 可选.配置相关请求的CORS(跨域资源共享)设置,默认不适用CORS.">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高4笔记2-HTML中的Javascript">
+<meta property="og:url" content="https://912380760.github.io/2020/10/13/高4笔记2-HTML中的Javascript/index.html">
+<meta property="og:site_name" content="note">
+<meta property="og:description" content="&amp;lt;script&amp;gt;标签属性 async: 可选.表示立即开始下载脚本,但不阻止其他页面动作,比如下载资源或等待其他脚本加载.只对外部脚本文件有效.不能保证脚本加载顺序,需要保证脚本之间没有依赖关系. charset: 可选.使用src属性指定的代码字符集.这个属性很少使用,因为浏览器不在乎它的值. crossorigin: 可选.配置相关请求的CORS(跨域资源共享)设置,默认不适用CORS.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-10-14T13:45:22.407Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="高4笔记2-HTML中的Javascript">
+<meta name="twitter:description" content="&amp;lt;script&amp;gt;标签属性 async: 可选.表示立即开始下载脚本,但不阻止其他页面动作,比如下载资源或等待其他脚本加载.只对外部脚本文件有效.不能保证脚本加载顺序,需要保证脚本之间没有依赖关系. charset: 可选.使用src属性指定的代码字符集.这个属性很少使用,因为浏览器不在乎它的值. crossorigin: 可选.配置相关请求的CORS(跨域资源共享)设置,默认不适用CORS.">
+
+<link rel="canonical" href="https://912380760.github.io/2020/10/13/高4笔记2-HTML中的Javascript/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>高4笔记2-HTML中的Javascript | note</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/h5/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">note</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/h5/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/h5/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://912380760.github.io/2020/10/13/高4笔记2-HTML中的Javascript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/h5/images/avatar.gif">
+      <meta itemprop="name" content="Lucien Huang">
+      <meta itemprop="description" content="这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          高4笔记2-HTML中的Javascript
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2020-10-13 23:56:17" itemprop="dateCreated datePublished" datetime="2020-10-13T23:56:17+08:00">2020-10-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2020-10-14 21:45:22" itemprop="dateModified" datetime="2020-10-14T21:45:22+08:00">2020-10-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="lt-script-标签属性"><a href="#lt-script-标签属性" class="headerlink" title="&lt;script>标签属性"></a>&lt;script>标签属性</h3><ul>
+<li><strong>async</strong>: 可选.表示立即开始下载脚本,但不阻止其他页面动作,比如下载资源或等待其他脚本加载.只对外部脚本文件有效.不能保证脚本加载顺序,需要保证脚本之间没有依赖关系.</li>
+<li>charset: 可选.使用src属性指定的代码字符集.这个属性很少使用,因为浏览器不在乎它的值.</li>
+<li>crossorigin: 可选.配置相关请求的CORS(跨域资源共享)设置,默认不适用CORS.<br>crossorigin=”anonymous”配置文件请求不必设置凭据标志.<br>crossorigin=”use-credentials”设置凭据标志,意味着出站请求会包含凭据.</li>
+<li><strong>defer</strong>: 可选.表示立即下载文档,等文档解析和显示完成后再执行脚本,只对外部脚本有效,IE7及更早的版本中,对行内脚本也生效.</li>
+<li>integrity: 可选.允许比对接收到的资源的签名与这个属性指定的加密签名以验证子资源完整性(SRI).如果接受到的资源的签名与这个属性指定的签名不匹配,则页面会报错,脚本不会执行.这个属性可以用于确保内容分发网络(CDN)不会提供恶意内容.</li>
+<li>language: 废弃</li>
+<li><strong>src</strong>: 可选.表示包含要执行的代码的外部文件路径.</li>
+<li><strong>type</strong>: 可选.按照惯例这个值始终是”text/javascript”,如果这个值是module,则代码会被当做ES6模块,而且也只有这个时候代码中才能使用import和export关键字.</li>
+</ul>
+<h3 id="script标签特性"><a href="#script标签特性" class="headerlink" title="script标签特性"></a>script标签特性</h3><ul>
+<li><p>在使用行内Javascript代码时,要注意代码中不能出现&lt;/script>字符串,下面代码会导致浏览器报错</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> &gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">// error</span></span><br><span class="line"><span class="undefined">function sayScript() &#123;</span></span><br><span class="line"><span class="undefined">  console.log('</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>');</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// success</span><br><span class="line">function sayScript() &#123;</span><br><span class="line">  // 使用'\'转义即可</span><br><span class="line">  console.log('<span class="tag">&lt;<span class="name">\</span>/<span class="attr">script</span>&gt;</span>');</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>&lt;script>元素有一个饱受争议的特性是,他可以包含外来自外部域的JavaScript文件.跟&lt;img>标签很像,浏览器在解释这个资源时,会向src属性指定的路径发送一个GET请求,这个初始的请求不受同源策略限制.当然,这个请求仍然受父页面HTTP/HTTPS协议的限制.<br>这个能力可以让我们通过不同的域分发Javascript,不过,引用了别人服务器的Javascript文件时要格外小心,因为恶意程序员随时可能替换这个文件.integrity属性是防范这种问题的一个武器,可是不是所有浏览器都支持.  </p>
+</li>
+<li>把所有Javascript文件放在head里,也就意味着必须把所有Javascript代码都下载、解析、解释完成后才能开始渲染页面.对于需要很多Javascript的页面,这会导致页面渲染的明显延迟,出现长时间白屏,为解决这个问题,现代web应用通常将所有JavaScript引用放在&lt;body>元素后面.</li>
+<li>动态加载脚本<br>因为Javascript可以使用DOM API,所以可以通过向DOM中动态添加script元素来加载指定脚本.以这种方式加载资源对浏览器预加载器是不可见的,这会严重影响他们在资源获取队里中的优先级.要想让预加载器知道这些动态请求文件的存在,可以在文档头部声明他们.<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"preload"</span> <span class="attr">href</span>=<span class="string">"test.js"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> &gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">let script = document.createElement('script');</span></span><br><span class="line"><span class="undefined">script.src = 'test.js';</span></span><br><span class="line"><span class="undefined">document.head.appendChild(script);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="lt-noscript-元素"><a href="#lt-noscript-元素" class="headerlink" title="&lt;noscript>元素"></a>&lt;noscript>元素</h3><p>针对早起浏览器不支持Javascript的问题,提供的一个优雅降级的解决方案,只有浏览器不支持脚本或浏览器对脚本的支持被关闭才会渲染&lt;noscript>中的内容</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/h5/tags/js/" rel="tag"># js</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/h5/2020/10/13/高4笔记1-什么是Javascript/" rel="prev" title="高4笔记1-什么是Javascript">
+      <i class="fa fa-chevron-left"></i> 高4笔记1-什么是Javascript
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#lt-script-标签属性"><span class="nav-number">1.</span> <span class="nav-text">&lt;script&gt;标签属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#script标签特性"><span class="nav-number">2.</span> <span class="nav-text">script标签特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lt-noscript-元素"><span class="nav-number">3.</span> <span class="nav-text">&lt;noscript&gt;元素</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lucien Huang</p>
+  <div class="site-description" itemprop="description">这是我的个人博客，收录了我的一些前端工作以来的笔记和经验，内容主要为前端、后端node等方面的内容。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/h5/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">الوسوم</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lucien Huang</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/h5/lib/anime.min.js"></script>
+  <script src="/h5/lib/velocity/velocity.min.js"></script>
+  <script src="/h5/lib/velocity/velocity.ui.min.js"></script>
+<script src="/h5/js/utils.js"></script><script src="/h5/js/motion.js"></script>
+<script src="/h5/js/schemes/muse.js"></script>
+<script src="/h5/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
